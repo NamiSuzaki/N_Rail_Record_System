@@ -21,5 +21,31 @@ namespace Rail_Record_System
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        // 『アプリ終了』ボタン押下
+        private void button3_Click(object sender, EventArgs e)
+        {
+            // アプリ終了確認ダイアログの表示
+            DialogResult result = MessageBox.Show
+                ("アプリケーションを終了しますか？", "アプリケーションの終了", MessageBoxButtons.YesNo);
+            
+            // 『はい』を選択
+            if(result == System.Windows.Forms.DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        // テストフォームの表示
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form2 f2 = new Form2();
+            f2.Show();
+        }
     }
 }

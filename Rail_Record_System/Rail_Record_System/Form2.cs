@@ -89,12 +89,126 @@ namespace Rail_Record_System
                 // DataTableを生成します。
                 var dataTable = new DataTable();
 
+                // SQLの実行
+                var adapter = new SQLiteDataAdapter("SELECT * FROM t_product", con);
+                adapter.Fill(dataTable);
+                dataGridView1.DataSource = dataTable;
             }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        // データ更新
+        private void button4_Click(object sender, EventArgs e)
+        {
+            using (SQLiteConnection con = new SQLiteConnection("Data Source=test.db"))
+            {
+                con.Open();
+
+                using (SQLiteTransaction trans = con.BeginTransaction())
+                {
+                    SQLiteCommand cmd = con.CreateCommand();
+
+                    // UPDATE文を作ることもできます
+                    // インサート
+                    cmd.CommandText = "UPDATE t_product SET productname = @Product, price = @Price WHERE CD = @Cd";
+
+                    // パラメータセット
+                    cmd.Parameters.Add("Product", System.Data.DbType.String);
+                    cmd.Parameters.Add("Price", System.Data.DbType.Int64);
+                    cmd.Parameters.Add("Cd", System.Data.DbType.Int64);
+
+                    // データ追加
+                    cmd.Parameters["Cd"].Value = int.Parse(textBox3.Text);
+                    cmd.Parameters["Product"].Value = textBox4.Text;
+                    cmd.Parameters["Price"].Value = int.Parse(textBox5.Text);
+
+                    cmd.ExecuteNonQuery();
+
+                    // コミット
+                    trans.Commit();
+                }
+            }
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        // データ検索
+        private void button5_Click(object sender, EventArgs e)
+        {
+            using (SQLiteConnection con = new SQLiteConnection("Data Source = test.db"))
+            {
+                // DataTableを生成します。
+                var dataTable = new DataTable();
+
+                // SQLの実行
+                var adapter = new SQLiteDataAdapter("SELECT * FROM t_product", con);
+                adapter.Fill(dataTable);
+                dataGridView1.DataSource = dataTable;
+            }
+        }
+
+        // データ削除
+        private void button6_Click(object sender, EventArgs e)
+        {
+            using (SQLiteConnection con = new SQLiteConnection("Data Source = test.db"))
+            {
+                con.Open();
+
+                using (SQLiteTransaction trans = con.BeginTransaction())
+                {
+                    SQLiteCommand cmd = con.CreateCommand();
+
+                    // DELETE文を作ることもできます
+                    // インサート
+                    cmd.CommandText = "DELETE FROM t_product WHERE CD = @Cd";
+
+                    // パラメータセット
+                    cmd.Parameters.Add("Cd", System.Data.DbType.Int64);
+
+                    // データ削除
+                    cmd.Parameters["Cd"].Value = int.Parse(textBox6.Text);
+                    cmd.ExecuteNonQuery();
+
+                    // コミット
+                    trans.Commit();
+                }
+            }
+        }
+
+        // テーブル削除
+        private void button7_Click(object sender, EventArgs e)
+        {
+            // コネクションを開いてテーブル削除して閉じる
+            using(var con = new SQLiteConnection("Data Source = test.db"))
+            {
+                con.Open();
+                
+                using (SQLiteCommand command = con.CreateCommand())
+                {
+                    // テーブルを削除するときはdrop tableを使います
+                    command.CommandText = "drop table t_product";
+                    command.ExecuteNonQuery();
+                }
+
+                con.Close();
+            }
         }
     }
 }

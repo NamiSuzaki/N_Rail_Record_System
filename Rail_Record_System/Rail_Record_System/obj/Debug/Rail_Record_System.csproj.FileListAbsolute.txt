@@ -18,4 +18,6 @@ C:\Users\s20217061.STD\Documents\N_Rail_Record_System\Rail_Record_System\Rail_Re
 C:\Users\s20217061.STD\Documents\N_Rail_Record_System\Rail_Record_System\Rail_Record_System\obj\Debug\Rail_Record_System.exe
 C:\Users\s20217061.STD\Documents\N_Rail_Record_System\Rail_Record_System\Rail_Record_System\obj\Debug\Rail_Record_System.pdb
 C:\Users\s20217061.STD\Documents\N_Rail_Record_System\Rail_Record_System\Rail_Record_System\obj\Debug\Rail_Record_System.Formmain.resources
+C:\Users\s20217061.STD\Documents\N_Rail_Record_System\Rail_Record_System\Rail_Record_System\obj\Debug\Rail_Record_System.W01.resources
 C:\Users\s20217061.STD\Documents\N_Rail_Record_System\Rail_Record_System\Rail_Record_System\obj\Debug\Rail_Record_System.UserControl1.resources
+C:\Users\s20217061.STD\Documents\N_Rail_Record_System\Rail_Record_System\Rail_Record_System\obj\Debug\Rail_Record_System.W02.resources

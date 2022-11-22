@@ -103,6 +103,18 @@
     <Compile Include="UserControl1.Designer.cs">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
+    <Compile Include="W01.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="W01.Designer.cs">
+      <DependentUpon>W01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="W02.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="W02.Designer.cs">
+      <DependentUpon>W02.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Formmain.resx">
       <DependentUpon>Formmain.cs</DependentUpon>
     </EmbeddedResource>
@@ -120,6 +132,12 @@
     </Compile>
     <EmbeddedResource Include="UserControl1.resx">
       <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="W01.resx">
+      <DependentUpon>W01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="W02.resx">
+      <DependentUpon>W02.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

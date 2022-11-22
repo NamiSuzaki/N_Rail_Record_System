@@ -29,35 +29,34 @@ namespace Rail_Record_System
         /// </summary>
         private void InitializeComponent()
         {
-            this.userControl11 = new Rail_Record_System.UserControl1();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // userControl11
+            // panel1
             // 
-            this.userControl11.Location = new System.Drawing.Point(2, 1);
-            this.userControl11.MaximumSize = new System.Drawing.Size(938, 589);
-            this.userControl11.MinimumSize = new System.Drawing.Size(938, 589);
-            this.userControl11.Name = "userControl11";
-            this.userControl11.Size = new System.Drawing.Size(938, 589);
-            this.userControl11.TabIndex = 0;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(942, 594);
+            this.panel1.TabIndex = 0;
             // 
             // Formmain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(942, 593);
-            this.Controls.Add(this.userControl11);
+            this.Controls.Add(this.panel1);
             this.MaximumSize = new System.Drawing.Size(960, 640);
             this.MinimumSize = new System.Drawing.Size(960, 640);
             this.Name = "Formmain";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Formmain_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private UserControl1 userControl11;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

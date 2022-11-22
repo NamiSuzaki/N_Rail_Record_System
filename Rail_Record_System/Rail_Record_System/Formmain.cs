@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Rail_Record_System
 {
-    public partial class Form1 : Form
+    public partial class Formmain : Form
     {
-        public Form1()
+        public Formmain()
         {
             InitializeComponent();
         }

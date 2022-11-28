@@ -40,7 +40,7 @@ namespace Rail_Record_System
             // 
             this.W02_Title.AutoSize = true;
             this.W02_Title.Font = new System.Drawing.Font("MS UI Gothic", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.W02_Title.Location = new System.Drawing.Point(316, 49);
+            this.W02_Title.Location = new System.Drawing.Point(315, 49);
             this.W02_Title.Name = "W02_Title";
             this.W02_Title.Size = new System.Drawing.Size(308, 48);
             this.W02_Title.TabIndex = 0;
@@ -81,6 +81,7 @@ namespace Rail_Record_System
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(856, 372);
             this.dataGridView1.TabIndex = 3;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // W02
             // 
@@ -94,6 +95,7 @@ namespace Rail_Record_System
             this.MinimumSize = new System.Drawing.Size(938, 589);
             this.Name = "W02";
             this.Size = new System.Drawing.Size(938, 589);
+            this.Load += new System.EventHandler(this.W02_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

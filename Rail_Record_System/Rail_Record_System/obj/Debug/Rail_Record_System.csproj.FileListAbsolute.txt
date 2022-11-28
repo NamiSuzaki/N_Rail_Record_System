@@ -21,3 +21,4 @@ C:\Users\s20217061.STD\Documents\N_Rail_Record_System\Rail_Record_System\Rail_Re
 C:\Users\s20217061.STD\Documents\N_Rail_Record_System\Rail_Record_System\Rail_Record_System\obj\Debug\Rail_Record_System.W01.resources
 C:\Users\s20217061.STD\Documents\N_Rail_Record_System\Rail_Record_System\Rail_Record_System\obj\Debug\Rail_Record_System.UserControl1.resources
 C:\Users\s20217061.STD\Documents\N_Rail_Record_System\Rail_Record_System\Rail_Record_System\obj\Debug\Rail_Record_System.W02.resources
+C:\Users\s20217061.STD\Documents\N_Rail_Record_System\Rail_Record_System\Rail_Record_System\obj\Debug\Rail_Record_System.W03_delete_this.resources

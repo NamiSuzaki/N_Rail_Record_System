@@ -115,6 +115,12 @@
     <Compile Include="W02.Designer.cs">
       <DependentUpon>W02.cs</DependentUpon>
     </Compile>
+    <Compile Include="W03.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="W03.Designer.cs">
+      <DependentUpon>W03.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Formmain.resx">
       <DependentUpon>Formmain.cs</DependentUpon>
     </EmbeddedResource>
@@ -138,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="W02.resx">
       <DependentUpon>W02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="W03.resx">
+      <DependentUpon>W03.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -26,7 +26,8 @@ namespace Rail_Record_System
         // 検索フォームを開く
         private void goW03_Click(object sender, EventArgs e)
         {
-
+            W03_delete_this w03 = new W03_delete_this();
+            w03.Show();
         }
 
         // 戻るボタン押下
@@ -34,6 +35,16 @@ namespace Rail_Record_System
         {
             Formmain.uc_w02.Visible = false;
             Formmain.uc_w01.Visible = true;
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void W02_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

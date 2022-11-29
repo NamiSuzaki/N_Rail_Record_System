@@ -23,15 +23,29 @@ namespace Rail_Record_System
         {
             // コネクションを開いてテーブル作成して閉じる
             // Data Source=で指定した名前がDBのファイル名になります
-            using (var con = new SQLiteConnection("Data Source=test.db"))
+            using (var con = new SQLiteConnection("Data Source=Rail_records_system_DB.db"))
             {
                 con.Open();
 
                 using (SQLiteCommand command = con.CreateCommand())
                 {
-                    // t_productテーブルを作成します
+                    // 記録テーブルを作成
                     command.CommandText =
-                        "Create table t_product (CD INTEGER  PRIMARY KEY AUTOINCREMENT, productname TEXT, price INTEGER)";
+                        "CREATE TABLE IF NOT EXISTS 乗車記録" +
+                        " (乗車記録ID INTEGER PRIMARY KEY AUTOINCREMENT," +
+                          "記録タイトル TEXT," +
+                          "乗車駅 TEXT," +
+                          "乗車日時 TEXT," +
+                          "降車駅 TEXT," +
+                          "降車日時 TEXT," +
+                          "列車名 TEXT," +
+                          "列車番号 TEXT," +
+                          "乗車車両ナンバー TEXT," +
+                          "乗車路線 TEXT," +
+                          "乗車距離 REAL," +
+                          "鉄道会社 TEXT," +
+                          "鉄道種別 TEXT," +
+                          "備考 TEXT)";
                     command.ExecuteNonQuery();
                 }
 
@@ -47,7 +61,7 @@ namespace Rail_Record_System
         // データ追加
         private void button2_Click(object sender, EventArgs e)
         {
-            using (SQLiteConnection con = new SQLiteConnection("Data Source=test.db"))
+            using (SQLiteConnection con = new SQLiteConnection("Data Source=Rail_records_system_DB.db"))
             {
                 con.Open();
 
@@ -57,7 +71,7 @@ namespace Rail_Record_System
 
                     // インサート
                     // @をつけることで後述のParametersでセットした値をプログラム実行時に付加してSQLを実行できます
-                    cmd.CommandText = "INSERT INTO t_product (productname, price) VALUES (@Product, @Price)";
+                    cmd.CommandText = "INSERT INTO 乗車記録 (記録タイトル, price) VALUES (@Product, @Price)";
 
                     // パラメータセット
                     // ParametersにProductとPriceを追加します
@@ -84,13 +98,13 @@ namespace Rail_Record_System
         // データ読み込み
         private void button3_Click(object sender, EventArgs e)
         {
-            using (SQLiteConnection con = new SQLiteConnection("Data Source = test.db"))
+            using (SQLiteConnection con = new SQLiteConnection("Data Source = Rail_records_system_DB.db"))
             {
                 // DataTableを生成します。
                 var dataTable = new DataTable();
 
                 // SQLの実行
-                var adapter = new SQLiteDataAdapter("SELECT * FROM t_product", con);
+                var adapter = new SQLiteDataAdapter("SELECT * FROM 乗車記録", con);
                 adapter.Fill(dataTable);
                 dataGridView1.DataSource = dataTable;
             }
@@ -104,7 +118,7 @@ namespace Rail_Record_System
         // データ更新
         private void button4_Click(object sender, EventArgs e)
         {
-            using (SQLiteConnection con = new SQLiteConnection("Data Source=test.db"))
+            using (SQLiteConnection con = new SQLiteConnection("Data Source=Rail_records_system_DB.db"))
             {
                 con.Open();
 
@@ -114,7 +128,7 @@ namespace Rail_Record_System
 
                     // UPDATE文を作ることもできます
                     // インサート
-                    cmd.CommandText = "UPDATE t_product SET productname = @Product, price = @Price WHERE CD = @Cd";
+                    cmd.CommandText = "UPDATE 乗車記録 SET productname = @Product, price = @Price WHERE CD = @Cd";
 
                     // パラメータセット
                     cmd.Parameters.Add("Product", System.Data.DbType.String);
@@ -157,7 +171,7 @@ namespace Rail_Record_System
             // どうあれそんな感じのことが出来てくれないと困るんだけどさぁ；；；
             // や　出来ないわけはない　検索に必ずといっていいほど必要だし実装してるシステムはいくつもある　絶対出来ないってことは無いんだから
 
-            using (SQLiteConnection con = new SQLiteConnection("Data Source = test.db"))
+            using (SQLiteConnection con = new SQLiteConnection("Data Source = Rail_records_system_DB.db"))
             {
                 con.Open();
 
@@ -225,7 +239,7 @@ namespace Rail_Record_System
         // データ削除
         private void button6_Click(object sender, EventArgs e)
         {
-            using (SQLiteConnection con = new SQLiteConnection("Data Source = test.db"))
+            using (SQLiteConnection con = new SQLiteConnection("Data Source = Rail_records_system_DB.db"))
             {
                 con.Open();
 
@@ -254,14 +268,14 @@ namespace Rail_Record_System
         private void button7_Click(object sender, EventArgs e)
         {
             // コネクションを開いてテーブル削除して閉じる
-            using(var con = new SQLiteConnection("Data Source = test.db"))
+            using(var con = new SQLiteConnection("Data Source = Rail_records_system_DB.db"))
             {
                 con.Open();
                 
                 using (SQLiteCommand command = con.CreateCommand())
                 {
                     // テーブルを削除するときはdrop tableを使います
-                    command.CommandText = "drop table t_product";
+                    command.CommandText = "drop table 乗車記録";
                     command.ExecuteNonQuery();
                 }
 

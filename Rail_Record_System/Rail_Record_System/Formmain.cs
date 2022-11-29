@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SQLite;
 
 namespace Rail_Record_System
 {
@@ -37,16 +38,17 @@ namespace Rail_Record_System
         }
 
         // 起動時
-        private void Formmain_Load(object sender, EventArgs e)
-        {
-            
-        }
-
         // テストフォームの表示
-        private void button4_Click(object sender, EventArgs e)
+        private void Formmain_Load(object sender, EventArgs e)
         {
             Form2 f2 = new Form2();
             f2.Show();
+        }
+
+        
+        private void button4_Click(object sender, EventArgs e)
+        {
+            
         }
 
         private void w011_Load(object sender, EventArgs e)
@@ -55,6 +57,11 @@ namespace Rail_Record_System
         }
 
         private void w021_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

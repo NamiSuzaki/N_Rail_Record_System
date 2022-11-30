@@ -23,6 +23,23 @@ namespace Rail_Record_System
 
         }
 
+        // 一番最初　コントロールを読み込んだ時
+        // 記録一覧全件表示
+        private void W02_Load(object sender, EventArgs e)
+        {
+            using (SQLiteConnection con = new SQLiteConnection("Data Source = Rail_records_system_DB.db"))
+            {
+                // DataTableを生成します。
+                var dataTable = new DataTable();
+
+                // SQLの実行
+                var adapter = new SQLiteDataAdapter("SELECT 乗車記録ID,記録タイトル,列車名,乗車駅,乗車日時,降車駅,降車日時 FROM 乗車記録", con);
+                // select id, name from user;
+                adapter.Fill(dataTable);
+                dataGridView1.DataSource = dataTable;
+            }
+        }
+
         // 検索画面表示ボタン押下
         // 検索フォームを開く
         private void goW03_Click(object sender, EventArgs e)
@@ -41,21 +58,6 @@ namespace Rail_Record_System
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-        }
-
-        private void W02_Load(object sender, EventArgs e)
-        {
-            using (SQLiteConnection con = new SQLiteConnection("Data Source = Rail_records_system_DB.db"))
-            {
-                // DataTableを生成します。
-                var dataTable = new DataTable();
-
-                // SQLの実行
-                var adapter = new SQLiteDataAdapter("SELECT 乗車記録ID,記録タイトル,列車名,乗車駅,乗車日時,降車駅,降車日時 FROM 乗車記録", con);
-                // select id, name from user;
-                adapter.Fill(dataTable);
-                dataGridView1.DataSource = dataTable;
-            }
         }
     }
 }

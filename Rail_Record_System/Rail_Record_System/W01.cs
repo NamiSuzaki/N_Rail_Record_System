@@ -24,10 +24,12 @@ namespace Rail_Record_System
             Formmain.uc_w02.Visible = true;
         }
 
-        // 乗車記録新規登録
+        // 乗車記録新規登録ボタン押下
+        // 登録フォームを開く
         private void goW09_Click(object sender, EventArgs e)
         {
-
+            W09 w09 = new W09();
+            w09.Show();
         }
 
         // 『アプリ終了』ボタン押下

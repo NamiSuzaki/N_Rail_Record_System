@@ -362,6 +362,8 @@
             this.Controls.Add(this.W03_title_LB);
             this.Controls.Add(this.W03_id_LB);
             this.Controls.Add(this.W03_Title);
+            this.MaximumSize = new System.Drawing.Size(1114, 735);
+            this.MinimumSize = new System.Drawing.Size(1114, 735);
             this.Name = "W03_delete_this";
             this.Text = "W03";
             this.Load += new System.EventHandler(this.W03_Load);

@@ -369,6 +369,7 @@ namespace Rail_Record_System
             this.MinimumSize = new System.Drawing.Size(1114, 735);
             this.Name = "W09";
             this.Text = "W09";
+            this.Load += new System.EventHandler(this.W09_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

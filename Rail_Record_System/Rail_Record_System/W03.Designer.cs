@@ -57,6 +57,8 @@
             this.W03_company_TB = new System.Windows.Forms.TextBox();
             this.W03_category_TB = new System.Windows.Forms.TextBox();
             this.gobacktoW02 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // W03_Title
@@ -202,12 +204,13 @@
             // goW04
             // 
             this.goW04.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.goW04.Location = new System.Drawing.Point(416, 536);
+            this.goW04.Location = new System.Drawing.Point(784, 536);
             this.goW04.Name = "goW04";
             this.goW04.Size = new System.Drawing.Size(256, 112);
             this.goW04.TabIndex = 16;
             this.goW04.Text = "検索";
             this.goW04.UseVisualStyleBackColor = true;
+            this.goW04.Click += new System.EventHandler(this.goW04_Click);
             // 
             // W03_train_number_TB
             // 
@@ -328,11 +331,26 @@
             this.gobacktoW02.UseVisualStyleBackColor = true;
             this.gobacktoW02.Click += new System.EventHandler(this.gobacktoW01_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(32, 528);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(720, 136);
+            this.dataGridView1.TabIndex = 31;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
             // W03_delete_this
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1096, 688);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.gobacktoW02);
             this.Controls.Add(this.W03_category_TB);
             this.Controls.Add(this.W03_company_TB);
@@ -367,6 +385,7 @@
             this.Name = "W03_delete_this";
             this.Text = "W03";
             this.Load += new System.EventHandler(this.W03_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -403,5 +422,6 @@
         private System.Windows.Forms.TextBox W03_company_TB;
         private System.Windows.Forms.TextBox W03_category_TB;
         private System.Windows.Forms.Button gobacktoW02;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

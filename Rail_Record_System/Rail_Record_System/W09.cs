@@ -95,5 +95,10 @@ namespace Rail_Record_System
         {
 
         }
+
+        private void W09_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

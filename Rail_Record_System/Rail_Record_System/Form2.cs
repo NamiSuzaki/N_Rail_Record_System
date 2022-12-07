@@ -30,23 +30,29 @@ namespace Rail_Record_System
                 using (SQLiteCommand command = con.CreateCommand())
                 {
                     // 記録テーブルを作成
-                    command.CommandText =
-                        "CREATE TABLE IF NOT EXISTS 乗車記録" +
-                        " (乗車記録ID INTEGER PRIMARY KEY AUTOINCREMENT," +
-                          "記録タイトル TEXT," +
-                          "乗車駅 TEXT," +
-                          "乗車日時 TEXT," +
-                          "降車駅 TEXT," +
-                          "降車日時 TEXT," +
-                          "列車名 TEXT," +
-                          "列車番号 TEXT," +
-                          "乗車車両ナンバー TEXT," +
-                          "乗車路線 TEXT," +
-                          "乗車距離 REAL," +
-                          "鉄道会社 TEXT," +
-                          "鉄道種別 TEXT," +
-                          "備考 TEXT)";
+                    //command.CommandText =
+                    //    "create table if not exists 乗車記録" +
+                    //    " (乗車記録ID integer primary key autoincrement," +
+                    //      "記録タイトル text default '無題'," +
+                    //      "乗車駅 text not null," +
+                    //      "乗車日時 text default '2000-00-00 00:00'," +
+                    //      "降車駅 text not null," +
+                    //      "降車日時 text default '2000-00-00 00:00'," +
+                    //      "列車名 text default '列車名なし'," +
+                    //      "列車番号 text default '-'," +
+                    //      "乗車車両ナンバー text default '-'," +
+                    //      "乗車路線 text default '-'," +
+                    //      "乗車距離 real default '0'," +
+                    //      "鉄道会社 text," +
+                    //      "鉄道種別 text," +
+                    //      "備考 text)";
+                    //command.ExecuteNonQuery();
+
+                    // 記録テーブルを作成
+                    command.CommandText = "";
+                                               
                     command.ExecuteNonQuery();
+
                 }
 
                 con.Close();

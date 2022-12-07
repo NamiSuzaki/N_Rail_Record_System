@@ -33,6 +33,7 @@ namespace Rail_Record_System
             this.goW03 = new System.Windows.Forms.Button();
             this.gobacktoW01 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,10 +61,10 @@ namespace Rail_Record_System
             // 
             // gobacktoW01
             // 
-            this.gobacktoW01.Font = new System.Drawing.Font("MS UI Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.gobacktoW01.Location = new System.Drawing.Point(43, 34);
+            this.gobacktoW01.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.gobacktoW01.Location = new System.Drawing.Point(48, 32);
             this.gobacktoW01.Name = "gobacktoW01";
-            this.gobacktoW01.Size = new System.Drawing.Size(230, 90);
+            this.gobacktoW01.Size = new System.Drawing.Size(224, 38);
             this.gobacktoW01.TabIndex = 2;
             this.gobacktoW01.Text = "戻る";
             this.gobacktoW01.UseVisualStyleBackColor = true;
@@ -83,10 +84,22 @@ namespace Rail_Record_System
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("MS UI Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.button1.Location = new System.Drawing.Point(48, 72);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(224, 56);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "更新";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // W02
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.gobacktoW01);
             this.Controls.Add(this.goW03);
@@ -108,5 +121,6 @@ namespace Rail_Record_System
         private System.Windows.Forms.Button goW03;
         private System.Windows.Forms.Button gobacktoW01;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button1;
     }
 }

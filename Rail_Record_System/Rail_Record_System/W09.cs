@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SQLite;
 
-
 namespace Rail_Record_System
 {
     public partial class W09 : Form
@@ -26,56 +25,64 @@ namespace Rail_Record_System
             {
                 con.Open();
 
-                using (SQLiteTransaction trans = con.BeginTransaction())
+                try
                 {
-                    SQLiteCommand cmd = con.CreateCommand();
+                    using (SQLiteTransaction trans = con.BeginTransaction())
+                    {
+                        SQLiteCommand cmd = con.CreateCommand();
 
-                    // インサート
-                    // @をつけることで後述のParametersでセットした値をプログラム実行時に付加してSQLを実行できる
-                    cmd.CommandText = 
-                        "INSERT INTO 乗車記録 " +
-                        "(記録タイトル,乗車駅,乗車日時,降車駅,降車日時,列車名,列車番号,乗車車両ナンバー,乗車路線,乗車距離,鉄道会社,鉄道種別,備考)" +
-                        " VALUES (@記録タイトル,@乗車駅,@乗車日時,@降車駅,@降車日時,@列車名,@列車番号,@乗車車両ナンバー,@乗車路線,@乗車距離,@鉄道会社,@鉄道種別,@備考)";
+                        // インサート
+                        // @をつけることで後述のParametersでセットした値をプログラム実行時に付加してSQLを実行できる
+                        cmd.CommandText =
+                            "INSERT INTO 乗車記録 " +
+                            "(記録タイトル,乗車駅,乗車日時,降車駅,降車日時,列車名,列車番号,乗車車両ナンバー,乗車路線,乗車距離,鉄道会社,鉄道種別,備考)" +
+                            " VALUES (@記録タイトル,@乗車駅,@乗車日時,@降車駅,@降車日時,@列車名,@列車番号,@乗車車両ナンバー,@乗車路線,@乗車距離,@鉄道会社,@鉄道種別,@備考)";
 
-                    // パラメータセット
-                    // Parametersに各項目を追加
-                    cmd.Parameters.Add("記録タイトル", System.Data.DbType.String);
-                    cmd.Parameters.Add("乗車駅", System.Data.DbType.String);
-                    cmd.Parameters.Add("乗車日時", System.Data.DbType.String);
-                    cmd.Parameters.Add("降車駅", System.Data.DbType.String);
-                    cmd.Parameters.Add("降車日時", System.Data.DbType.String);
-                    cmd.Parameters.Add("列車名", System.Data.DbType.String);
-                    cmd.Parameters.Add("列車番号", System.Data.DbType.String);
-                    cmd.Parameters.Add("乗車車両ナンバー", System.Data.DbType.String);
-                    cmd.Parameters.Add("乗車路線", System.Data.DbType.String);
-                    cmd.Parameters.Add("乗車距離", System.Data.DbType.String);
-                    cmd.Parameters.Add("鉄道会社", System.Data.DbType.String);
-                    cmd.Parameters.Add("鉄道種別", System.Data.DbType.String);
-                    cmd.Parameters.Add("備考", System.Data.DbType.String);
+                        // パラメータセット
+                        // Parametersに各項目を追加
+                        cmd.Parameters.Add("記録タイトル", System.Data.DbType.String);
+                        cmd.Parameters.Add("乗車駅", System.Data.DbType.String);
+                        cmd.Parameters.Add("乗車日時", System.Data.DbType.String);
+                        cmd.Parameters.Add("降車駅", System.Data.DbType.String);
+                        cmd.Parameters.Add("降車日時", System.Data.DbType.String);
+                        cmd.Parameters.Add("列車名", System.Data.DbType.String);
+                        cmd.Parameters.Add("列車番号", System.Data.DbType.String);
+                        cmd.Parameters.Add("乗車車両ナンバー", System.Data.DbType.String);
+                        cmd.Parameters.Add("乗車路線", System.Data.DbType.String);
+                        cmd.Parameters.Add("乗車距離", System.Data.DbType.String);
+                        cmd.Parameters.Add("鉄道会社", System.Data.DbType.String);
+                        cmd.Parameters.Add("鉄道種別", System.Data.DbType.String);
+                        cmd.Parameters.Add("備考", System.Data.DbType.String);
 
-                    // データ追加
-                    // textBoxに入力されている文字列をParametersに設定
-                    cmd.Parameters["記録タイトル"].Value = W09_title_TB.Text;
-                    cmd.Parameters["乗車駅"].Value = W09_boarding_sta_TB.Text;
-                    cmd.Parameters["乗車日時"].Value = W09_boarding_time_TB.Text;
-                    cmd.Parameters["降車駅"].Value = W09_exit_sta_TB.Text;
-                    cmd.Parameters["降車日時"].Value = W09_exit_time_TB.Text;
-                    cmd.Parameters["列車名"].Value = W09_name_TB.Text;
-                    cmd.Parameters["列車番号"].Value = W09_unit_number_TB.Text;
-                    cmd.Parameters["乗車車両ナンバー"].Value = W09_train_number_TB.Text;
-                    cmd.Parameters["乗車路線"].Value = W09_lines_TB.Text;
-                    cmd.Parameters["乗車距離"].Value = W09_distance_TB.Text;
-                    cmd.Parameters["鉄道会社"].Value = W09_company_TB.Text;
-                    cmd.Parameters["鉄道種別"].Value = W09_category_TB.Text;
-                    cmd.Parameters["備考"].Value = W09_note_TB.Text;
+                        // データ追加
+                        // textBoxに入力されている文字列をParametersに設定
+                        cmd.Parameters["記録タイトル"].Value = W09_title_TB.Text;
+                        cmd.Parameters["乗車駅"].Value = W09_boarding_sta_TB.Text;
+                        cmd.Parameters["乗車日時"].Value = W09_boarding_time_TB.Text;
+                        cmd.Parameters["降車駅"].Value = W09_exit_sta_TB.Text;
+                        cmd.Parameters["降車日時"].Value = W09_exit_time_TB.Text;
+                        cmd.Parameters["列車名"].Value = W09_name_TB.Text;
+                        cmd.Parameters["列車番号"].Value = W09_unit_number_TB.Text;
+                        cmd.Parameters["乗車車両ナンバー"].Value = W09_train_number_TB.Text;
+                        cmd.Parameters["乗車路線"].Value = W09_lines_TB.Text;
+                        cmd.Parameters["乗車距離"].Value = W09_distance_TB.Text;
+                        cmd.Parameters["鉄道会社"].Value = W09_company_TB.Text;
+                        cmd.Parameters["鉄道種別"].Value = W09_category_TB.Text;
+                        cmd.Parameters["備考"].Value = W09_note_TB.Text;
 
-                    cmd.ExecuteNonQuery();
+                        cmd.ExecuteNonQuery();
 
-                    // コミット
-                    // trans.commit();でDBの変更を確定
-                    trans.Commit();
+                        // コミット
+                        // trans.commit();でDBの変更を確定
+                        trans.Commit();
 
-                    // テキストボックスにデータを入力してデータ追加ボタンを押すとDBにデータが登録されます
+                        // テキストボックスにデータを入力してデータ追加ボタンを押すとDBにデータが登録されます
+                    }
+                }
+
+                finally
+                {
+                    con.Close();
                 }
             }
         }
@@ -99,6 +106,70 @@ namespace Rail_Record_System
         private void W09_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // コネクションを開いてテーブル作成して閉じる
+            // Data Source=で指定した名前がDBのファイル名
+            using (var con = new SQLiteConnection("Data Source=Rail_records_system_DB.db"))
+            {
+                con.Open();
+
+                using (SQLiteCommand command = con.CreateCommand())
+                {
+                    // 記録テーブルを作成
+                    command.CommandText =
+                    "create table if not exists 乗車記録" +
+                    " (乗車記録ID INTEGER primary key autoincrement," +
+                    "記録タイトル text default '無題'," +
+                    "乗車駅 text not null," +
+                    "乗車日時 text default '2000-00-00 00:00'," +
+                    "降車駅 text not null," +
+                    "降車日時 text default '2000-00-00 00:00'," +
+                    "列車名 text default '列車名なし'," +
+                    "列車番号 text default '-'," +
+                    "乗車車両ナンバー text default '-'," +
+                    "乗車路線 text default '-'," +
+                    "乗車距離 real default '0'," +
+                    "鉄道会社 text," +
+                    "鉄道種別 text," +
+                    "備考 text)";
+
+                    command.ExecuteNonQuery();
+                }
+                
+                con.Close();
+                
+                // con.Open();でDBを接続しcon.Close();でDB接続を切断します
+                // 使い終わったら必ず接続を切断しましょう
+                // command.CommandTextには実行するSQL文を入れます
+                // Command.ExecuteNonQuery(); でSQLを実行します
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            // コネクションを開いてテーブル削除して閉じる
+            using (var con = new SQLiteConnection("Data Source = Rail_records_system_DB.db"))
+            {
+                con.Open();
+                
+                try
+                {
+                    using (SQLiteCommand command = con.CreateCommand())
+                    {
+                        // テーブルを削除するときはdrop tableを使います
+                        command.CommandText = "drop table 乗車記録";
+                        command.ExecuteNonQuery();
+                    }
+                }
+
+                finally
+                {
+                    con.Close();
+                }
+            }
         }
     }
 }

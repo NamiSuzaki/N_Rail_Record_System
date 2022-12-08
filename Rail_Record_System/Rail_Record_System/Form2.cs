@@ -110,7 +110,8 @@ namespace Rail_Record_System
                 var dataTable = new DataTable();
 
                 // SQLの実行
-                var adapter = new SQLiteDataAdapter("SELECT * FROM 乗車記録", con);
+                //var adapter = new SQLiteDataAdapter("SELECT * FROM 乗車記録", con);
+                var adapter = new SQLiteDataAdapter("SELECT * FROM 駅情報", con);
                 adapter.Fill(dataTable);
                 dataGridView1.DataSource = dataTable;
             }

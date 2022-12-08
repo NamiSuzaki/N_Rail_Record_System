@@ -41,8 +41,8 @@ namespace Rail_Record_System
         // テストフォームの表示
         private void Formmain_Load(object sender, EventArgs e)
         {
-            // Form2 f2 = new Form2();
-            // f2.Show();
+            Form2 f2 = new Form2();
+            f2.Show();
         }
 
         

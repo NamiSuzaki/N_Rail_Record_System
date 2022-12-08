@@ -48,7 +48,7 @@ namespace Rail_Record_System
                 using (SQLiteConnection con = new SQLiteConnection("Data Source = Rail_records_system_DB.db"))
                 {
                     //SQL文とコネクションを設定
-                    using (SQLiteCommand cmd = new SQLiteCommand("select * from 乗車記録 where 乗車記録ID Like @検索ID and 乗車駅 Like %@検索乗車駅%", con))
+                    using (SQLiteCommand cmd = new SQLiteCommand("select * from 乗車記録 where 乗車記録ID Like @検索ID", con))
 
                     //記録タイトル,乗車駅,乗車日時,降車駅,降車日時,列車名,列車番号,乗車車両ナンバー,乗車路線,乗車距離,鉄道会社,鉄道種別,備考
                     {

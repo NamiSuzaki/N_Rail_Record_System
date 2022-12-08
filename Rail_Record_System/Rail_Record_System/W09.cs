@@ -25,8 +25,6 @@ namespace Rail_Record_System
             {
                 con.Open();
 
-                try
-                {
                     using (SQLiteTransaction trans = con.BeginTransaction())
                     {
                         SQLiteCommand cmd = con.CreateCommand();
@@ -78,12 +76,6 @@ namespace Rail_Record_System
 
                         // テキストボックスにデータを入力してデータ追加ボタンを押すとDBにデータが登録されます
                     }
-                }
-
-                finally
-                {
-                    con.Close();
-                }
             }
         }
 

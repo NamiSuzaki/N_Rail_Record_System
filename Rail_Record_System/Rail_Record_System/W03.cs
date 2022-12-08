@@ -42,17 +42,18 @@ namespace Rail_Record_System
             // 検索CDの数字を読み込んで変数に格納
             // パラメータを使用してSQLで検索
             
+            // データテーブルを作る
             DataTable dt = new DataTable();
 
-                //接続情報を使ってコネクションを生成
+                // 接続情報を使ってコネクションを生成
                 using (SQLiteConnection con = new SQLiteConnection("Data Source = Rail_records_system_DB.db"))
                 {
-                    //SQL文とコネクションを設定
+                    // SQL文とコネクションを設定
                     using (SQLiteCommand cmd = new SQLiteCommand("select * from 乗車記録 where 乗車記録ID Like @検索ID", con))
 
-                    //記録タイトル,乗車駅,乗車日時,降車駅,降車日時,列車名,列車番号,乗車車両ナンバー,乗車路線,乗車距離,鉄道会社,鉄道種別,備考
+                    // 記録タイトル,乗車駅,乗車日時,降車駅,降車日時,列車名,列車番号,乗車車両ナンバー,乗車路線,乗車距離,鉄道会社,鉄道種別,備考
                     {
-                        //パラメータの作成
+                        // パラメータの作成
                         SQLiteParameter s_id   = new SQLiteParameter();
                         SQLiteParameter s_title = new SQLiteParameter();
                         SQLiteParameter s_Bsta = new SQLiteParameter();
@@ -67,7 +68,7 @@ namespace Rail_Record_System
                         SQLiteParameter s_comp = new SQLiteParameter();
                         SQLiteParameter s_cate = new SQLiteParameter();
 
-                        //パラメータ名は@を除いた名前を指定
+                        // パラメータ名の指定
                         s_id.ParameterName      = "検索ID";
                         s_title.ParameterName   = "検索タイトル";
                         s_Bsta.ParameterName    = "検索乗車駅";
@@ -82,7 +83,7 @@ namespace Rail_Record_System
                         s_comp.ParameterName    = "検索鉄道会社";
                         s_cate.ParameterName    = "検索鉄道種別";
 
-                        //パラメータの値を設定
+                        // パラメータの値を設定　テキストボックスから読み込む
                         s_id.Value = W03_id_TB.Text;
                         s_title.Value = W03_title_TB;
                         s_Bsta.Value = W03_boarding_sta_TB;
@@ -97,19 +98,19 @@ namespace Rail_Record_System
                         s_comp.Value = W03_company_TB;
                         s_cate.Value = W03_category_TB;
 
-                        //パラメータをコマンドに追加
+                        // パラメータをコマンドに追加
                         cmd.Parameters.Add(s_id);
 
-                        //SQLiteへの橋渡しのアダプターを設定
+                        // SQLiteへの橋渡しのアダプターを設定
                         SQLiteDataAdapter sda = new SQLiteDataAdapter();
 
-                        //SELECTコマンドを設定
+                        // SELECTコマンドを設定
                         sda.SelectCommand = cmd;
 
-                        //SELECTの実行及びフェッチ
+                        // SELECTの実行及びフェッチ
                         sda.Fill(dt);
 
-                        //dataGridViewに表示
+                        // dataGridViewに表示
                         dataGridView1.DataSource = dt;
                     }
                 }

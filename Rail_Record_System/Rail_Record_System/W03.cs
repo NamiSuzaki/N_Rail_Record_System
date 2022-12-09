@@ -48,6 +48,10 @@ namespace Rail_Record_System
                 // 接続情報を使ってコネクションを生成
                 using (SQLiteConnection con = new SQLiteConnection("Data Source = Rail_records_system_DB.db"))
                 {
+                    // 検索
+                    // 入ってるやつだけ条件に入れて調べたい　入ってるやつと入ってないやつをどっかで拾えないか？
+                    // nullのやつ　弾く……　みたいな……
+
                     // SQL文とコネクションを設定
                     using (SQLiteCommand cmd = new SQLiteCommand("select * from 乗車記録 where 乗車記録ID Like @検索ID", con))
 

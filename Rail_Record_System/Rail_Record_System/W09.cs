@@ -23,15 +23,18 @@ namespace Rail_Record_System
         {
             using (SQLiteConnection con = new SQLiteConnection("Data Source=Rail_records_system_DB.db"))
             {
+                // DBを開く
                 con.Open();
 
                     using (SQLiteTransaction trans = con.BeginTransaction())
                     {
                         SQLiteCommand cmd = con.CreateCommand();
+                        //cmd.CommandText = "pragma foreign_keys = true";
+                        //cmd.ExecuteNonQuery();
 
-                        // インサート
-                        // @をつけることで後述のParametersでセットした値をプログラム実行時に付加してSQLを実行できる
-                        cmd.CommandText =
+                    // インサート
+                    // @をつけることで後述のParametersでセットした値をプログラム実行時に付加してSQLを実行できる
+                    cmd.CommandText =
                             "INSERT INTO 乗車記録 " +
                             "(記録タイトル,乗車駅,乗車日時,降車駅,降車日時,列車名,列車番号,乗車車両ナンバー,乗車路線,乗車距離,鉄道会社,鉄道種別,備考)" +
                             " VALUES (@記録タイトル,@乗車駅,@乗車日時,@降車駅,@降車日時,@列車名,@列車番号,@乗車車両ナンバー,@乗車路線,@乗車距離,@鉄道会社,@鉄道種別,@備考)";
@@ -68,12 +71,19 @@ namespace Rail_Record_System
                         cmd.Parameters["鉄道種別"].Value = W09_category_TB.Text;
                         cmd.Parameters["備考"].Value = W09_note_TB.Text;
 
+                    if(String.IsNullOrEmpty(W09_title_TB.Text) || String.IsNullOrEmpty(W09_boarding_sta_TB.Text) || String.IsNullOrEmpty(W09_boarding_sta_TB.Text) || String.IsNullOrEmpty(W09_boarding_sta_TB.Text) || String.IsNullOrEmpty(W09_boarding_sta_TB.Text) || String.IsNullOrEmpty(W09_boarding_sta_TB.Text) || String.IsNullOrEmpty(W09_boarding_sta_TB.Text))
+                    {
+
+                    }
+                    else
+                    {
                         cmd.ExecuteNonQuery();
 
                         // コミット
                         // trans.commit();でDBの変更を確定
                         trans.Commit();
 
+                    }
                         // テキストボックスにデータを入力してデータ追加ボタンを押すとDBにデータが登録されます
                     }
             }

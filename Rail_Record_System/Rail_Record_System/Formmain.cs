@@ -45,10 +45,10 @@ namespace Rail_Record_System
             // Form2 f2 = new Form2();
             // f2.Show();
         }
-        
+
         private void button4_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void w011_Load(object sender, EventArgs e)
@@ -58,7 +58,7 @@ namespace Rail_Record_System
 
         private void w021_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

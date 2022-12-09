@@ -57,7 +57,19 @@ namespace Rail_Record_System
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            
+        }
 
+        // DataGridViewのセルをクリックしたら、そのセルの情報を詳細表示する
+        // とりあえずクリックしたセルのIDを表示したい　ポップアップとかでも
+        private void DataGridView1_CellContentDoubleClick(Object sender, DataGridViewCellEventArgs e)
+        {
+            System.Text.StringBuilder messageBoxCS = new System.Text.StringBuilder();
+            messageBoxCS.AppendFormat("{0} = {1}", "ColumnIndex", e.ColumnIndex);
+            messageBoxCS.AppendLine();
+            messageBoxCS.AppendFormat("{0} = {1}", "RowIndex", e.RowIndex);
+            messageBoxCS.AppendLine();
+            MessageBox.Show(messageBoxCS.ToString(), "CellDoubleClick Event");
         }
 
         // 更新ボタン押下、データ読み込み
@@ -74,6 +86,11 @@ namespace Rail_Record_System
                 adapter.Fill(dataTable);
                 dataGridView1.DataSource = dataTable;
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -12,6 +12,8 @@ namespace Rail_Record_System
 {
     public partial class W01 : UserControl
     {
+        public W03_N w03_n = null;
+
         public W01()
         {
             InitializeComponent();
@@ -21,8 +23,15 @@ namespace Rail_Record_System
         private void goW02_Click(object sender, EventArgs e)
         {
             // メインメニュー画面の非表示、一覧表示画面を表示
-            Formmain.uc_w01.Visible = false;
-            Formmain.uc_w02.Visible = true;
+            //Formmain.uc_w01.Visible = false;
+            //Formmain.uc_w02.Visible = true;
+
+            /* 二重起動防止 */
+            if (this.w03_n == null || this.w03_n.IsDisposed)
+            { /* ヌル、または破棄されていたら */
+                this.w03_n = new W03_N();
+                w03_n.Show();
+            }
         }
 
         // 乗車記録新規登録ボタン押下

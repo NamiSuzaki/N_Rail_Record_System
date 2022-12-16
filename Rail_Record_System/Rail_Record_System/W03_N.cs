@@ -11,7 +11,7 @@ using System.Data.SQLite;
 
 namespace Rail_Record_System
 {
-    public partial class W03_delete_this : Form
+    public partial class W03_N : Form
     {
         // 検索の条件文
         // これにnullの所を消したり入ってる所を付けたりしていく
@@ -35,35 +35,27 @@ namespace Rail_Record_System
         private string SQL_search_cate = " 鉄道種別 Like @検索鉄道種別";
         // public string SQL_search_text = "select * from 乗車記録 where 乗車記録ID Like @検索ID";
 
-        public W03_delete_this()
+        public W03_N()
         {
             InitializeComponent();
         }
 
-        private void W03_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void W03_id_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         // 閉じるボタン押下
-        private void gobacktoW01_Click(object sender, EventArgs e)
+        private void gobacktoW01_Click_1(object sender, EventArgs e)
         {
             //フォームを閉じる
             this.Close();
         }
 
-        // 検索ボタン押下
-        // 入ってるやつと＝のやつをさがす
+        private void gobacktoW01_Click(object sender, EventArgs e)
+        {
+            
+        }
+
         private void goW04_Click(object sender, EventArgs e)
         {
-            // 検索CDの数字を読み込んで変数に格納
-            // パラメータを使用してSQLで検索
-
+            // 検索
+            // 検索欄の情報を読み込んで、パラメータを使用してSQLで検索
             // データテーブルを作る
             DataTable search_result = new DataTable();
 
@@ -78,8 +70,8 @@ namespace Rail_Record_System
                 // 検索仕様は完全一致型
                 SQL_Edit();
 
-                // チェック用
-                DialogResult result = MessageBox.Show(SQL_search, "かくにん", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                // SQL文チェック用
+                // DialogResult result = MessageBox.Show(SQL_search, "SQL文確認", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
                 // SQL文とコネクション、パラメータを設定
                 using (SQLiteCommand cmd = new SQLiteCommand(SQL_search, con))
@@ -157,6 +149,8 @@ namespace Rail_Record_System
                     dataGridView1.DataSource = search_result;
                 }
             }
+
+            
         }
 
         private void SQL_Edit()
@@ -166,13 +160,12 @@ namespace Rail_Record_System
             {
                 SQL_search = SQL_search + SQL_search_where + SQL_search_id;
                 whereC = true;
-                // DialogResult result = MessageBox.Show(SQL_search, "かくにん", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
             // タイトルが入ってたとき
             if (!String.IsNullOrEmpty(W03_title_TB.Text))
             {
-                // whereが入ってるか入ってないかで文章が変わるので、whereスイッチでの条件分岐
+                // whereが入ってるか入ってないかでSQLの文章が変わるので、whereスイッチでの条件分岐
                 switch (whereC)
                 {
                     case true:
@@ -189,7 +182,7 @@ namespace Rail_Record_System
             // 乗車駅が入ってたとき
             if (!String.IsNullOrEmpty(W03_boarding_sta_TB.Text))
             {
-                // whereが入ってるか入ってないかで文章が変わるので、whereスイッチでの条件分岐
+                // whereが入ってるか入ってないかでSQLの文章が変わるので、whereスイッチでの条件分岐
                 switch (whereC)
                 {
                     case true:
@@ -372,41 +365,6 @@ namespace Rail_Record_System
                         break;
                 }
             }
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void W03_unit_number_TB_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void W03_name_TB_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void W03_name_LB_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void W03_lines_LB_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void W03_lines_TB_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void W03_train_number_LB_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -65,7 +65,7 @@
             // 
             this.W03_Title.AutoSize = true;
             this.W03_Title.Font = new System.Drawing.Font("MS UI Gothic", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.W03_Title.Location = new System.Drawing.Point(392, 48);
+            this.W03_Title.Location = new System.Drawing.Point(522, 48);
             this.W03_Title.Name = "W03_Title";
             this.W03_Title.Size = new System.Drawing.Size(308, 48);
             this.W03_Title.TabIndex = 1;
@@ -74,137 +74,140 @@
             // W03_id_LB
             // 
             this.W03_id_LB.AutoSize = true;
-            this.W03_id_LB.Font = new System.Drawing.Font("MS UI Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.W03_id_LB.Location = new System.Drawing.Point(40, 136);
+            this.W03_id_LB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.W03_id_LB.Location = new System.Drawing.Point(68, 165);
             this.W03_id_LB.Name = "W03_id_LB";
-            this.W03_id_LB.Size = new System.Drawing.Size(149, 28);
+            this.W03_id_LB.Size = new System.Drawing.Size(123, 23);
             this.W03_id_LB.TabIndex = 2;
             this.W03_id_LB.Text = "乗車記録ID";
             // 
             // W03_title_LB
             // 
             this.W03_title_LB.AutoSize = true;
-            this.W03_title_LB.Font = new System.Drawing.Font("MS UI Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.W03_title_LB.Location = new System.Drawing.Point(40, 192);
+            this.W03_title_LB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.W03_title_LB.Location = new System.Drawing.Point(67, 206);
             this.W03_title_LB.Name = "W03_title_LB";
-            this.W03_title_LB.Size = new System.Drawing.Size(150, 28);
+            this.W03_title_LB.Size = new System.Drawing.Size(124, 23);
             this.W03_title_LB.TabIndex = 3;
             this.W03_title_LB.Text = "記録タイトル";
             // 
             // W03_boarding_sta_LB
             // 
             this.W03_boarding_sta_LB.AutoSize = true;
-            this.W03_boarding_sta_LB.Font = new System.Drawing.Font("MS UI Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.W03_boarding_sta_LB.Location = new System.Drawing.Point(40, 248);
+            this.W03_boarding_sta_LB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.W03_boarding_sta_LB.Location = new System.Drawing.Point(112, 251);
             this.W03_boarding_sta_LB.Name = "W03_boarding_sta_LB";
-            this.W03_boarding_sta_LB.Size = new System.Drawing.Size(96, 28);
+            this.W03_boarding_sta_LB.Size = new System.Drawing.Size(79, 23);
             this.W03_boarding_sta_LB.TabIndex = 4;
             this.W03_boarding_sta_LB.Text = "乗車駅";
             // 
             // W03_exit_sta_LB
             // 
             this.W03_exit_sta_LB.AutoSize = true;
-            this.W03_exit_sta_LB.Font = new System.Drawing.Font("MS UI Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.W03_exit_sta_LB.Location = new System.Drawing.Point(40, 360);
+            this.W03_exit_sta_LB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.W03_exit_sta_LB.Location = new System.Drawing.Point(112, 299);
             this.W03_exit_sta_LB.Name = "W03_exit_sta_LB";
-            this.W03_exit_sta_LB.Size = new System.Drawing.Size(96, 28);
+            this.W03_exit_sta_LB.Size = new System.Drawing.Size(79, 23);
             this.W03_exit_sta_LB.TabIndex = 5;
             this.W03_exit_sta_LB.Text = "降車駅";
             // 
             // W03_boarding_time_LB
             // 
             this.W03_boarding_time_LB.AutoSize = true;
-            this.W03_boarding_time_LB.Font = new System.Drawing.Font("MS UI Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.W03_boarding_time_LB.Location = new System.Drawing.Point(40, 304);
+            this.W03_boarding_time_LB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.W03_boarding_time_LB.Location = new System.Drawing.Point(89, 348);
             this.W03_boarding_time_LB.Name = "W03_boarding_time_LB";
-            this.W03_boarding_time_LB.Size = new System.Drawing.Size(124, 28);
+            this.W03_boarding_time_LB.Size = new System.Drawing.Size(102, 23);
             this.W03_boarding_time_LB.TabIndex = 6;
             this.W03_boarding_time_LB.Text = "乗車日時";
             // 
             // W03_exit_time_LB
             // 
             this.W03_exit_time_LB.AutoSize = true;
-            this.W03_exit_time_LB.Font = new System.Drawing.Font("MS UI Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.W03_exit_time_LB.Location = new System.Drawing.Point(40, 416);
+            this.W03_exit_time_LB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.W03_exit_time_LB.Location = new System.Drawing.Point(89, 396);
             this.W03_exit_time_LB.Name = "W03_exit_time_LB";
-            this.W03_exit_time_LB.Size = new System.Drawing.Size(124, 28);
+            this.W03_exit_time_LB.Size = new System.Drawing.Size(102, 23);
             this.W03_exit_time_LB.TabIndex = 7;
             this.W03_exit_time_LB.Text = "降車日時";
             // 
             // W03_lines_LB
             // 
             this.W03_lines_LB.AutoSize = true;
-            this.W03_lines_LB.Font = new System.Drawing.Font("MS UI Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.W03_lines_LB.Location = new System.Drawing.Point(536, 304);
+            this.W03_lines_LB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.W03_lines_LB.Location = new System.Drawing.Point(89, 549);
             this.W03_lines_LB.Name = "W03_lines_LB";
-            this.W03_lines_LB.Size = new System.Drawing.Size(124, 28);
+            this.W03_lines_LB.Size = new System.Drawing.Size(102, 23);
             this.W03_lines_LB.TabIndex = 8;
             this.W03_lines_LB.Text = "乗車路線";
+            this.W03_lines_LB.Click += new System.EventHandler(this.W03_lines_LB_Click);
             // 
             // W03_distance_LB
             // 
             this.W03_distance_LB.AutoSize = true;
-            this.W03_distance_LB.Font = new System.Drawing.Font("MS UI Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.W03_distance_LB.Location = new System.Drawing.Point(536, 360);
+            this.W03_distance_LB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.W03_distance_LB.Location = new System.Drawing.Point(89, 645);
             this.W03_distance_LB.Name = "W03_distance_LB";
-            this.W03_distance_LB.Size = new System.Drawing.Size(124, 28);
+            this.W03_distance_LB.Size = new System.Drawing.Size(102, 23);
             this.W03_distance_LB.TabIndex = 9;
             this.W03_distance_LB.Text = "乗車距離";
             // 
             // W03_name_LB
             // 
             this.W03_name_LB.AutoSize = true;
-            this.W03_name_LB.Font = new System.Drawing.Font("MS UI Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.W03_name_LB.Location = new System.Drawing.Point(536, 136);
+            this.W03_name_LB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.W03_name_LB.Location = new System.Drawing.Point(112, 447);
             this.W03_name_LB.Name = "W03_name_LB";
-            this.W03_name_LB.Size = new System.Drawing.Size(96, 28);
+            this.W03_name_LB.Size = new System.Drawing.Size(79, 23);
             this.W03_name_LB.TabIndex = 10;
             this.W03_name_LB.Text = "列車名";
+            this.W03_name_LB.Click += new System.EventHandler(this.W03_name_LB_Click);
             // 
             // W03_train_number_LB
             // 
             this.W03_train_number_LB.AutoSize = true;
-            this.W03_train_number_LB.Font = new System.Drawing.Font("MS UI Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.W03_train_number_LB.Location = new System.Drawing.Point(536, 248);
+            this.W03_train_number_LB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.W03_train_number_LB.Location = new System.Drawing.Point(25, 596);
             this.W03_train_number_LB.Name = "W03_train_number_LB";
-            this.W03_train_number_LB.Size = new System.Drawing.Size(214, 28);
+            this.W03_train_number_LB.Size = new System.Drawing.Size(166, 23);
             this.W03_train_number_LB.TabIndex = 11;
-            this.W03_train_number_LB.Text = "乗車車両ナンバー";
+            this.W03_train_number_LB.Text = "乗車車両ﾅﾝﾊﾞｰ";
+            this.W03_train_number_LB.Click += new System.EventHandler(this.W03_train_number_LB_Click);
             // 
             // W03_unit_number_LB
             // 
             this.W03_unit_number_LB.AutoSize = true;
-            this.W03_unit_number_LB.Font = new System.Drawing.Font("MS UI Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.W03_unit_number_LB.Location = new System.Drawing.Point(536, 192);
+            this.W03_unit_number_LB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.W03_unit_number_LB.Location = new System.Drawing.Point(89, 499);
             this.W03_unit_number_LB.Name = "W03_unit_number_LB";
-            this.W03_unit_number_LB.Size = new System.Drawing.Size(124, 28);
+            this.W03_unit_number_LB.Size = new System.Drawing.Size(102, 23);
             this.W03_unit_number_LB.TabIndex = 12;
             this.W03_unit_number_LB.Text = "列車番号";
             // 
             // W03_company_LB
             // 
             this.W03_company_LB.AutoSize = true;
-            this.W03_company_LB.Font = new System.Drawing.Font("MS UI Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.W03_company_LB.Location = new System.Drawing.Point(536, 416);
+            this.W03_company_LB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.W03_company_LB.Location = new System.Drawing.Point(89, 695);
             this.W03_company_LB.Name = "W03_company_LB";
-            this.W03_company_LB.Size = new System.Drawing.Size(124, 28);
+            this.W03_company_LB.Size = new System.Drawing.Size(102, 23);
             this.W03_company_LB.TabIndex = 13;
             this.W03_company_LB.Text = "鉄道会社";
             // 
             // W03_category_LB
             // 
             this.W03_category_LB.AutoSize = true;
-            this.W03_category_LB.Font = new System.Drawing.Font("MS UI Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.W03_category_LB.Location = new System.Drawing.Point(536, 472);
+            this.W03_category_LB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.W03_category_LB.Location = new System.Drawing.Point(89, 745);
             this.W03_category_LB.Name = "W03_category_LB";
-            this.W03_category_LB.Size = new System.Drawing.Size(124, 28);
+            this.W03_category_LB.Size = new System.Drawing.Size(102, 23);
             this.W03_category_LB.TabIndex = 14;
             this.W03_category_LB.Text = "鉄道種別";
             // 
             // goW04
             // 
             this.goW04.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.goW04.Location = new System.Drawing.Point(784, 536);
+            this.goW04.Location = new System.Drawing.Point(142, 802);
             this.goW04.Name = "goW04";
             this.goW04.Size = new System.Drawing.Size(256, 112);
             this.goW04.TabIndex = 16;
@@ -215,7 +218,7 @@
             // W03_train_number_TB
             // 
             this.W03_train_number_TB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.W03_train_number_TB.Location = new System.Drawing.Point(776, 248);
+            this.W03_train_number_TB.Location = new System.Drawing.Point(215, 546);
             this.W03_train_number_TB.Name = "W03_train_number_TB";
             this.W03_train_number_TB.Size = new System.Drawing.Size(272, 29);
             this.W03_train_number_TB.TabIndex = 17;
@@ -223,23 +226,25 @@
             // W03_unit_number_TB
             // 
             this.W03_unit_number_TB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.W03_unit_number_TB.Location = new System.Drawing.Point(776, 192);
+            this.W03_unit_number_TB.Location = new System.Drawing.Point(212, 499);
             this.W03_unit_number_TB.Name = "W03_unit_number_TB";
             this.W03_unit_number_TB.Size = new System.Drawing.Size(272, 29);
             this.W03_unit_number_TB.TabIndex = 18;
+            this.W03_unit_number_TB.TextChanged += new System.EventHandler(this.W03_unit_number_TB_TextChanged);
             // 
             // W03_name_TB
             // 
             this.W03_name_TB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.W03_name_TB.Location = new System.Drawing.Point(776, 136);
+            this.W03_name_TB.Location = new System.Drawing.Point(215, 447);
             this.W03_name_TB.Name = "W03_name_TB";
             this.W03_name_TB.Size = new System.Drawing.Size(272, 29);
             this.W03_name_TB.TabIndex = 19;
+            this.W03_name_TB.TextChanged += new System.EventHandler(this.W03_name_TB_TextChanged);
             // 
             // W03_exit_time_TB
             // 
             this.W03_exit_time_TB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.W03_exit_time_TB.Location = new System.Drawing.Point(216, 416);
+            this.W03_exit_time_TB.Location = new System.Drawing.Point(215, 396);
             this.W03_exit_time_TB.Name = "W03_exit_time_TB";
             this.W03_exit_time_TB.Size = new System.Drawing.Size(272, 29);
             this.W03_exit_time_TB.TabIndex = 20;
@@ -248,7 +253,7 @@
             // W03_exit_sta_TB
             // 
             this.W03_exit_sta_TB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.W03_exit_sta_TB.Location = new System.Drawing.Point(216, 360);
+            this.W03_exit_sta_TB.Location = new System.Drawing.Point(215, 299);
             this.W03_exit_sta_TB.Name = "W03_exit_sta_TB";
             this.W03_exit_sta_TB.Size = new System.Drawing.Size(272, 29);
             this.W03_exit_sta_TB.TabIndex = 21;
@@ -256,7 +261,7 @@
             // W03_boarding_time_TB
             // 
             this.W03_boarding_time_TB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.W03_boarding_time_TB.Location = new System.Drawing.Point(216, 304);
+            this.W03_boarding_time_TB.Location = new System.Drawing.Point(215, 348);
             this.W03_boarding_time_TB.Name = "W03_boarding_time_TB";
             this.W03_boarding_time_TB.Size = new System.Drawing.Size(272, 29);
             this.W03_boarding_time_TB.TabIndex = 22;
@@ -265,7 +270,7 @@
             // W03_boarding_sta_TB
             // 
             this.W03_boarding_sta_TB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.W03_boarding_sta_TB.Location = new System.Drawing.Point(216, 248);
+            this.W03_boarding_sta_TB.Location = new System.Drawing.Point(215, 251);
             this.W03_boarding_sta_TB.Name = "W03_boarding_sta_TB";
             this.W03_boarding_sta_TB.Size = new System.Drawing.Size(272, 29);
             this.W03_boarding_sta_TB.TabIndex = 23;
@@ -273,7 +278,7 @@
             // W03_title_TB
             // 
             this.W03_title_TB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.W03_title_TB.Location = new System.Drawing.Point(216, 192);
+            this.W03_title_TB.Location = new System.Drawing.Point(215, 206);
             this.W03_title_TB.Name = "W03_title_TB";
             this.W03_title_TB.Size = new System.Drawing.Size(272, 29);
             this.W03_title_TB.TabIndex = 24;
@@ -281,7 +286,7 @@
             // W03_id_TB
             // 
             this.W03_id_TB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.W03_id_TB.Location = new System.Drawing.Point(216, 136);
+            this.W03_id_TB.Location = new System.Drawing.Point(215, 159);
             this.W03_id_TB.MaxLength = 4;
             this.W03_id_TB.Name = "W03_id_TB";
             this.W03_id_TB.Size = new System.Drawing.Size(272, 29);
@@ -291,15 +296,16 @@
             // W03_lines_TB
             // 
             this.W03_lines_TB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.W03_lines_TB.Location = new System.Drawing.Point(776, 304);
+            this.W03_lines_TB.Location = new System.Drawing.Point(215, 596);
             this.W03_lines_TB.Name = "W03_lines_TB";
             this.W03_lines_TB.Size = new System.Drawing.Size(272, 29);
             this.W03_lines_TB.TabIndex = 26;
+            this.W03_lines_TB.TextChanged += new System.EventHandler(this.W03_lines_TB_TextChanged);
             // 
             // W03_distance_TB
             // 
             this.W03_distance_TB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.W03_distance_TB.Location = new System.Drawing.Point(776, 360);
+            this.W03_distance_TB.Location = new System.Drawing.Point(219, 645);
             this.W03_distance_TB.Name = "W03_distance_TB";
             this.W03_distance_TB.Size = new System.Drawing.Size(272, 29);
             this.W03_distance_TB.TabIndex = 27;
@@ -307,7 +313,7 @@
             // W03_company_TB
             // 
             this.W03_company_TB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.W03_company_TB.Location = new System.Drawing.Point(776, 416);
+            this.W03_company_TB.Location = new System.Drawing.Point(219, 695);
             this.W03_company_TB.Name = "W03_company_TB";
             this.W03_company_TB.Size = new System.Drawing.Size(272, 29);
             this.W03_company_TB.TabIndex = 28;
@@ -315,7 +321,7 @@
             // W03_category_TB
             // 
             this.W03_category_TB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.W03_category_TB.Location = new System.Drawing.Point(776, 472);
+            this.W03_category_TB.Location = new System.Drawing.Point(219, 745);
             this.W03_category_TB.Name = "W03_category_TB";
             this.W03_category_TB.Size = new System.Drawing.Size(272, 29);
             this.W03_category_TB.TabIndex = 29;
@@ -336,12 +342,12 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(32, 528);
+            this.dataGridView1.Location = new System.Drawing.Point(530, 159);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(720, 136);
+            this.dataGridView1.Size = new System.Drawing.Size(802, 755);
             this.dataGridView1.TabIndex = 31;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -349,7 +355,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1096, 688);
+            this.ClientSize = new System.Drawing.Size(1355, 940);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.gobacktoW02);
             this.Controls.Add(this.W03_category_TB);
@@ -380,8 +386,8 @@
             this.Controls.Add(this.W03_title_LB);
             this.Controls.Add(this.W03_id_LB);
             this.Controls.Add(this.W03_Title);
-            this.MaximumSize = new System.Drawing.Size(1114, 735);
-            this.MinimumSize = new System.Drawing.Size(1114, 735);
+            this.MaximumSize = new System.Drawing.Size(1373, 987);
+            this.MinimumSize = new System.Drawing.Size(1373, 987);
             this.Name = "W03_delete_this";
             this.Text = "W03";
             this.Load += new System.EventHandler(this.W03_Load);

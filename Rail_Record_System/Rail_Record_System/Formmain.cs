@@ -65,5 +65,10 @@ namespace Rail_Record_System
         {
 
         }
+
+        private void bindingNavigator1_RefreshItems(object sender, EventArgs e)
+        {
+
+        }
     }
 }

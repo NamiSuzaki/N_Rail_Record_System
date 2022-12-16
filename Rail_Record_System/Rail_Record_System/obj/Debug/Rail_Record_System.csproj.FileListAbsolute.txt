@@ -73,3 +73,4 @@ D:\docu\N_Rail_Record_System\Rail_Record_System\Rail_Record_System\obj\Debug\Rai
 D:\docu\N_Rail_Record_System\Rail_Record_System\Rail_Record_System\obj\Debug\Rail_Record_System.csproj.CopyComplete
 D:\docu\N_Rail_Record_System\Rail_Record_System\Rail_Record_System\obj\Debug\Rail_Record_System.exe
 D:\docu\N_Rail_Record_System\Rail_Record_System\Rail_Record_System\obj\Debug\Rail_Record_System.pdb
+D:\docu\N_Rail_Record_System\Rail_Record_System\Rail_Record_System\obj\Debug\Rail_Record_System.W03_N.resources

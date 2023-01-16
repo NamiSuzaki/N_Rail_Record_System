@@ -29,7 +29,7 @@ namespace Rail_Record_System
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.W03_DateGridView = new System.Windows.Forms.DataGridView();
             this.gobacktoW01 = new System.Windows.Forms.Button();
             this.W03_category_TB = new System.Windows.Forms.TextBox();
             this.W03_company_TB = new System.Windows.Forms.TextBox();
@@ -59,21 +59,22 @@ namespace Rail_Record_System
             this.W03_title_LB = new System.Windows.Forms.Label();
             this.W03_id_LB = new System.Windows.Forms.Label();
             this.W03_Title = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.W03_DateGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // W03_DateGridView
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(510, 98);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1004, 723);
-            this.dataGridView1.TabIndex = 61;
+            this.W03_DateGridView.AllowUserToAddRows = false;
+            this.W03_DateGridView.AllowUserToDeleteRows = false;
+            this.W03_DateGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.W03_DateGridView.Location = new System.Drawing.Point(510, 98);
+            this.W03_DateGridView.Name = "W03_DateGridView";
+            this.W03_DateGridView.ReadOnly = true;
+            this.W03_DateGridView.RowHeadersWidth = 51;
+            this.W03_DateGridView.RowTemplate.Height = 24;
+            this.W03_DateGridView.Size = new System.Drawing.Size(1004, 723);
+            this.W03_DateGridView.TabIndex = 61;
+            this.W03_DateGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // gobacktoW01
             // 
@@ -210,7 +211,7 @@ namespace Rail_Record_System
             this.W03_category_LB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.W03_category_LB.Location = new System.Drawing.Point(88, 684);
             this.W03_category_LB.Name = "W03_category_LB";
-            this.W03_category_LB.Size = new System.Drawing.Size(102, 23);
+            this.W03_category_LB.Size = new System.Drawing.Size(98, 22);
             this.W03_category_LB.TabIndex = 45;
             this.W03_category_LB.Text = "鉄道種別";
             // 
@@ -220,7 +221,7 @@ namespace Rail_Record_System
             this.W03_company_LB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.W03_company_LB.Location = new System.Drawing.Point(88, 634);
             this.W03_company_LB.Name = "W03_company_LB";
-            this.W03_company_LB.Size = new System.Drawing.Size(102, 23);
+            this.W03_company_LB.Size = new System.Drawing.Size(98, 22);
             this.W03_company_LB.TabIndex = 44;
             this.W03_company_LB.Text = "鉄道会社";
             // 
@@ -230,7 +231,7 @@ namespace Rail_Record_System
             this.W03_unit_number_LB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.W03_unit_number_LB.Location = new System.Drawing.Point(88, 438);
             this.W03_unit_number_LB.Name = "W03_unit_number_LB";
-            this.W03_unit_number_LB.Size = new System.Drawing.Size(102, 23);
+            this.W03_unit_number_LB.Size = new System.Drawing.Size(98, 22);
             this.W03_unit_number_LB.TabIndex = 43;
             this.W03_unit_number_LB.Text = "列車番号";
             // 
@@ -240,7 +241,7 @@ namespace Rail_Record_System
             this.W03_train_number_LB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.W03_train_number_LB.Location = new System.Drawing.Point(24, 535);
             this.W03_train_number_LB.Name = "W03_train_number_LB";
-            this.W03_train_number_LB.Size = new System.Drawing.Size(166, 23);
+            this.W03_train_number_LB.Size = new System.Drawing.Size(158, 22);
             this.W03_train_number_LB.TabIndex = 42;
             this.W03_train_number_LB.Text = "乗車車両ﾅﾝﾊﾞｰ";
             // 
@@ -250,7 +251,7 @@ namespace Rail_Record_System
             this.W03_name_LB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.W03_name_LB.Location = new System.Drawing.Point(111, 386);
             this.W03_name_LB.Name = "W03_name_LB";
-            this.W03_name_LB.Size = new System.Drawing.Size(79, 23);
+            this.W03_name_LB.Size = new System.Drawing.Size(76, 22);
             this.W03_name_LB.TabIndex = 41;
             this.W03_name_LB.Text = "列車名";
             // 
@@ -260,7 +261,7 @@ namespace Rail_Record_System
             this.W03_distance_LB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.W03_distance_LB.Location = new System.Drawing.Point(88, 584);
             this.W03_distance_LB.Name = "W03_distance_LB";
-            this.W03_distance_LB.Size = new System.Drawing.Size(102, 23);
+            this.W03_distance_LB.Size = new System.Drawing.Size(98, 22);
             this.W03_distance_LB.TabIndex = 40;
             this.W03_distance_LB.Text = "乗車距離";
             // 
@@ -270,7 +271,7 @@ namespace Rail_Record_System
             this.W03_lines_LB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.W03_lines_LB.Location = new System.Drawing.Point(88, 488);
             this.W03_lines_LB.Name = "W03_lines_LB";
-            this.W03_lines_LB.Size = new System.Drawing.Size(102, 23);
+            this.W03_lines_LB.Size = new System.Drawing.Size(98, 22);
             this.W03_lines_LB.TabIndex = 39;
             this.W03_lines_LB.Text = "乗車路線";
             // 
@@ -280,7 +281,7 @@ namespace Rail_Record_System
             this.W03_exit_time_LB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.W03_exit_time_LB.Location = new System.Drawing.Point(88, 335);
             this.W03_exit_time_LB.Name = "W03_exit_time_LB";
-            this.W03_exit_time_LB.Size = new System.Drawing.Size(102, 23);
+            this.W03_exit_time_LB.Size = new System.Drawing.Size(98, 22);
             this.W03_exit_time_LB.TabIndex = 38;
             this.W03_exit_time_LB.Text = "降車日時";
             // 
@@ -290,7 +291,7 @@ namespace Rail_Record_System
             this.W03_boarding_time_LB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.W03_boarding_time_LB.Location = new System.Drawing.Point(88, 287);
             this.W03_boarding_time_LB.Name = "W03_boarding_time_LB";
-            this.W03_boarding_time_LB.Size = new System.Drawing.Size(102, 23);
+            this.W03_boarding_time_LB.Size = new System.Drawing.Size(98, 22);
             this.W03_boarding_time_LB.TabIndex = 37;
             this.W03_boarding_time_LB.Text = "乗車日時";
             // 
@@ -300,7 +301,7 @@ namespace Rail_Record_System
             this.W03_exit_sta_LB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.W03_exit_sta_LB.Location = new System.Drawing.Point(111, 238);
             this.W03_exit_sta_LB.Name = "W03_exit_sta_LB";
-            this.W03_exit_sta_LB.Size = new System.Drawing.Size(79, 23);
+            this.W03_exit_sta_LB.Size = new System.Drawing.Size(76, 22);
             this.W03_exit_sta_LB.TabIndex = 36;
             this.W03_exit_sta_LB.Text = "降車駅";
             // 
@@ -310,7 +311,7 @@ namespace Rail_Record_System
             this.W03_boarding_sta_LB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.W03_boarding_sta_LB.Location = new System.Drawing.Point(111, 190);
             this.W03_boarding_sta_LB.Name = "W03_boarding_sta_LB";
-            this.W03_boarding_sta_LB.Size = new System.Drawing.Size(79, 23);
+            this.W03_boarding_sta_LB.Size = new System.Drawing.Size(76, 22);
             this.W03_boarding_sta_LB.TabIndex = 35;
             this.W03_boarding_sta_LB.Text = "乗車駅";
             // 
@@ -320,7 +321,7 @@ namespace Rail_Record_System
             this.W03_title_LB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.W03_title_LB.Location = new System.Drawing.Point(66, 145);
             this.W03_title_LB.Name = "W03_title_LB";
-            this.W03_title_LB.Size = new System.Drawing.Size(124, 23);
+            this.W03_title_LB.Size = new System.Drawing.Size(119, 22);
             this.W03_title_LB.TabIndex = 34;
             this.W03_title_LB.Text = "記録タイトル";
             // 
@@ -330,7 +331,7 @@ namespace Rail_Record_System
             this.W03_id_LB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.W03_id_LB.Location = new System.Drawing.Point(67, 104);
             this.W03_id_LB.Name = "W03_id_LB";
-            this.W03_id_LB.Size = new System.Drawing.Size(123, 23);
+            this.W03_id_LB.Size = new System.Drawing.Size(117, 22);
             this.W03_id_LB.TabIndex = 33;
             this.W03_id_LB.Text = "乗車記録ID";
             // 
@@ -349,7 +350,7 @@ namespace Rail_Record_System
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1539, 842);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.W03_DateGridView);
             this.Controls.Add(this.gobacktoW01);
             this.Controls.Add(this.W03_category_TB);
             this.Controls.Add(this.W03_company_TB);
@@ -383,7 +384,7 @@ namespace Rail_Record_System
             this.MinimumSize = new System.Drawing.Size(1557, 889);
             this.Name = "W03_N";
             this.Text = "W03_N";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.W03_DateGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -391,7 +392,7 @@ namespace Rail_Record_System
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView W03_DateGridView;
         private System.Windows.Forms.Button gobacktoW01;
         private System.Windows.Forms.TextBox W03_category_TB;
         private System.Windows.Forms.TextBox W03_company_TB;

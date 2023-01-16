@@ -13,12 +13,20 @@ namespace Rail_Record_System
 {
     public partial class W03_N : Form
     {
+        public W05_N w05_n = null;
+
         // 検索の条件文
         // これにnullの所を消したり入ってる所を付けたりしていく
         public string SQL_search = "select 乗車記録ID,記録タイトル,列車名,乗車駅,乗車日時,降車駅,降車日時 from 乗車記録";
         private string SQL_search_where = " where";
         private string SQL_search_and = " and";
         private bool whereC = false;
+
+        /*
+         検索仕様（理想）（いったん後回し）
+         あいまい：タイトル、列車名、ナンバー、列番、会社
+         完全一致：ID、駅、日時、路線、距離、種別
+        */
 
         private string SQL_search_id = " 乗車記録ID Like @検索ID";
         private string SQL_search_title = " 記録タイトル Like @検索タイトル";
@@ -66,8 +74,6 @@ namespace Rail_Record_System
                 whereC = false;
 
                 // 検索
-                // 検索欄に入ってないやつは拾わない　入ってるやつは拾う
-                // 検索仕様は完全一致型
                 SQL_Edit();
 
                 // SQL文チェック用
@@ -146,15 +152,20 @@ namespace Rail_Record_System
                     sda.Fill(search_result);
 
                     // dataGridViewに表示
-                    dataGridView1.DataSource = search_result;
+                    W03_DateGridView.DataSource = search_result;
                 }
             }
-
-            
         }
 
+        // 検索欄に入ってないやつは拾わない　入ってるやつは拾う
         private void SQL_Edit()
         {
+            /*
+             検索仕様
+             完全一致：ID、駅名、日時、
+             あいまい：タイトル、ナンバー、列番、会社
+            */
+
             // IDが入ってたとき
             if (!String.IsNullOrEmpty(W03_id_TB.Text))
             {
@@ -364,6 +375,30 @@ namespace Rail_Record_System
                         whereC = true;
                         break;
                 }
+            }
+        }
+
+        // クリックしたセルの取得
+        // CellContentなので、セルそのものじゃなく『セル内の値』をクリックすると反応する
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //string s1 = $"クリックされた位置 {e.RowIndex}列目 {e.ColumnIndex}行目";
+            // 行・列のヘッダーをクリックした場合は流す
+            if (e.ColumnIndex == -1 || e.RowIndex == -1)
+            {
+                return;
+            }
+
+            string s2 = $"{W03_DateGridView[0, e.RowIndex].Value}";
+            string ai = s2;
+            MessageBox.Show(ai, "情報",MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            // 二重起動防止
+            // null、または画面が破棄されていたら開く
+            if (this.w05_n == null || this.w05_n.IsDisposed)
+            {
+                this.w05_n = new W05_N();
+                w05_n.Show();
             }
         }
     }

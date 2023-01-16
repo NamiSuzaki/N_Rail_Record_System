@@ -13,6 +13,7 @@ namespace Rail_Record_System
     public partial class W01 : UserControl
     {
         public W03_N w03_n = null;
+        public W09 w09 = null;
 
         public W01()
         {
@@ -20,15 +21,13 @@ namespace Rail_Record_System
         }
 
         // 『乗車記録確認・修正・削除』ボタン押下
+        // 一覧＆検索画面を表示
         private void goW02_Click(object sender, EventArgs e)
         {
-            // メインメニュー画面の非表示、一覧表示画面を表示
-            //Formmain.uc_w01.Visible = false;
-            //Formmain.uc_w02.Visible = true;
-
-            /* 二重起動防止 */
+            // 二重起動防止
+            // null、または画面が破棄されていたら開く
             if (this.w03_n == null || this.w03_n.IsDisposed)
-            { /* ヌル、または破棄されていたら */
+            {
                 this.w03_n = new W03_N();
                 w03_n.Show();
             }
@@ -38,8 +37,13 @@ namespace Rail_Record_System
         // 新規登録フォームを開く
         private void goW09_Click(object sender, EventArgs e)
         {
-            W09 w09 = new W09();
-            w09.Show();
+            // 二重起動防止
+            // null、または画面が破棄されていたら開く
+            if (this.w09 == null || this.w09.IsDisposed)
+            {
+                W09 w09 = new W09();
+                w09.Show();
+            }
         }
 
         // 『アプリ終了』ボタン押下

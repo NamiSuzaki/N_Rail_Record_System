@@ -127,6 +127,18 @@
     <Compile Include="W03_N.Designer.cs">
       <DependentUpon>W03_N.cs</DependentUpon>
     </Compile>
+    <Compile Include="W05.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="W05.Designer.cs">
+      <DependentUpon>W05.cs</DependentUpon>
+    </Compile>
+    <Compile Include="W05_N.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="W05_N.Designer.cs">
+      <DependentUpon>W05_N.cs</DependentUpon>
+    </Compile>
     <Compile Include="W09.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +174,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="W03_N.resx">
       <DependentUpon>W03_N.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="W05.resx">
+      <DependentUpon>W05.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="W05_N.resx">
+      <DependentUpon>W05_N.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="W09.resx">
       <DependentUpon>W09.cs</DependentUpon>

@@ -239,5 +239,10 @@ namespace Rail_Record_System
                 }
             }
         }
+
+        private void w011_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

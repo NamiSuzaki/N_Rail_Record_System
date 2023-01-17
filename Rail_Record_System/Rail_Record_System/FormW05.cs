@@ -21,13 +21,32 @@ namespace Rail_Record_System
         // IDをW03_Nから受け取るためのハコ
         private static string ToGetID;
 
+        // W03⇒W05か、登録直後の詳細画面を出すのかで処理を分けるためのスイッチ
+        public static bool W05SW;
+
         // 起動時
         private void FormW05_Load_1(object sender, EventArgs e)
         {
             // ここで検索するためのIDをW03_Nから受け取る
             ToGetID = W03_N.search_ID;
 
-            // 検索
+            // 登録直後の詳細画面スイッチの正負を受け取る
+            W05SW = W09.W05_11SW;
+
+            if(W05SW == false)
+            {
+                // 検索
+                Search_OnlyOne();
+            }
+            else
+            {
+                // 新規登録詳細
+                Search_Ringo();
+            }
+        }
+
+        private void Search_OnlyOne()
+        {
             // ↑のIDをパラメータに入れ込んでSQLで検索
             // データテーブルを作る
             DataTable search_result = new DataTable();
@@ -62,6 +81,76 @@ namespace Rail_Record_System
                     sda.Fill(search_result);
 
                     var D_result = search_result;
+
+                    // 結果をそれぞれのLabelに表示していく
+                    // ID
+                    W05_id_D.Text = D_result.Rows[0][0].ToString();
+                    //タイトル
+                    W05_title_D.Text = D_result.Rows[0][1].ToString();
+                    //乗車駅
+                    W05_boarding_sta_D.Text = D_result.Rows[0][2].ToString();
+                    //乗車日時
+                    W05_boarding_time_D.Text = D_result.Rows[0][4].ToString();
+                    //降車駅
+                    W05_exit_sta_D.Text = D_result.Rows[0][3].ToString();
+                    //降車日時
+                    W05_exit_time_D.Text = D_result.Rows[0][5].ToString();
+                    //列車名
+                    W05_name_D.Text = D_result.Rows[0][8].ToString();
+                    //列車番号
+                    W05_unit_number_D.Text = D_result.Rows[0][10].ToString();
+                    //乗車路線
+                    W05_lines_D.Text = D_result.Rows[0][6].ToString();
+                    //乗車車両ナンバー
+                    W05_train_number_D.Text = D_result.Rows[0][9].ToString();
+                    //乗車距離
+                    W05_distance_D.Text = D_result.Rows[0][7].ToString();
+                    //鉄道会社
+                    W05_company_D.Text = D_result.Rows[0][11].ToString();
+                    //鉄道種別
+                    W05_category_D.Text = D_result.Rows[0][12].ToString();
+                    //備考
+                    W05_note_D.Text = D_result.Rows[0][13].ToString();
+                }
+            }
+        }
+
+        private void Search_Ringo()
+        {
+            // ↑のIDをパラメータに入れ込んでSQLで検索
+            // データテーブルを作る
+            DataTable search_result_N = new DataTable();
+
+            // 接続情報を使ってコネクションを生成
+            using (SQLiteConnection con = new SQLiteConnection("Data Source = Rail_records_system_DB.db"))
+            {
+                string SQL_search = "select * from 乗車記録 where 乗車記録ID Like @検索ID";
+
+                // SQL文とコネクション、パラメータを設定
+                using (SQLiteCommand cmd = new SQLiteCommand(SQL_search, con))
+                {
+                    // パラメータの作成
+                    SQLiteParameter s_id = new SQLiteParameter();
+
+                    // パラメータ名の指定
+                    s_id.ParameterName = "検索ID";
+
+                    // パラメータの値を設定　テキストボックスから読み込む
+                    s_id.Value = ToGetID;
+
+                    // パラメータをコマンドに追加
+                    cmd.Parameters.Add(s_id);
+
+                    // SQLiteへの橋渡しのアダプターを設定
+                    SQLiteDataAdapter sda = new SQLiteDataAdapter();
+
+                    // SELECTコマンドを設定
+                    sda.SelectCommand = cmd;
+
+                    // SELECTの実行及びフェッチ
+                    sda.Fill(search_result_N);
+
+                    var D_result = search_result_N;
 
                     // 結果をそれぞれのLabelに表示していく
                     // ID

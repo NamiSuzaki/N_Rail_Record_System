@@ -69,9 +69,9 @@ namespace Rail_Record_System
             this.W05_category_D.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.W05_category_D.Location = new System.Drawing.Point(224, 608);
             this.W05_category_D.Name = "W05_category_D";
-            this.W05_category_D.Size = new System.Drawing.Size(36, 22);
+            this.W05_category_D.Size = new System.Drawing.Size(54, 22);
             this.W05_category_D.TabIndex = 122;
-            this.W05_category_D.Text = "JR";
+            this.W05_category_D.Text = "××";
             // 
             // W05_company_D
             // 
@@ -79,9 +79,9 @@ namespace Rail_Record_System
             this.W05_company_D.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.W05_company_D.Location = new System.Drawing.Point(224, 568);
             this.W05_company_D.Name = "W05_company_D";
-            this.W05_company_D.Size = new System.Drawing.Size(102, 22);
+            this.W05_company_D.Size = new System.Drawing.Size(120, 22);
             this.W05_company_D.TabIndex = 121;
-            this.W05_company_D.Text = "JR北海道";
+            this.W05_company_D.Text = "×××××";
             // 
             // W05_unit_number_D
             // 
@@ -89,9 +89,9 @@ namespace Rail_Record_System
             this.W05_unit_number_D.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.W05_unit_number_D.Location = new System.Drawing.Point(224, 407);
             this.W05_unit_number_D.Name = "W05_unit_number_D";
-            this.W05_unit_number_D.Size = new System.Drawing.Size(68, 22);
+            this.W05_unit_number_D.Size = new System.Drawing.Size(98, 22);
             this.W05_unit_number_D.TabIndex = 120;
-            this.W05_unit_number_D.Text = "D2023";
+            this.W05_unit_number_D.Text = "××××";
             // 
             // W05_train_number_D
             // 
@@ -99,9 +99,9 @@ namespace Rail_Record_System
             this.W05_train_number_D.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.W05_train_number_D.Location = new System.Drawing.Point(224, 488);
             this.W05_train_number_D.Name = "W05_train_number_D";
-            this.W05_train_number_D.Size = new System.Drawing.Size(190, 22);
+            this.W05_train_number_D.Size = new System.Drawing.Size(197, 22);
             this.W05_train_number_D.TabIndex = 119;
-            this.W05_train_number_D.Text = "キハ××-××××";
+            this.W05_train_number_D.Text = "××××-××××";
             // 
             // W05_name_D
             // 
@@ -111,7 +111,7 @@ namespace Rail_Record_System
             this.W05_name_D.Name = "W05_name_D";
             this.W05_name_D.Size = new System.Drawing.Size(98, 22);
             this.W05_name_D.TabIndex = 118;
-            this.W05_name_D.Text = "普通列車";
+            this.W05_name_D.Text = "××××";
             // 
             // W05_distance_D
             // 
@@ -119,9 +119,9 @@ namespace Rail_Record_System
             this.W05_distance_D.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.W05_distance_D.Location = new System.Drawing.Point(224, 528);
             this.W05_distance_D.Name = "W05_distance_D";
-            this.W05_distance_D.Size = new System.Drawing.Size(158, 22);
+            this.W05_distance_D.Size = new System.Drawing.Size(124, 22);
             this.W05_distance_D.TabIndex = 117;
-            this.W05_distance_D.Text = "×××.××キロ";
+            this.W05_distance_D.Text = "×××.××";
             this.W05_distance_D.Click += new System.EventHandler(this.label8_Click);
             // 
             // W05_lines_D
@@ -130,9 +130,9 @@ namespace Rail_Record_System
             this.W05_lines_D.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.W05_lines_D.Location = new System.Drawing.Point(224, 448);
             this.W05_lines_D.Name = "W05_lines_D";
-            this.W05_lines_D.Size = new System.Drawing.Size(102, 22);
+            this.W05_lines_D.Size = new System.Drawing.Size(76, 22);
             this.W05_lines_D.TabIndex = 116;
-            this.W05_lines_D.Text = "JR千歳線";
+            this.W05_lines_D.Text = "×××";
             this.W05_lines_D.Click += new System.EventHandler(this.label9_Click);
             // 
             // W05_exit_time_D
@@ -141,9 +141,9 @@ namespace Rail_Record_System
             this.W05_exit_time_D.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.W05_exit_time_D.Location = new System.Drawing.Point(224, 328);
             this.W05_exit_time_D.Name = "W05_exit_time_D";
-            this.W05_exit_time_D.Size = new System.Drawing.Size(175, 22);
+            this.W05_exit_time_D.Size = new System.Drawing.Size(307, 22);
             this.W05_exit_time_D.TabIndex = 115;
-            this.W05_exit_time_D.Text = "2000-00-00 00:00";
+            this.W05_exit_time_D.Text = "××××-××-×× ××:××";
             // 
             // W05_boarding_time_D
             // 
@@ -151,9 +151,9 @@ namespace Rail_Record_System
             this.W05_boarding_time_D.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.W05_boarding_time_D.Location = new System.Drawing.Point(224, 248);
             this.W05_boarding_time_D.Name = "W05_boarding_time_D";
-            this.W05_boarding_time_D.Size = new System.Drawing.Size(175, 22);
+            this.W05_boarding_time_D.Size = new System.Drawing.Size(307, 22);
             this.W05_boarding_time_D.TabIndex = 114;
-            this.W05_boarding_time_D.Text = "2000-00-00 00:00";
+            this.W05_boarding_time_D.Text = "××××-××-×× ××:××";
             // 
             // W05_exit_sta_D
             // 
@@ -163,7 +163,7 @@ namespace Rail_Record_System
             this.W05_exit_sta_D.Name = "W05_exit_sta_D";
             this.W05_exit_sta_D.Size = new System.Drawing.Size(76, 22);
             this.W05_exit_sta_D.TabIndex = 113;
-            this.W05_exit_sta_D.Text = "苫小牧";
+            this.W05_exit_sta_D.Text = "×××";
             // 
             // W05_boarding_sta_D
             // 
@@ -173,7 +173,7 @@ namespace Rail_Record_System
             this.W05_boarding_sta_D.Name = "W05_boarding_sta_D";
             this.W05_boarding_sta_D.Size = new System.Drawing.Size(76, 22);
             this.W05_boarding_sta_D.TabIndex = 112;
-            this.W05_boarding_sta_D.Text = "北広島";
+            this.W05_boarding_sta_D.Text = "×××";
             // 
             // W05_title_D
             // 
@@ -183,7 +183,7 @@ namespace Rail_Record_System
             this.W05_title_D.Name = "W05_title_D";
             this.W05_title_D.Size = new System.Drawing.Size(54, 22);
             this.W05_title_D.TabIndex = 111;
-            this.W05_title_D.Text = "無題";
+            this.W05_title_D.Text = "××";
             // 
             // W05_id_D
             // 
@@ -391,7 +391,7 @@ namespace Rail_Record_System
             this.W05_note_D.ReadOnly = true;
             this.W05_note_D.Size = new System.Drawing.Size(392, 136);
             this.W05_note_D.TabIndex = 123;
-            this.W05_note_D.Text = "備考備考備考備考備考備考備考備考備考備考備考備考備考備考備考備考備考備考備考備考備考備考備考備考備考備考備考備考備考";
+            this.W05_note_D.Text = "××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××";
             // 
             // FormW05
             // 

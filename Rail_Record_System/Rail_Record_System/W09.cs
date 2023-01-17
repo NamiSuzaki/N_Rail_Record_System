@@ -13,6 +13,11 @@ namespace Rail_Record_System
 {
     public partial class W09 : Form
     {
+        public FormW05 w05_11 = null;
+
+        // W05フォームを使って登録直後の詳細画面を出すためのフラグ
+        public static bool W05_11SW = false;
+
         public W09()
         {
             InitializeComponent();
@@ -74,84 +79,93 @@ namespace Rail_Record_System
 
                     // 最低限　乗車駅・降車駅が入ってなかったら登録を弾く
                     if (String.IsNullOrEmpty(W09_boarding_sta_TB.Text) || String.IsNullOrEmpty(W09_exit_sta_TB.Text))
-                    {
-                        // 登録時エラーポップアップの表示
-                        DialogResult result = MessageBox.Show("乗車駅・降車駅を入力してください","登録内容エラー",MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    }
+                        {
+                            // 登録時エラーポップアップの表示
+                            DialogResult result = MessageBox.Show("乗車駅・降車駅を入力してください","登録内容エラー",MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        }
                     // 乗車駅・降車駅が入ってたらとりあえず登録
                     else
+                        {
+                            // 未入力の所の登録内容を置き換える
+
+                            // ・記録タイトル「無題」
+                            if (String.IsNullOrEmpty(W09_title_TB.Text))
+                            {
+                                cmd.Parameters["記録タイトル"].Value = "無題";
+                            }
+
+                            // ・乗車時刻「2000-00-00 00:00」
+                            if (String.IsNullOrEmpty(W09_boarding_time_TB.Text))
+                            {
+                                cmd.Parameters["乗車日時"].Value = "2000-00-00 00:00";
+                            }
+
+                            // ・降車時刻「2000-00-00 00:00」
+                            if (String.IsNullOrEmpty(W09_exit_time_TB.Text))
+                            {
+                                cmd.Parameters["降車日時"].Value = "2000-00-00 00:00";
+                            }
+
+                            // ・乗車路線「-」
+                            if (String.IsNullOrEmpty(W09_lines_TB.Text))
+                            {
+                                cmd.Parameters["乗車路線"].Value = "-";
+                            }
+
+                            // ・乗車距離「0」
+                            if (String.IsNullOrEmpty(W09_distance_TB.Text))
+                            {
+                                cmd.Parameters["乗車距離"].Value = 0;
+                            }
+
+                            // ・列車名「列車名なし」
+                            if (String.IsNullOrEmpty(W09_name_TB.Text))
+                            {
+                                cmd.Parameters["列車名"].Value = "列車名なし";
+                            }
+
+                            // ・乗車車両ナンバー「-」
+                            if (String.IsNullOrEmpty(W09_train_number_TB.Text))
+                            {
+                                cmd.Parameters["乗車車両ナンバー"].Value = "-";
+                            }
+
+                            // ・列車番号「-」
+                            if (String.IsNullOrEmpty(W09_unit_number_TB.Text))
+                            {
+                                cmd.Parameters["列車番号"].Value = "-";
+                            }
+
+                            // ・鉄道会社「-」
+                            if (String.IsNullOrEmpty(W09_company_TB.Text))
+                            {
+                                cmd.Parameters["鉄道会社"].Value = "-";
+                            }
+
+                            // ・鉄道種別「-」
+                            if (String.IsNullOrEmpty(W09_category_TB.Text))
+                            {
+                                cmd.Parameters["鉄道種別"].Value = "-";
+                            }
+
+                            // 実行
+                            cmd.ExecuteNonQuery();
+
+                            // コミット　trans.commit();でDBの変更を確定
+                            trans.Commit();
+                        }
+
+                    W05_11SW = true;
+
+                    // 登録したデータの詳細を表示する
+                    // 二重起動防止
+                    // null、または画面が破棄されていたら開く
+                    if (this.w05_11 == null || this.w05_11.IsDisposed)
                     {
-                        // 未入力の所の登録内容を置き換える
-
-                        // ・記録タイトル「無題」
-                        if (String.IsNullOrEmpty(W09_title_TB.Text))
-                        {
-                            cmd.Parameters["記録タイトル"].Value = "無題";
-                        }
-
-                        // ・乗車時刻「2000-00-00 00:00」
-                        if (String.IsNullOrEmpty(W09_boarding_time_TB.Text))
-                        {
-                            cmd.Parameters["乗車日時"].Value = "2000-00-00 00:00";
-                        }
-
-                        // ・降車時刻「2000-00-00 00:00」
-                        if (String.IsNullOrEmpty(W09_exit_time_TB.Text))
-                        {
-                            cmd.Parameters["降車日時"].Value = "2000-00-00 00:00";
-                        }
-
-                        // ・乗車路線「-」
-                        if (String.IsNullOrEmpty(W09_lines_TB.Text))
-                        {
-                            cmd.Parameters["乗車路線"].Value = "-";
-                        }
-
-                        // ・乗車距離「0」
-                        if (String.IsNullOrEmpty(W09_distance_TB.Text))
-                        {
-                            cmd.Parameters["乗車距離"].Value = 0;
-                        }
-
-                        // ・列車名「列車名なし」
-                        if (String.IsNullOrEmpty(W09_name_TB.Text))
-                        {
-                            cmd.Parameters["列車名"].Value = "列車名なし";
-                        }
-
-                        // ・乗車車両ナンバー「-」
-                        if (String.IsNullOrEmpty(W09_train_number_TB.Text))
-                        {
-                            cmd.Parameters["乗車車両ナンバー"].Value = "-";
-                        }
-
-                        // ・列車番号「-」
-                        if (String.IsNullOrEmpty(W09_unit_number_TB.Text))
-                        {
-                            cmd.Parameters["列車番号"].Value = "-";
-                        }
-
-                        // ・鉄道会社「-」
-                        if (String.IsNullOrEmpty(W09_company_TB.Text))
-                        {
-                            cmd.Parameters["鉄道会社"].Value = "-";
-                        }
-
-                        // ・鉄道種別「-」
-                        if (String.IsNullOrEmpty(W09_category_TB.Text))
-                        {
-                            cmd.Parameters["鉄道種別"].Value = "-";
-                        }
-
-                        // 実行
-                        cmd.ExecuteNonQuery();
-
-                        // コミット　trans.commit();でDBの変更を確定
-                        trans.Commit();
-
+                        this.w05_11 = new FormW05();
+                        w05_11.Show();
                     }
-                        // テキストボックスにデータを入力してデータ追加ボタンを押すとDBにデータが登録されます
-                    }
+                }
             }
         }
 

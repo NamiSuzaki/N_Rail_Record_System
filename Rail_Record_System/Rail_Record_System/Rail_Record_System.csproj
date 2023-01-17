@@ -133,11 +133,11 @@
     <Compile Include="W05.Designer.cs">
       <DependentUpon>W05.cs</DependentUpon>
     </Compile>
-    <Compile Include="W05_N.cs">
+    <Compile Include="FormW05.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="W05_N.Designer.cs">
-      <DependentUpon>W05_N.cs</DependentUpon>
+    <Compile Include="FormW05.Designer.cs">
+      <DependentUpon>FormW05.cs</DependentUpon>
     </Compile>
     <Compile Include="W09.cs">
       <SubType>Form</SubType>
@@ -178,8 +178,8 @@
     <EmbeddedResource Include="W05.resx">
       <DependentUpon>W05.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="W05_N.resx">
-      <DependentUpon>W05_N.cs</DependentUpon>
+    <EmbeddedResource Include="FormW05.resx">
+      <DependentUpon>FormW05.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="W09.resx">
       <DependentUpon>W09.cs</DependentUpon>

@@ -13,7 +13,7 @@ namespace Rail_Record_System
 {
     public partial class W03_N : Form
     {
-        public W05_N w05_n = null;
+        public FormW05 w05_n = null;
 
         // 検索の条件文
         // これにnullの所を消したり入ってる所を付けたりしていく
@@ -42,6 +42,9 @@ namespace Rail_Record_System
         private string SQL_search_comp = " 鉄道会社 Like @検索鉄道会社";
         private string SQL_search_cate = " 鉄道種別 Like @検索鉄道種別";
         // public string SQL_search_text = "select * from 乗車記録 where 乗車記録ID Like @検索ID";
+
+        // W05でのID検索用変数
+        public static string search_ID;
 
         public W03_N()
         {
@@ -389,15 +392,14 @@ namespace Rail_Record_System
                 return;
             }
 
-            string s2 = $"{W03_DateGridView[0, e.RowIndex].Value}";
-            string ai = s2;
-            MessageBox.Show(ai, "情報",MessageBoxButtons.OK, MessageBoxIcon.Information);
+            search_ID = $"{W03_DateGridView[0, e.RowIndex].Value}";
+            MessageBox.Show(search_ID, "情報",MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             // 二重起動防止
             // null、または画面が破棄されていたら開く
             if (this.w05_n == null || this.w05_n.IsDisposed)
             {
-                this.w05_n = new W05_N();
+                this.w05_n = new FormW05();
                 w05_n.Show();
             }
         }

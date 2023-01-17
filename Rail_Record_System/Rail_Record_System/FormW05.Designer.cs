@@ -61,7 +61,6 @@ namespace Rail_Record_System
             this.W05_id_LB = new System.Windows.Forms.Label();
             this.W05_Title = new System.Windows.Forms.Label();
             this.W05_note_D = new System.Windows.Forms.TextBox();
-            this.W05_ID_dayo = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // W05_category_D
@@ -394,23 +393,11 @@ namespace Rail_Record_System
             this.W05_note_D.TabIndex = 123;
             this.W05_note_D.Text = "備考備考備考備考備考備考備考備考備考備考備考備考備考備考備考備考備考備考備考備考備考備考備考備考備考備考備考備考備考";
             // 
-            // W05_ID_dayo
-            // 
-            this.W05_ID_dayo.AutoSize = true;
-            this.W05_ID_dayo.Font = new System.Drawing.Font("MS UI Gothic", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.W05_ID_dayo.Location = new System.Drawing.Point(520, 240);
-            this.W05_ID_dayo.Name = "W05_ID_dayo";
-            this.W05_ID_dayo.Size = new System.Drawing.Size(63, 48);
-            this.W05_ID_dayo.TabIndex = 124;
-            this.W05_ID_dayo.Text = "ID";
-            this.W05_ID_dayo.Click += new System.EventHandler(this.W05_ID_dayo_Click);
-            // 
             // FormW05
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(643, 807);
-            this.Controls.Add(this.W05_ID_dayo);
             this.Controls.Add(this.W05_note_D);
             this.Controls.Add(this.W05_category_D);
             this.Controls.Add(this.W05_company_D);
@@ -486,6 +473,5 @@ namespace Rail_Record_System
         private System.Windows.Forms.Label W05_id_LB;
         private System.Windows.Forms.Label W05_Title;
         private System.Windows.Forms.TextBox W05_note_D;
-        private System.Windows.Forms.Label W05_ID_dayo;
     }
 }

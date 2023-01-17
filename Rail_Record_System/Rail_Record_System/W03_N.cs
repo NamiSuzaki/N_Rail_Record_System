@@ -385,7 +385,6 @@ namespace Rail_Record_System
         // CellContentなので、セルそのものじゃなく『セル内の値』をクリックすると反応する
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            //string s1 = $"クリックされた位置 {e.RowIndex}列目 {e.ColumnIndex}行目";
             // 行・列のヘッダーをクリックした場合は流す
             if (e.ColumnIndex == -1 || e.RowIndex == -1)
             {
@@ -393,7 +392,6 @@ namespace Rail_Record_System
             }
 
             search_ID = $"{W03_DateGridView[0, e.RowIndex].Value}";
-            MessageBox.Show(search_ID, "情報",MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             // 二重起動防止
             // null、または画面が破棄されていたら開く

@@ -58,8 +58,6 @@ namespace Rail_Record_System
             this.W09_Title = new System.Windows.Forms.Label();
             this.W09_note_LB = new System.Windows.Forms.Label();
             this.W09_note_TB = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // W09_close
@@ -80,7 +78,6 @@ namespace Rail_Record_System
             this.W09_category_TB.Name = "W09_category_TB";
             this.W09_category_TB.Size = new System.Drawing.Size(272, 29);
             this.W09_category_TB.TabIndex = 58;
-            this.W09_category_TB.TextChanged += new System.EventHandler(this.W09_category_TB_TextChanged);
             // 
             // W09_company_TB
             // 
@@ -329,39 +326,15 @@ namespace Rail_Record_System
             this.W09_note_TB.Location = new System.Drawing.Point(624, 416);
             this.W09_note_TB.Multiline = true;
             this.W09_note_TB.Name = "W09_note_TB";
+            this.W09_note_TB.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.W09_note_TB.Size = new System.Drawing.Size(424, 88);
             this.W09_note_TB.TabIndex = 61;
-            this.W09_note_TB.TextChanged += new System.EventHandler(this.W09_note_TB_TextChanged);
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button1.Location = new System.Drawing.Point(56, 536);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(128, 112);
-            this.button1.TabIndex = 62;
-            this.button1.Text = "テーブル\r\n作成";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button2.Location = new System.Drawing.Point(200, 536);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(128, 112);
-            this.button2.TabIndex = 63;
-            this.button2.Text = "テーブル削除";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // W09
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1096, 688);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.W09_note_TB);
             this.Controls.Add(this.W09_note_LB);
             this.Controls.Add(this.W09_close);
@@ -395,7 +368,6 @@ namespace Rail_Record_System
             this.MinimumSize = new System.Drawing.Size(1114, 735);
             this.Name = "W09";
             this.Text = "W09";
-            this.Load += new System.EventHandler(this.W09_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -432,7 +404,5 @@ namespace Rail_Record_System
         private System.Windows.Forms.Label W09_Title;
         private System.Windows.Forms.Label W09_note_LB;
         private System.Windows.Forms.TextBox W09_note_TB;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
     }
 }

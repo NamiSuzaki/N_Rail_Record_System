@@ -139,11 +139,23 @@
     <Compile Include="FormW05.Designer.cs">
       <DependentUpon>FormW05.cs</DependentUpon>
     </Compile>
+    <Compile Include="W06.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="W06.Designer.cs">
+      <DependentUpon>W06.cs</DependentUpon>
+    </Compile>
     <Compile Include="W09.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="W09.Designer.cs">
       <DependentUpon>W09.cs</DependentUpon>
+    </Compile>
+    <Compile Include="W11.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="W11.Designer.cs">
+      <DependentUpon>W11.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Formmain.resx">
       <DependentUpon>Formmain.cs</DependentUpon>
@@ -181,8 +193,14 @@
     <EmbeddedResource Include="FormW05.resx">
       <DependentUpon>FormW05.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="W06.resx">
+      <DependentUpon>W06.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="W09.resx">
       <DependentUpon>W09.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="W11.resx">
+      <DependentUpon>W11.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

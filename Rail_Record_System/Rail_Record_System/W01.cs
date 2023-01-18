@@ -51,7 +51,7 @@ namespace Rail_Record_System
         {
             // アプリ終了確認ダイアログの表示
             DialogResult result = MessageBox.Show
-                ("アプリケーションを終了しますか？", "アプリケーションの終了", MessageBoxButtons.YesNo);
+                ("アプリケーションを終了しますか？", "アプリケーションの終了", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             // 『はい』を選択
             if (result == System.Windows.Forms.DialogResult.Yes)

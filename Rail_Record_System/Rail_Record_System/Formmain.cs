@@ -38,14 +38,6 @@ namespace Rail_Record_System
             uc_w02.Visible = false;
         }
 
-        // 起動時
-        // テストフォームの表示
-        private void Formmain_Load(object sender, EventArgs e)
-        {
-            // Form2 f2 = new Form2();
-            // f2.Show();
-        }
-
         private void button4_Click(object sender, EventArgs e)
         {
 

@@ -50,7 +50,6 @@ namespace Rail_Record_System
             this.MinimumSize = new System.Drawing.Size(960, 640);
             this.Name = "Formmain";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Formmain_Load);
             this.ResumeLayout(false);
 
         }

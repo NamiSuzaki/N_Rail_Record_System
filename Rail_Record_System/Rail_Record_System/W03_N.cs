@@ -58,11 +58,6 @@ namespace Rail_Record_System
             this.Close();
         }
 
-        private void gobacktoW01_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void goW04_Click(object sender, EventArgs e)
         {
             // 検索
@@ -78,9 +73,6 @@ namespace Rail_Record_System
 
                 // 検索
                 SQL_Edit();
-
-                // SQL文チェック用
-                // DialogResult result = MessageBox.Show(SQL_search, "SQL文確認", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
                 // SQL文とコネクション、パラメータを設定
                 using (SQLiteCommand cmd = new SQLiteCommand(SQL_search, con))
@@ -393,13 +385,55 @@ namespace Rail_Record_System
 
             search_ID = $"{W03_DateGridView[0, e.RowIndex].Value}";
 
-            // 二重起動防止
-            // null、または画面が破棄されていたら開く
+            // 二重起動防止　既に開かれていた場合は一度閉じて開き直す
+            if (this.w05_n != null)
+            {
+                // フォームを閉じる
+                this.w05_n.Close();
+            }
+            // フォームを開く
             if (this.w05_n == null || this.w05_n.IsDisposed)
             {
                 this.w05_n = new FormW05();
                 w05_n.Show();
             }
+        }
+
+        // 最初開いた時の全記録一覧表示
+        private void W03_N_Load(object sender, EventArgs e)
+        {
+            // データテーブルを作る
+            DataTable search_result = new DataTable();
+
+            // 接続情報を使ってコネクションを生成
+            using (SQLiteConnection con = new SQLiteConnection("Data Source = Rail_records_system_DB.db"))
+            {
+                SQL_search = "select 乗車記録ID,記録タイトル,列車名,乗車駅,乗車日時,降車駅,降車日時 from 乗車記録";
+                whereC = false;
+
+                // SQL文とコネクション、パラメータを設定
+                using (SQLiteCommand cmd = new SQLiteCommand(SQL_search, con))
+                {
+                    // SQLiteへの橋渡しのアダプターを設定
+                    SQLiteDataAdapter sda = new SQLiteDataAdapter();
+
+                    // SELECTコマンドを設定
+                    sda.SelectCommand = cmd;
+
+                    // SELECTの実行及びフェッチ
+                    sda.Fill(search_result);
+
+                    // dataGridViewに表示
+                    W03_DateGridView.DataSource = search_result;
+                }
+            }
+        }
+
+        // 閉じるボタン押下
+        private void gobacktoW01_Click(object sender, EventArgs e)
+        {
+            //フォームを閉じる
+            this.Close();
         }
     }
 }

@@ -85,7 +85,7 @@ namespace Rail_Record_System
             this.gobacktoW01.TabIndex = 60;
             this.gobacktoW01.Text = "閉じる";
             this.gobacktoW01.UseVisualStyleBackColor = true;
-            this.gobacktoW01.Click += new System.EventHandler(this.gobacktoW01_Click_1);
+            this.gobacktoW01.Click += new System.EventHandler(this.gobacktoW01_Click);
             // 
             // W03_category_TB
             // 
@@ -339,7 +339,7 @@ namespace Rail_Record_System
             // 
             this.W03_Title.AutoSize = true;
             this.W03_Title.Font = new System.Drawing.Font("MS UI Gothic", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.W03_Title.Location = new System.Drawing.Point(533, 25);
+            this.W03_Title.Location = new System.Drawing.Point(608, 24);
             this.W03_Title.Name = "W03_Title";
             this.W03_Title.Size = new System.Drawing.Size(308, 48);
             this.W03_Title.TabIndex = 32;
@@ -384,6 +384,7 @@ namespace Rail_Record_System
             this.MinimumSize = new System.Drawing.Size(1557, 889);
             this.Name = "W03_N";
             this.Text = "W03_N";
+            this.Load += new System.EventHandler(this.W03_N_Load);
             ((System.ComponentModel.ISupportInitialize)(this.W03_DateGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

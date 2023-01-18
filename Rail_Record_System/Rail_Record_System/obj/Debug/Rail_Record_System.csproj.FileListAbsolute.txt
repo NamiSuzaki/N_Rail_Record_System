@@ -77,3 +77,5 @@ D:\docu\N_Rail_Record_System\Rail_Record_System\Rail_Record_System\obj\Debug\Rai
 C:\Users\s20217061.STD\Documents\N_Rail_Record_System\Rail_Record_System\Rail_Record_System\obj\Debug\Rail_Record_System.W03_N.resources
 C:\Users\s20217061.STD\Documents\N_Rail_Record_System\Rail_Record_System\Rail_Record_System\obj\Debug\Rail_Record_System.W05.resources
 C:\Users\s20217061.STD\Documents\N_Rail_Record_System\Rail_Record_System\Rail_Record_System\obj\Debug\Rail_Record_System.FormW05.resources
+C:\Users\s20217061.STD\Documents\N_Rail_Record_System\Rail_Record_System\Rail_Record_System\obj\Debug\Rail_Record_System.W11.resources
+C:\Users\s20217061.STD\Documents\N_Rail_Record_System\Rail_Record_System\Rail_Record_System\obj\Debug\Rail_Record_System.W06.resources

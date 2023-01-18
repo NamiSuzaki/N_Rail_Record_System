@@ -122,7 +122,6 @@ namespace Rail_Record_System
             this.W05_distance_D.Size = new System.Drawing.Size(124, 22);
             this.W05_distance_D.TabIndex = 117;
             this.W05_distance_D.Text = "×××.××";
-            this.W05_distance_D.Click += new System.EventHandler(this.label8_Click);
             // 
             // W05_lines_D
             // 
@@ -133,7 +132,6 @@ namespace Rail_Record_System
             this.W05_lines_D.Size = new System.Drawing.Size(76, 22);
             this.W05_lines_D.TabIndex = 116;
             this.W05_lines_D.Text = "×××";
-            this.W05_lines_D.Click += new System.EventHandler(this.label9_Click);
             // 
             // W05_exit_time_D
             // 
@@ -194,7 +192,6 @@ namespace Rail_Record_System
             this.W05_id_D.Size = new System.Drawing.Size(54, 22);
             this.W05_id_D.TabIndex = 110;
             this.W05_id_D.Text = "××";
-            this.W05_id_D.Click += new System.EventHandler(this.label15_Click);
             // 
             // W05_note_LB
             // 
@@ -298,7 +295,6 @@ namespace Rail_Record_System
             this.W05_distance_LB.Size = new System.Drawing.Size(98, 22);
             this.W05_distance_LB.TabIndex = 100;
             this.W05_distance_LB.Text = "乗車距離";
-            this.W05_distance_LB.Click += new System.EventHandler(this.W05_distance_LB_Click);
             // 
             // W05_lines_LB
             // 
@@ -309,7 +305,6 @@ namespace Rail_Record_System
             this.W05_lines_LB.Size = new System.Drawing.Size(98, 22);
             this.W05_lines_LB.TabIndex = 99;
             this.W05_lines_LB.Text = "乗車路線";
-            this.W05_lines_LB.Click += new System.EventHandler(this.W05_lines_LB_Click);
             // 
             // W05_exit_time_LB
             // 
@@ -360,7 +355,6 @@ namespace Rail_Record_System
             this.W05_title_LB.Size = new System.Drawing.Size(119, 22);
             this.W05_title_LB.TabIndex = 94;
             this.W05_title_LB.Text = "記録タイトル";
-            this.W05_title_LB.Click += new System.EventHandler(this.W03_title_LB_Click);
             // 
             // W05_id_LB
             // 
@@ -389,9 +383,10 @@ namespace Rail_Record_System
             this.W05_note_D.Multiline = true;
             this.W05_note_D.Name = "W05_note_D";
             this.W05_note_D.ReadOnly = true;
+            this.W05_note_D.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.W05_note_D.Size = new System.Drawing.Size(392, 136);
             this.W05_note_D.TabIndex = 123;
-            this.W05_note_D.Text = "××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××";
+            this.W05_note_D.Text = "××××××××××××××××××××××××××××××";
             // 
             // FormW05
             // 

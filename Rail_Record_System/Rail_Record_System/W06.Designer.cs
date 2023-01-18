@@ -90,6 +90,7 @@ namespace Rail_Record_System
             this.W06_close.TabIndex = 89;
             this.W06_close.Text = "閉じる";
             this.W06_close.UseVisualStyleBackColor = true;
+            this.W06_close.Click += new System.EventHandler(this.W06_close_Click);
             // 
             // W09_category_TB
             // 
@@ -208,6 +209,7 @@ namespace Rail_Record_System
             this.W09_register.TabIndex = 76;
             this.W09_register.Text = "修正";
             this.W09_register.UseVisualStyleBackColor = true;
+            this.W09_register.Click += new System.EventHandler(this.W09_register_Click);
             // 
             // W06_category_LB
             // 
@@ -377,6 +379,7 @@ namespace Rail_Record_System
             this.MinimumSize = new System.Drawing.Size(1114, 735);
             this.Name = "W06";
             this.Text = "W06";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.W06_FormClosing);
             this.Load += new System.EventHandler(this.W06_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

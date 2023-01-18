@@ -13,7 +13,7 @@ namespace Rail_Record_System
 {
     public partial class W03_N : Form
     {
-        public FormW05 w05_n = null;
+        public W05 w05_n = null;
 
         // 検索の条件文
         // これにnullの所を消したり入ってる所を付けたりしていく
@@ -394,7 +394,7 @@ namespace Rail_Record_System
             // フォームを開く
             if (this.w05_n == null || this.w05_n.IsDisposed)
             {
-                this.w05_n = new FormW05();
+                this.w05_n = new W05();
                 w05_n.Show();
             }
         }

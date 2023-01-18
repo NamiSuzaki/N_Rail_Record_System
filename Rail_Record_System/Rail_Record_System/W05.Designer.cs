@@ -3,15 +3,15 @@ namespace Rail_Record_System
 {
     partial class W05
     {
-        /// <summary> 
-        /// 必要なデザイナー変数です。
+        /// <summary>
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary> 
-        /// 使用中のリソースをすべてクリーンアップします。
+        /// <summary>
+        /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">マネージド リソースを破棄する場合は true を指定し、その他の場合は false を指定します。</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -21,447 +21,452 @@ namespace Rail_Record_System
             base.Dispose(disposing);
         }
 
-        #region コンポーネント デザイナーで生成されたコード
+        #region Windows Form Designer generated code
 
-        /// <summary> 
-        /// デザイナー サポートに必要なメソッドです。このメソッドの内容を 
-        /// コード エディターで変更しないでください。
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
+            this.W05_category_D = new System.Windows.Forms.Label();
+            this.W05_company_D = new System.Windows.Forms.Label();
+            this.W05_unit_number_D = new System.Windows.Forms.Label();
+            this.W05_train_number_D = new System.Windows.Forms.Label();
+            this.W05_name_D = new System.Windows.Forms.Label();
+            this.W05_distance_D = new System.Windows.Forms.Label();
+            this.W05_lines_D = new System.Windows.Forms.Label();
+            this.W05_exit_time_D = new System.Windows.Forms.Label();
+            this.W05_boarding_time_D = new System.Windows.Forms.Label();
+            this.W05_exit_sta_D = new System.Windows.Forms.Label();
+            this.W05_boarding_sta_D = new System.Windows.Forms.Label();
+            this.W05_title_D = new System.Windows.Forms.Label();
+            this.W05_id_D = new System.Windows.Forms.Label();
+            this.W05_note_LB = new System.Windows.Forms.Label();
+            this.CloseW05 = new System.Windows.Forms.Button();
+            this.goW07_8 = new System.Windows.Forms.Button();
+            this.goW06 = new System.Windows.Forms.Button();
+            this.W05_category_LB = new System.Windows.Forms.Label();
+            this.W05_company_LB = new System.Windows.Forms.Label();
+            this.W05_unit_number_LB = new System.Windows.Forms.Label();
+            this.W05_train_number_LB = new System.Windows.Forms.Label();
+            this.W05_name_LB = new System.Windows.Forms.Label();
+            this.W05_distance_LB = new System.Windows.Forms.Label();
+            this.W05_lines_LB = new System.Windows.Forms.Label();
+            this.W05_exit_time_LB = new System.Windows.Forms.Label();
+            this.W05_boarding_time_LB = new System.Windows.Forms.Label();
+            this.W05_exit_sta_LB = new System.Windows.Forms.Label();
+            this.W05_boarding_sta_LB = new System.Windows.Forms.Label();
+            this.W05_title_LB = new System.Windows.Forms.Label();
+            this.W05_id_LB = new System.Windows.Forms.Label();
             this.W05_Title = new System.Windows.Forms.Label();
-            this.goW04 = new System.Windows.Forms.Button();
-            this.W03_category_LB = new System.Windows.Forms.Label();
-            this.W03_company_LB = new System.Windows.Forms.Label();
-            this.W03_unit_number_LB = new System.Windows.Forms.Label();
-            this.W03_train_number_LB = new System.Windows.Forms.Label();
-            this.W03_name_LB = new System.Windows.Forms.Label();
-            this.W03_distance_LB = new System.Windows.Forms.Label();
-            this.W03_lines_LB = new System.Windows.Forms.Label();
-            this.W03_exit_time_LB = new System.Windows.Forms.Label();
-            this.W03_boarding_time_LB = new System.Windows.Forms.Label();
-            this.W03_exit_sta_LB = new System.Windows.Forms.Label();
-            this.W03_boarding_sta_LB = new System.Windows.Forms.Label();
-            this.W03_title_LB = new System.Windows.Forms.Label();
-            this.W03_id_LB = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.W05_note_D = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
+            // 
+            // W05_category_D
+            // 
+            this.W05_category_D.AutoSize = true;
+            this.W05_category_D.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.W05_category_D.Location = new System.Drawing.Point(224, 608);
+            this.W05_category_D.Name = "W05_category_D";
+            this.W05_category_D.Size = new System.Drawing.Size(54, 22);
+            this.W05_category_D.TabIndex = 122;
+            this.W05_category_D.Text = "××";
+            // 
+            // W05_company_D
+            // 
+            this.W05_company_D.AutoSize = true;
+            this.W05_company_D.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.W05_company_D.Location = new System.Drawing.Point(224, 568);
+            this.W05_company_D.Name = "W05_company_D";
+            this.W05_company_D.Size = new System.Drawing.Size(120, 22);
+            this.W05_company_D.TabIndex = 121;
+            this.W05_company_D.Text = "×××××";
+            // 
+            // W05_unit_number_D
+            // 
+            this.W05_unit_number_D.AutoSize = true;
+            this.W05_unit_number_D.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.W05_unit_number_D.Location = new System.Drawing.Point(224, 407);
+            this.W05_unit_number_D.Name = "W05_unit_number_D";
+            this.W05_unit_number_D.Size = new System.Drawing.Size(98, 22);
+            this.W05_unit_number_D.TabIndex = 120;
+            this.W05_unit_number_D.Text = "××××";
+            // 
+            // W05_train_number_D
+            // 
+            this.W05_train_number_D.AutoSize = true;
+            this.W05_train_number_D.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.W05_train_number_D.Location = new System.Drawing.Point(224, 488);
+            this.W05_train_number_D.Name = "W05_train_number_D";
+            this.W05_train_number_D.Size = new System.Drawing.Size(197, 22);
+            this.W05_train_number_D.TabIndex = 119;
+            this.W05_train_number_D.Text = "××××-××××";
+            // 
+            // W05_name_D
+            // 
+            this.W05_name_D.AutoSize = true;
+            this.W05_name_D.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.W05_name_D.Location = new System.Drawing.Point(224, 368);
+            this.W05_name_D.Name = "W05_name_D";
+            this.W05_name_D.Size = new System.Drawing.Size(98, 22);
+            this.W05_name_D.TabIndex = 118;
+            this.W05_name_D.Text = "××××";
+            // 
+            // W05_distance_D
+            // 
+            this.W05_distance_D.AutoSize = true;
+            this.W05_distance_D.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.W05_distance_D.Location = new System.Drawing.Point(224, 528);
+            this.W05_distance_D.Name = "W05_distance_D";
+            this.W05_distance_D.Size = new System.Drawing.Size(124, 22);
+            this.W05_distance_D.TabIndex = 117;
+            this.W05_distance_D.Text = "×××.××";
+            // 
+            // W05_lines_D
+            // 
+            this.W05_lines_D.AutoSize = true;
+            this.W05_lines_D.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.W05_lines_D.Location = new System.Drawing.Point(224, 448);
+            this.W05_lines_D.Name = "W05_lines_D";
+            this.W05_lines_D.Size = new System.Drawing.Size(76, 22);
+            this.W05_lines_D.TabIndex = 116;
+            this.W05_lines_D.Text = "×××";
+            // 
+            // W05_exit_time_D
+            // 
+            this.W05_exit_time_D.AutoSize = true;
+            this.W05_exit_time_D.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.W05_exit_time_D.Location = new System.Drawing.Point(224, 328);
+            this.W05_exit_time_D.Name = "W05_exit_time_D";
+            this.W05_exit_time_D.Size = new System.Drawing.Size(307, 22);
+            this.W05_exit_time_D.TabIndex = 115;
+            this.W05_exit_time_D.Text = "××××-××-×× ××:××";
+            // 
+            // W05_boarding_time_D
+            // 
+            this.W05_boarding_time_D.AutoSize = true;
+            this.W05_boarding_time_D.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.W05_boarding_time_D.Location = new System.Drawing.Point(224, 248);
+            this.W05_boarding_time_D.Name = "W05_boarding_time_D";
+            this.W05_boarding_time_D.Size = new System.Drawing.Size(307, 22);
+            this.W05_boarding_time_D.TabIndex = 114;
+            this.W05_boarding_time_D.Text = "××××-××-×× ××:××";
+            // 
+            // W05_exit_sta_D
+            // 
+            this.W05_exit_sta_D.AutoSize = true;
+            this.W05_exit_sta_D.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.W05_exit_sta_D.Location = new System.Drawing.Point(224, 288);
+            this.W05_exit_sta_D.Name = "W05_exit_sta_D";
+            this.W05_exit_sta_D.Size = new System.Drawing.Size(76, 22);
+            this.W05_exit_sta_D.TabIndex = 113;
+            this.W05_exit_sta_D.Text = "×××";
+            // 
+            // W05_boarding_sta_D
+            // 
+            this.W05_boarding_sta_D.AutoSize = true;
+            this.W05_boarding_sta_D.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.W05_boarding_sta_D.Location = new System.Drawing.Point(224, 208);
+            this.W05_boarding_sta_D.Name = "W05_boarding_sta_D";
+            this.W05_boarding_sta_D.Size = new System.Drawing.Size(76, 22);
+            this.W05_boarding_sta_D.TabIndex = 112;
+            this.W05_boarding_sta_D.Text = "×××";
+            // 
+            // W05_title_D
+            // 
+            this.W05_title_D.AutoSize = true;
+            this.W05_title_D.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.W05_title_D.Location = new System.Drawing.Point(224, 168);
+            this.W05_title_D.Name = "W05_title_D";
+            this.W05_title_D.Size = new System.Drawing.Size(54, 22);
+            this.W05_title_D.TabIndex = 111;
+            this.W05_title_D.Text = "××";
+            // 
+            // W05_id_D
+            // 
+            this.W05_id_D.AutoSize = true;
+            this.W05_id_D.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.W05_id_D.Location = new System.Drawing.Point(224, 128);
+            this.W05_id_D.Name = "W05_id_D";
+            this.W05_id_D.Size = new System.Drawing.Size(54, 22);
+            this.W05_id_D.TabIndex = 110;
+            this.W05_id_D.Text = "××";
+            // 
+            // W05_note_LB
+            // 
+            this.W05_note_LB.AutoSize = true;
+            this.W05_note_LB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.W05_note_LB.Location = new System.Drawing.Point(40, 648);
+            this.W05_note_LB.Name = "W05_note_LB";
+            this.W05_note_LB.Size = new System.Drawing.Size(54, 22);
+            this.W05_note_LB.TabIndex = 109;
+            this.W05_note_LB.Text = "備考";
+            // 
+            // CloseW05
+            // 
+            this.CloseW05.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.CloseW05.Location = new System.Drawing.Point(40, 40);
+            this.CloseW05.Name = "CloseW05";
+            this.CloseW05.Size = new System.Drawing.Size(88, 48);
+            this.CloseW05.TabIndex = 108;
+            this.CloseW05.Text = "閉じる";
+            this.CloseW05.UseVisualStyleBackColor = true;
+            this.CloseW05.Click += new System.EventHandler(this.CloseW05_Click);
+            // 
+            // goW07_8
+            // 
+            this.goW07_8.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.goW07_8.Location = new System.Drawing.Point(488, 136);
+            this.goW07_8.Name = "goW07_8";
+            this.goW07_8.Size = new System.Drawing.Size(120, 80);
+            this.goW07_8.TabIndex = 107;
+            this.goW07_8.Text = "削除";
+            this.goW07_8.UseVisualStyleBackColor = true;
+            this.goW07_8.Click += new System.EventHandler(this.goW07_8_Click);
+            // 
+            // goW06
+            // 
+            this.goW06.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.goW06.Location = new System.Drawing.Point(488, 32);
+            this.goW06.Name = "goW06";
+            this.goW06.Size = new System.Drawing.Size(120, 80);
+            this.goW06.TabIndex = 106;
+            this.goW06.Text = "修正";
+            this.goW06.UseVisualStyleBackColor = true;
+            this.goW06.Click += new System.EventHandler(this.goW06_Click);
+            // 
+            // W05_category_LB
+            // 
+            this.W05_category_LB.AutoSize = true;
+            this.W05_category_LB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.W05_category_LB.Location = new System.Drawing.Point(40, 608);
+            this.W05_category_LB.Name = "W05_category_LB";
+            this.W05_category_LB.Size = new System.Drawing.Size(98, 22);
+            this.W05_category_LB.TabIndex = 105;
+            this.W05_category_LB.Text = "鉄道種別";
+            // 
+            // W05_company_LB
+            // 
+            this.W05_company_LB.AutoSize = true;
+            this.W05_company_LB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.W05_company_LB.Location = new System.Drawing.Point(40, 568);
+            this.W05_company_LB.Name = "W05_company_LB";
+            this.W05_company_LB.Size = new System.Drawing.Size(98, 22);
+            this.W05_company_LB.TabIndex = 104;
+            this.W05_company_LB.Text = "鉄道会社";
+            // 
+            // W05_unit_number_LB
+            // 
+            this.W05_unit_number_LB.AutoSize = true;
+            this.W05_unit_number_LB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.W05_unit_number_LB.Location = new System.Drawing.Point(40, 408);
+            this.W05_unit_number_LB.Name = "W05_unit_number_LB";
+            this.W05_unit_number_LB.Size = new System.Drawing.Size(98, 22);
+            this.W05_unit_number_LB.TabIndex = 103;
+            this.W05_unit_number_LB.Text = "列車番号";
+            // 
+            // W05_train_number_LB
+            // 
+            this.W05_train_number_LB.AutoSize = true;
+            this.W05_train_number_LB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.W05_train_number_LB.Location = new System.Drawing.Point(40, 488);
+            this.W05_train_number_LB.Name = "W05_train_number_LB";
+            this.W05_train_number_LB.Size = new System.Drawing.Size(158, 22);
+            this.W05_train_number_LB.TabIndex = 102;
+            this.W05_train_number_LB.Text = "乗車車両ﾅﾝﾊﾞｰ";
+            // 
+            // W05_name_LB
+            // 
+            this.W05_name_LB.AutoSize = true;
+            this.W05_name_LB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.W05_name_LB.Location = new System.Drawing.Point(40, 368);
+            this.W05_name_LB.Name = "W05_name_LB";
+            this.W05_name_LB.Size = new System.Drawing.Size(76, 22);
+            this.W05_name_LB.TabIndex = 101;
+            this.W05_name_LB.Text = "列車名";
+            // 
+            // W05_distance_LB
+            // 
+            this.W05_distance_LB.AutoSize = true;
+            this.W05_distance_LB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.W05_distance_LB.Location = new System.Drawing.Point(40, 528);
+            this.W05_distance_LB.Name = "W05_distance_LB";
+            this.W05_distance_LB.Size = new System.Drawing.Size(98, 22);
+            this.W05_distance_LB.TabIndex = 100;
+            this.W05_distance_LB.Text = "乗車距離";
+            // 
+            // W05_lines_LB
+            // 
+            this.W05_lines_LB.AutoSize = true;
+            this.W05_lines_LB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.W05_lines_LB.Location = new System.Drawing.Point(40, 448);
+            this.W05_lines_LB.Name = "W05_lines_LB";
+            this.W05_lines_LB.Size = new System.Drawing.Size(98, 22);
+            this.W05_lines_LB.TabIndex = 99;
+            this.W05_lines_LB.Text = "乗車路線";
+            // 
+            // W05_exit_time_LB
+            // 
+            this.W05_exit_time_LB.AutoSize = true;
+            this.W05_exit_time_LB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.W05_exit_time_LB.Location = new System.Drawing.Point(40, 328);
+            this.W05_exit_time_LB.Name = "W05_exit_time_LB";
+            this.W05_exit_time_LB.Size = new System.Drawing.Size(98, 22);
+            this.W05_exit_time_LB.TabIndex = 98;
+            this.W05_exit_time_LB.Text = "降車日時";
+            // 
+            // W05_boarding_time_LB
+            // 
+            this.W05_boarding_time_LB.AutoSize = true;
+            this.W05_boarding_time_LB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.W05_boarding_time_LB.Location = new System.Drawing.Point(40, 248);
+            this.W05_boarding_time_LB.Name = "W05_boarding_time_LB";
+            this.W05_boarding_time_LB.Size = new System.Drawing.Size(98, 22);
+            this.W05_boarding_time_LB.TabIndex = 97;
+            this.W05_boarding_time_LB.Text = "乗車日時";
+            // 
+            // W05_exit_sta_LB
+            // 
+            this.W05_exit_sta_LB.AutoSize = true;
+            this.W05_exit_sta_LB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.W05_exit_sta_LB.Location = new System.Drawing.Point(40, 288);
+            this.W05_exit_sta_LB.Name = "W05_exit_sta_LB";
+            this.W05_exit_sta_LB.Size = new System.Drawing.Size(76, 22);
+            this.W05_exit_sta_LB.TabIndex = 96;
+            this.W05_exit_sta_LB.Text = "降車駅";
+            // 
+            // W05_boarding_sta_LB
+            // 
+            this.W05_boarding_sta_LB.AutoSize = true;
+            this.W05_boarding_sta_LB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.W05_boarding_sta_LB.Location = new System.Drawing.Point(40, 208);
+            this.W05_boarding_sta_LB.Name = "W05_boarding_sta_LB";
+            this.W05_boarding_sta_LB.Size = new System.Drawing.Size(76, 22);
+            this.W05_boarding_sta_LB.TabIndex = 95;
+            this.W05_boarding_sta_LB.Text = "乗車駅";
+            // 
+            // W05_title_LB
+            // 
+            this.W05_title_LB.AutoSize = true;
+            this.W05_title_LB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.W05_title_LB.Location = new System.Drawing.Point(40, 168);
+            this.W05_title_LB.Name = "W05_title_LB";
+            this.W05_title_LB.Size = new System.Drawing.Size(119, 22);
+            this.W05_title_LB.TabIndex = 94;
+            this.W05_title_LB.Text = "記録タイトル";
+            // 
+            // W05_id_LB
+            // 
+            this.W05_id_LB.AutoSize = true;
+            this.W05_id_LB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.W05_id_LB.Location = new System.Drawing.Point(40, 128);
+            this.W05_id_LB.Name = "W05_id_LB";
+            this.W05_id_LB.Size = new System.Drawing.Size(117, 22);
+            this.W05_id_LB.TabIndex = 93;
+            this.W05_id_LB.Text = "乗車記録ID";
             // 
             // W05_Title
             // 
             this.W05_Title.AutoSize = true;
             this.W05_Title.Font = new System.Drawing.Font("MS UI Gothic", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.W05_Title.Location = new System.Drawing.Point(128, 32);
+            this.W05_Title.Location = new System.Drawing.Point(152, 40);
             this.W05_Title.Name = "W05_Title";
             this.W05_Title.Size = new System.Drawing.Size(308, 48);
-            this.W05_Title.TabIndex = 33;
+            this.W05_Title.TabIndex = 92;
             this.W05_Title.Text = "乗車記録詳細";
-            this.W05_Title.Click += new System.EventHandler(this.W03_Title_Click);
             // 
-            // goW04
+            // W05_note_D
             // 
-            this.goW04.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.goW04.Location = new System.Drawing.Point(136, 816);
-            this.goW04.Name = "goW04";
-            this.goW04.Size = new System.Drawing.Size(120, 80);
-            this.goW04.TabIndex = 74;
-            this.goW04.Text = "修正";
-            this.goW04.UseVisualStyleBackColor = true;
-            this.goW04.Click += new System.EventHandler(this.goW04_Click);
-            // 
-            // W03_category_LB
-            // 
-            this.W03_category_LB.AutoSize = true;
-            this.W03_category_LB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.W03_category_LB.Location = new System.Drawing.Point(48, 712);
-            this.W03_category_LB.Name = "W03_category_LB";
-            this.W03_category_LB.Size = new System.Drawing.Size(98, 22);
-            this.W03_category_LB.TabIndex = 73;
-            this.W03_category_LB.Text = "鉄道種別";
-            // 
-            // W03_company_LB
-            // 
-            this.W03_company_LB.AutoSize = true;
-            this.W03_company_LB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.W03_company_LB.Location = new System.Drawing.Point(48, 662);
-            this.W03_company_LB.Name = "W03_company_LB";
-            this.W03_company_LB.Size = new System.Drawing.Size(98, 22);
-            this.W03_company_LB.TabIndex = 72;
-            this.W03_company_LB.Text = "鉄道会社";
-            // 
-            // W03_unit_number_LB
-            // 
-            this.W03_unit_number_LB.AutoSize = true;
-            this.W03_unit_number_LB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.W03_unit_number_LB.Location = new System.Drawing.Point(48, 466);
-            this.W03_unit_number_LB.Name = "W03_unit_number_LB";
-            this.W03_unit_number_LB.Size = new System.Drawing.Size(98, 22);
-            this.W03_unit_number_LB.TabIndex = 71;
-            this.W03_unit_number_LB.Text = "列車番号";
-            // 
-            // W03_train_number_LB
-            // 
-            this.W03_train_number_LB.AutoSize = true;
-            this.W03_train_number_LB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.W03_train_number_LB.Location = new System.Drawing.Point(48, 563);
-            this.W03_train_number_LB.Name = "W03_train_number_LB";
-            this.W03_train_number_LB.Size = new System.Drawing.Size(158, 22);
-            this.W03_train_number_LB.TabIndex = 70;
-            this.W03_train_number_LB.Text = "乗車車両ﾅﾝﾊﾞｰ";
-            // 
-            // W03_name_LB
-            // 
-            this.W03_name_LB.AutoSize = true;
-            this.W03_name_LB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.W03_name_LB.Location = new System.Drawing.Point(48, 415);
-            this.W03_name_LB.Name = "W03_name_LB";
-            this.W03_name_LB.Size = new System.Drawing.Size(76, 22);
-            this.W03_name_LB.TabIndex = 69;
-            this.W03_name_LB.Text = "列車名";
-            // 
-            // W03_distance_LB
-            // 
-            this.W03_distance_LB.AutoSize = true;
-            this.W03_distance_LB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.W03_distance_LB.Location = new System.Drawing.Point(48, 612);
-            this.W03_distance_LB.Name = "W03_distance_LB";
-            this.W03_distance_LB.Size = new System.Drawing.Size(98, 22);
-            this.W03_distance_LB.TabIndex = 68;
-            this.W03_distance_LB.Text = "乗車距離";
-            // 
-            // W03_lines_LB
-            // 
-            this.W03_lines_LB.AutoSize = true;
-            this.W03_lines_LB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.W03_lines_LB.Location = new System.Drawing.Point(48, 516);
-            this.W03_lines_LB.Name = "W03_lines_LB";
-            this.W03_lines_LB.Size = new System.Drawing.Size(98, 22);
-            this.W03_lines_LB.TabIndex = 67;
-            this.W03_lines_LB.Text = "乗車路線";
-            // 
-            // W03_exit_time_LB
-            // 
-            this.W03_exit_time_LB.AutoSize = true;
-            this.W03_exit_time_LB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.W03_exit_time_LB.Location = new System.Drawing.Point(48, 363);
-            this.W03_exit_time_LB.Name = "W03_exit_time_LB";
-            this.W03_exit_time_LB.Size = new System.Drawing.Size(98, 22);
-            this.W03_exit_time_LB.TabIndex = 66;
-            this.W03_exit_time_LB.Text = "降車日時";
-            // 
-            // W03_boarding_time_LB
-            // 
-            this.W03_boarding_time_LB.AutoSize = true;
-            this.W03_boarding_time_LB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.W03_boarding_time_LB.Location = new System.Drawing.Point(48, 315);
-            this.W03_boarding_time_LB.Name = "W03_boarding_time_LB";
-            this.W03_boarding_time_LB.Size = new System.Drawing.Size(98, 22);
-            this.W03_boarding_time_LB.TabIndex = 65;
-            this.W03_boarding_time_LB.Text = "乗車日時";
-            // 
-            // W03_exit_sta_LB
-            // 
-            this.W03_exit_sta_LB.AutoSize = true;
-            this.W03_exit_sta_LB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.W03_exit_sta_LB.Location = new System.Drawing.Point(48, 267);
-            this.W03_exit_sta_LB.Name = "W03_exit_sta_LB";
-            this.W03_exit_sta_LB.Size = new System.Drawing.Size(76, 22);
-            this.W03_exit_sta_LB.TabIndex = 64;
-            this.W03_exit_sta_LB.Text = "降車駅";
-            // 
-            // W03_boarding_sta_LB
-            // 
-            this.W03_boarding_sta_LB.AutoSize = true;
-            this.W03_boarding_sta_LB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.W03_boarding_sta_LB.Location = new System.Drawing.Point(48, 219);
-            this.W03_boarding_sta_LB.Name = "W03_boarding_sta_LB";
-            this.W03_boarding_sta_LB.Size = new System.Drawing.Size(76, 22);
-            this.W03_boarding_sta_LB.TabIndex = 63;
-            this.W03_boarding_sta_LB.Text = "乗車駅";
-            // 
-            // W03_title_LB
-            // 
-            this.W03_title_LB.AutoSize = true;
-            this.W03_title_LB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.W03_title_LB.Location = new System.Drawing.Point(48, 171);
-            this.W03_title_LB.Name = "W03_title_LB";
-            this.W03_title_LB.Size = new System.Drawing.Size(119, 22);
-            this.W03_title_LB.TabIndex = 62;
-            this.W03_title_LB.Text = "記録タイトル";
-            // 
-            // W03_id_LB
-            // 
-            this.W03_id_LB.AutoSize = true;
-            this.W03_id_LB.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.W03_id_LB.Location = new System.Drawing.Point(49, 130);
-            this.W03_id_LB.Name = "W03_id_LB";
-            this.W03_id_LB.Size = new System.Drawing.Size(117, 22);
-            this.W03_id_LB.TabIndex = 61;
-            this.W03_id_LB.Text = "乗車記録ID";
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button1.Location = new System.Drawing.Point(280, 816);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 80);
-            this.button1.TabIndex = 75;
-            this.button1.Text = "削除";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button2.Location = new System.Drawing.Point(440, 32);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(120, 48);
-            this.button2.TabIndex = 76;
-            this.button2.Text = "閉じる";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label1.Location = new System.Drawing.Point(46, 765);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 22);
-            this.label1.TabIndex = 77;
-            this.label1.Text = "備考";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label2.Location = new System.Drawing.Point(237, 763);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 22);
-            this.label2.TabIndex = 91;
-            this.label2.Text = "備考";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label3.Location = new System.Drawing.Point(239, 710);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 22);
-            this.label3.TabIndex = 90;
-            this.label3.Text = "鉄道種別";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label4.Location = new System.Drawing.Point(239, 660);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 22);
-            this.label4.TabIndex = 89;
-            this.label4.Text = "鉄道会社";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label5.Location = new System.Drawing.Point(239, 464);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(98, 22);
-            this.label5.TabIndex = 88;
-            this.label5.Text = "列車番号";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label6.Location = new System.Drawing.Point(239, 561);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(158, 22);
-            this.label6.TabIndex = 87;
-            this.label6.Text = "乗車車両ﾅﾝﾊﾞｰ";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label7.Location = new System.Drawing.Point(239, 413);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(76, 22);
-            this.label7.TabIndex = 86;
-            this.label7.Text = "列車名";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label8.Location = new System.Drawing.Point(239, 610);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(98, 22);
-            this.label8.TabIndex = 85;
-            this.label8.Text = "乗車距離";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label9.Location = new System.Drawing.Point(239, 514);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(98, 22);
-            this.label9.TabIndex = 84;
-            this.label9.Text = "乗車路線";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label10.Location = new System.Drawing.Point(239, 361);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(98, 22);
-            this.label10.TabIndex = 83;
-            this.label10.Text = "降車日時";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label11.Location = new System.Drawing.Point(239, 313);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(98, 22);
-            this.label11.TabIndex = 82;
-            this.label11.Text = "乗車日時";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label12.Location = new System.Drawing.Point(239, 265);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(76, 22);
-            this.label12.TabIndex = 81;
-            this.label12.Text = "降車駅";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label13.Location = new System.Drawing.Point(239, 217);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(76, 22);
-            this.label13.TabIndex = 80;
-            this.label13.Text = "乗車駅";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label14.Location = new System.Drawing.Point(239, 169);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(119, 22);
-            this.label14.TabIndex = 79;
-            this.label14.Text = "記録タイトル";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label15.Location = new System.Drawing.Point(240, 128);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(117, 22);
-            this.label15.TabIndex = 78;
-            this.label15.Text = "乗車記録ID";
+            this.W05_note_D.Font = new System.Drawing.Font("MS UI Gothic", 13.2F);
+            this.W05_note_D.Location = new System.Drawing.Point(224, 648);
+            this.W05_note_D.Multiline = true;
+            this.W05_note_D.Name = "W05_note_D";
+            this.W05_note_D.ReadOnly = true;
+            this.W05_note_D.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.W05_note_D.Size = new System.Drawing.Size(392, 136);
+            this.W05_note_D.TabIndex = 123;
+            this.W05_note_D.Text = "××××××××××××××××××××××××××××××";
             // 
             // W05
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.goW04);
-            this.Controls.Add(this.W03_category_LB);
-            this.Controls.Add(this.W03_company_LB);
-            this.Controls.Add(this.W03_unit_number_LB);
-            this.Controls.Add(this.W03_train_number_LB);
-            this.Controls.Add(this.W03_name_LB);
-            this.Controls.Add(this.W03_distance_LB);
-            this.Controls.Add(this.W03_lines_LB);
-            this.Controls.Add(this.W03_exit_time_LB);
-            this.Controls.Add(this.W03_boarding_time_LB);
-            this.Controls.Add(this.W03_exit_sta_LB);
-            this.Controls.Add(this.W03_boarding_sta_LB);
-            this.Controls.Add(this.W03_title_LB);
-            this.Controls.Add(this.W03_id_LB);
+            this.ClientSize = new System.Drawing.Size(643, 807);
+            this.Controls.Add(this.W05_note_D);
+            this.Controls.Add(this.W05_category_D);
+            this.Controls.Add(this.W05_company_D);
+            this.Controls.Add(this.W05_unit_number_D);
+            this.Controls.Add(this.W05_train_number_D);
+            this.Controls.Add(this.W05_name_D);
+            this.Controls.Add(this.W05_distance_D);
+            this.Controls.Add(this.W05_lines_D);
+            this.Controls.Add(this.W05_exit_time_D);
+            this.Controls.Add(this.W05_boarding_time_D);
+            this.Controls.Add(this.W05_exit_sta_D);
+            this.Controls.Add(this.W05_boarding_sta_D);
+            this.Controls.Add(this.W05_title_D);
+            this.Controls.Add(this.W05_id_D);
+            this.Controls.Add(this.W05_note_LB);
+            this.Controls.Add(this.CloseW05);
+            this.Controls.Add(this.goW07_8);
+            this.Controls.Add(this.goW06);
+            this.Controls.Add(this.W05_category_LB);
+            this.Controls.Add(this.W05_company_LB);
+            this.Controls.Add(this.W05_unit_number_LB);
+            this.Controls.Add(this.W05_train_number_LB);
+            this.Controls.Add(this.W05_name_LB);
+            this.Controls.Add(this.W05_distance_LB);
+            this.Controls.Add(this.W05_lines_LB);
+            this.Controls.Add(this.W05_exit_time_LB);
+            this.Controls.Add(this.W05_boarding_time_LB);
+            this.Controls.Add(this.W05_exit_sta_LB);
+            this.Controls.Add(this.W05_boarding_sta_LB);
+            this.Controls.Add(this.W05_title_LB);
+            this.Controls.Add(this.W05_id_LB);
             this.Controls.Add(this.W05_Title);
+            this.MaximumSize = new System.Drawing.Size(661, 854);
+            this.MinimumSize = new System.Drawing.Size(661, 854);
             this.Name = "W05";
-            this.Size = new System.Drawing.Size(593, 1136);
+            this.Text = "W05_N";
+            this.Load += new System.EventHandler(this.FormW05_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
+        private System.Windows.Forms.Label W05_category_D;
+        private System.Windows.Forms.Label W05_company_D;
+        private System.Windows.Forms.Label W05_unit_number_D;
+        private System.Windows.Forms.Label W05_train_number_D;
+        private System.Windows.Forms.Label W05_name_D;
+        private System.Windows.Forms.Label W05_distance_D;
+        private System.Windows.Forms.Label W05_lines_D;
+        private System.Windows.Forms.Label W05_exit_time_D;
+        private System.Windows.Forms.Label W05_boarding_time_D;
+        private System.Windows.Forms.Label W05_exit_sta_D;
+        private System.Windows.Forms.Label W05_boarding_sta_D;
+        private System.Windows.Forms.Label W05_title_D;
+        private System.Windows.Forms.Label W05_id_D;
+        private System.Windows.Forms.Label W05_note_LB;
+        private System.Windows.Forms.Button CloseW05;
+        private System.Windows.Forms.Button goW07_8;
+        private System.Windows.Forms.Button goW06;
+        private System.Windows.Forms.Label W05_category_LB;
+        private System.Windows.Forms.Label W05_company_LB;
+        private System.Windows.Forms.Label W05_unit_number_LB;
+        private System.Windows.Forms.Label W05_train_number_LB;
+        private System.Windows.Forms.Label W05_name_LB;
+        private System.Windows.Forms.Label W05_distance_LB;
+        private System.Windows.Forms.Label W05_lines_LB;
+        private System.Windows.Forms.Label W05_exit_time_LB;
+        private System.Windows.Forms.Label W05_boarding_time_LB;
+        private System.Windows.Forms.Label W05_exit_sta_LB;
+        private System.Windows.Forms.Label W05_boarding_sta_LB;
+        private System.Windows.Forms.Label W05_title_LB;
+        private System.Windows.Forms.Label W05_id_LB;
         private System.Windows.Forms.Label W05_Title;
-        private System.Windows.Forms.Button goW04;
-        private System.Windows.Forms.Label W03_category_LB;
-        private System.Windows.Forms.Label W03_company_LB;
-        private System.Windows.Forms.Label W03_unit_number_LB;
-        private System.Windows.Forms.Label W03_train_number_LB;
-        private System.Windows.Forms.Label W03_name_LB;
-        private System.Windows.Forms.Label W03_distance_LB;
-        private System.Windows.Forms.Label W03_lines_LB;
-        private System.Windows.Forms.Label W03_exit_time_LB;
-        private System.Windows.Forms.Label W03_boarding_time_LB;
-        private System.Windows.Forms.Label W03_exit_sta_LB;
-        private System.Windows.Forms.Label W03_boarding_sta_LB;
-        private System.Windows.Forms.Label W03_title_LB;
-        private System.Windows.Forms.Label W03_id_LB;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox W05_note_D;
     }
 }

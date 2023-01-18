@@ -14,7 +14,13 @@ namespace Rail_Record_System
     public partial class W11 : Form
     {
         // IDをW09から受け取るためのハコ
-        private static string RegistID;
+        private string RegistID;
+
+        // CanW06を読み取るためのハコ
+        private bool CanOpenW06_11;
+
+        // IDをW06に受渡すためのハコ
+        public static string IDW06_W11;
 
         public W11()
         {
@@ -22,6 +28,9 @@ namespace Rail_Record_System
         }
 
         public W06 w06 = null;
+
+        // W11からW06を開いたことを伝えるためのやつ
+        public static bool FW11;
 
         // 起動時
         private void W11_Load_1(object sender, EventArgs e)
@@ -113,14 +122,29 @@ namespace Rail_Record_System
         // 修正ボタン押下
         private void goW06_Click_1(object sender, EventArgs e)
         {
-            MessageBox.Show("修正ボタンが押されたよ！", "情報", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            CanOpenW06_11 = W06.CanW06;
 
-            // 二重起動防止　既に開かれている場合は開かない
-            // フォームを開く
-            if (this.w06 == null || this.w06.IsDisposed)
+            // ちょっと分かりづらいんだけ、ど変数がfalse,nullの時はW06を開く
+            // trueの時は開かない
+            if (CanOpenW06_11 != true)
             {
-                this.w06 = new W06();
-                w06.Show();
+                FW11 = true;
+                IDW06_W11 = RegistID;
+
+                // 二重起動防止　既に開かれている場合は開かない
+                // フォームを開く
+                if (this.w06 == null || this.w06.IsDisposed)
+                {
+                    this.w06 = new W06();
+                    w06.Show();
+                }
+            }
+            else
+            {
+                // ダイアログの表示
+                DialogResult result = MessageBox.Show
+                    ("既に別ウィンドウで修正画面が開かれています。" +
+                    "現在開かれている修正画面を閉じた後、再度開いてください。", "アプリケーション", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -134,41 +158,57 @@ namespace Rail_Record_System
             // 『はい』を選択
             if (result == System.Windows.Forms.DialogResult.Yes)
             {
-                // データ削除
-                using (SQLiteConnection con = new SQLiteConnection("Data Source = Rail_records_system_DB.db"))
+                DeleteR();
+            }
+        }
+
+        private void DeleteR()
+        {
+            // データ削除
+            using (SQLiteConnection con = new SQLiteConnection("Data Source = Rail_records_system_DB.db"))
+            {
+                con.Open();
+
+                using (SQLiteTransaction trans = con.BeginTransaction())
                 {
-                    con.Open();
+                    SQLiteCommand cmd = con.CreateCommand();
 
-                    using (SQLiteTransaction trans = con.BeginTransaction())
-                    {
-                        SQLiteCommand cmd = con.CreateCommand();
+                    cmd.CommandText = "delete from 乗車記録 where 乗車記録ID Like @検索ID";
 
-                        cmd.CommandText = "delete from 乗車記録 where 乗車記録ID Like @検索ID";
+                    // パラメータの作成
+                    SQLiteParameter s_id = new SQLiteParameter();
 
-                        // パラメータの作成
-                        SQLiteParameter s_id = new SQLiteParameter();
+                    // パラメータ名の指定
+                    s_id.ParameterName = "検索ID";
 
-                        // パラメータ名の指定
-                        s_id.ParameterName = "検索ID";
+                    // パラメータの値を設定（変数を読み込む）
+                    s_id.Value = RegistID;
 
-                        // パラメータの値を設定（変数を読み込む）
-                        s_id.Value = RegistID;
+                    // パラメータをコマンドに追加
+                    cmd.Parameters.Add(s_id);
 
-                        // パラメータをコマンドに追加
-                        cmd.Parameters.Add(s_id);
+                    // データ削除
+                    cmd.ExecuteNonQuery();
 
-                        // データ削除
-                        cmd.ExecuteNonQuery();
-
-                        // コミット
-                        trans.Commit();
-                    }
-
-                    MessageBox.Show("記録ID：" + RegistID + "は削除されました", "削除", MessageBoxButtons.OK);
-
-                    //フォームを閉じる
-                    this.Close();
+                    // コミット
+                    trans.Commit();
                 }
+
+                // フォームを閉じる
+                this.Close();
+
+                // もし修正画面開いてたら閉じる
+                if (this.w06 == null || this.w06.IsDisposed)
+                {
+                    return;
+                }
+                else
+                {
+                    // 修正フォームを閉じる
+                    this.w06.Close();
+                }
+
+                MessageBox.Show("記録ID：" + RegistID + "は削除されました", "削除", MessageBoxButtons.OK);
             }
         }
     }

@@ -154,26 +154,26 @@ namespace Rail_Record_System
 
                         // コミット　trans.commit();でDBの変更を確定
                         trans.Commit();
+
+                        // 登録完了
+                        // ここからはさっき登録した記録のIDを拾う
+                        W09_W11_open();
+
+                        // 登録したデータの詳細を表示する
+                        // 二重起動防止　既に開かれていた場合は一度閉じて開き直す
+                        if (this.w11 != null)
+                        {
+                            // フォームを閉じる
+                            this.w11.Close();
+                        }
+                        // フォームを開く
+                        if (this.w11 == null || this.w11.IsDisposed)
+                        {
+                            this.w11 = new W11();
+                            w11.Show();
+                        }
                     }
                 }
-            }
-
-            // 登録完了
-            // ここからはさっき登録した記録のIDを拾う
-            W09_W11_open();
-
-            // 登録したデータの詳細を表示する
-            // 二重起動防止　既に開かれていた場合は一度閉じて開き直す
-            if (this.w11 != null)
-            {
-                // フォームを閉じる
-                this.w11.Close();
-            }
-            // フォームを開く
-            if (this.w11 == null || this.w11.IsDisposed)
-            {
-                this.w11 = new W11();
-                w11.Show();
             }
         }
 

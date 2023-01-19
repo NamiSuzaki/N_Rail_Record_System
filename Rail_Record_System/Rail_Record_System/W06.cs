@@ -84,42 +84,44 @@ namespace Rail_Record_System
                 {
                     SQLiteCommand cmd = con.CreateCommand();
 
-                    cmd.CommandText = "update 乗車記録 set productname = @Product, price = @Price where 乗車記録ID = @検索ID";
-
-                    // テキストボックスたちの名前変更する
-                    // 更新処理のやつぱっぱっとやる
+                    cmd.CommandText = "update 乗車記録 set 記録タイトル = @更新記録タイトル, 乗車駅 = @更新乗車駅, 乗車日時 = @更新乗車日時," +
+                        "降車駅 = @更新降車駅, 降車日時 = @更新降車日時, 列車名 = @更新列車名, 列車番号 = @更新列車番号, 乗車車両ナンバー = @更新乗車車両ナンバー," +
+                        "乗車路線 = @更新乗車路線, 乗車距離 = @更新乗車距離, 鉄道会社 = @更新鉄道会社, 鉄道種別 = @更新鉄道種別, 備考 = @更新備考" +
+                        " where 乗車記録ID = @検索ID";
 
                     // パラメータセット
                     // Parametersに各項目を追加
-                    cmd.Parameters.Add("記録タイトル", System.Data.DbType.String);
-                    cmd.Parameters.Add("乗車駅", System.Data.DbType.String);
-                    cmd.Parameters.Add("乗車日時", System.Data.DbType.String);
-                    cmd.Parameters.Add("降車駅", System.Data.DbType.String);
-                    cmd.Parameters.Add("降車日時", System.Data.DbType.String);
-                    cmd.Parameters.Add("列車名", System.Data.DbType.String);
-                    cmd.Parameters.Add("列車番号", System.Data.DbType.String);
-                    cmd.Parameters.Add("乗車車両ナンバー", System.Data.DbType.String);
-                    cmd.Parameters.Add("乗車路線", System.Data.DbType.String);
-                    cmd.Parameters.Add("乗車距離", System.Data.DbType.String);
-                    cmd.Parameters.Add("鉄道会社", System.Data.DbType.String);
-                    cmd.Parameters.Add("鉄道種別", System.Data.DbType.String);
-                    cmd.Parameters.Add("備考", System.Data.DbType.String);
+                    cmd.Parameters.Add("検索ID", System.Data.DbType.String);
+                    cmd.Parameters.Add("更新記録タイトル", System.Data.DbType.String);
+                    cmd.Parameters.Add("更新乗車駅", System.Data.DbType.String);
+                    cmd.Parameters.Add("更新乗車日時", System.Data.DbType.String);
+                    cmd.Parameters.Add("更新降車駅", System.Data.DbType.String);
+                    cmd.Parameters.Add("更新降車日時", System.Data.DbType.String);
+                    cmd.Parameters.Add("更新列車名", System.Data.DbType.String);
+                    cmd.Parameters.Add("更新列車番号", System.Data.DbType.String);
+                    cmd.Parameters.Add("更新乗車車両ナンバー", System.Data.DbType.String);
+                    cmd.Parameters.Add("更新乗車路線", System.Data.DbType.String);
+                    cmd.Parameters.Add("更新乗車距離", System.Data.DbType.String);
+                    cmd.Parameters.Add("更新鉄道会社", System.Data.DbType.String);
+                    cmd.Parameters.Add("更新鉄道種別", System.Data.DbType.String);
+                    cmd.Parameters.Add("更新備考", System.Data.DbType.String);
 
                     // データ追加
                     // textBoxに入力されている文字列をParametersに設定
-                    cmd.Parameters["記録タイトル"].Value = W09_title_TB.Text;
-                    cmd.Parameters["乗車駅"].Value = W09_boarding_sta_TB.Text;
-                    cmd.Parameters["乗車日時"].Value = W09_boarding_time_TB.Text;
-                    cmd.Parameters["降車駅"].Value = W09_exit_sta_TB.Text;
-                    cmd.Parameters["降車日時"].Value = W09_exit_time_TB.Text;
-                    cmd.Parameters["列車名"].Value = W09_name_TB.Text;
-                    cmd.Parameters["列車番号"].Value = W09_unit_number_TB.Text;
-                    cmd.Parameters["乗車車両ナンバー"].Value = W09_train_number_TB.Text;
-                    cmd.Parameters["乗車路線"].Value = W09_lines_TB.Text;
-                    cmd.Parameters["乗車距離"].Value = W09_distance_TB.Text;
-                    cmd.Parameters["鉄道会社"].Value = W09_company_TB.Text;
-                    cmd.Parameters["鉄道種別"].Value = W09_category_TB.Text;
-                    cmd.Parameters["備考"].Value = W09_note_TB.Text;
+                    cmd.Parameters["検索ID"].Value = ReadW06ID;
+                    cmd.Parameters["更新記録タイトル"].Value = W09_title_TB.Text;
+                    cmd.Parameters["更新乗車駅"].Value = W09_boarding_sta_TB.Text;
+                    cmd.Parameters["更新乗車日時"].Value = W09_boarding_time_TB.Text;
+                    cmd.Parameters["更新降車駅"].Value = W09_exit_sta_TB.Text;
+                    cmd.Parameters["更新降車日時"].Value = W09_exit_time_TB.Text;
+                    cmd.Parameters["更新列車名"].Value = W09_name_TB.Text;
+                    cmd.Parameters["更新列車番号"].Value = W09_unit_number_TB.Text;
+                    cmd.Parameters["更新乗車車両ナンバー"].Value = W09_train_number_TB.Text;
+                    cmd.Parameters["更新乗車路線"].Value = W09_lines_TB.Text;
+                    cmd.Parameters["更新乗車距離"].Value = W09_distance_TB.Text;
+                    cmd.Parameters["更新鉄道会社"].Value = W09_company_TB.Text;
+                    cmd.Parameters["更新鉄道種別"].Value = W09_category_TB.Text;
+                    cmd.Parameters["更新備考"].Value = W09_note_TB.Text;
 
                     // 最低限　乗車駅・降車駅が入ってなかったら登録を弾く
                     if (String.IsNullOrEmpty(W09_boarding_sta_TB.Text) || String.IsNullOrEmpty(W09_exit_sta_TB.Text))
@@ -193,40 +195,16 @@ namespace Rail_Record_System
                         }
 
                         // 実行
-                        /*
-                        //タイトル
-                        W09_title_TB.Text = D_result.Rows[0][1].ToString();
-                        //乗車駅
-                        W09_boarding_sta_TB.Text = D_result.Rows[0][2].ToString();
-                        //乗車日時
-                        W09_boarding_time_TB.Text = D_result.Rows[0][4].ToString();
-                        //降車駅
-                        W09_exit_sta_TB.Text = D_result.Rows[0][3].ToString();
-                        //降車日時
-                        W09_exit_time_TB.Text = D_result.Rows[0][5].ToString();
-                        //列車名
-                        W09_name_TB.Text = D_result.Rows[0][8].ToString();
-                        //列車番号
-                        W09_unit_number_TB.Text = D_result.Rows[0][10].ToString();
-                        //乗車路線
-                        W09_lines_TB.Text = D_result.Rows[0][6].ToString();
-                        //乗車車両ナンバー
-                        W09_train_number_TB.Text = D_result.Rows[0][9].ToString();
-                        //乗車距離
-                        W09_distance_TB.Text = D_result.Rows[0][7].ToString();
-                        //鉄道会社
-                        W09_company_TB.Text = D_result.Rows[0][11].ToString();
-                        //鉄道種別
-                        W09_category_TB.Text = D_result.Rows[0][12].ToString();
-                        //備考
-                        W09_note_TB.Text = D_result.Rows[0][13].ToString();
-                         */
-
-                        // 実行
                         cmd.ExecuteNonQuery();
 
                         // コミット
                         trans.Commit();
+
+                        // 更新完了ダイアログ表示
+                        MessageBox.Show("ID：" + ReadW06ID + "は更新されました。");
+
+                        // このフォームを閉じる
+                        this.Close();
                     }
                 }
             }

@@ -41,7 +41,6 @@ namespace Rail_Record_System
         private string SQL_search_dist = " 乗車距離 Like @検索乗車距離";
         private string SQL_search_comp = " 鉄道会社 Like @検索鉄道会社";
         private string SQL_search_cate = " 鉄道種別 Like @検索鉄道種別";
-        // public string SQL_search_text = "select * from 乗車記録 where 乗車記録ID Like @検索ID";
 
         // W05でのID検索用変数
         public static string search_ID;
@@ -155,12 +154,6 @@ namespace Rail_Record_System
         // 検索欄に入ってないやつは拾わない　入ってるやつは拾う
         private void SQL_Edit()
         {
-            /*
-             検索仕様
-             完全一致：ID、駅名、日時、
-             あいまい：タイトル、ナンバー、列番、会社
-            */
-
             // IDが入ってたとき
             if (!String.IsNullOrEmpty(W03_id_TB.Text))
             {
@@ -383,6 +376,7 @@ namespace Rail_Record_System
                 return;
             }
 
+            // クリックしたデータのIDを取得
             search_ID = $"{W03_DateGridView[0, e.RowIndex].Value}";
 
             // 二重起動防止　既に開かれていた場合は一度閉じて開き直す

@@ -29,12 +29,12 @@ namespace Rail_Record_System
         {
             using (SQLiteConnection con = new SQLiteConnection("Data Source = Rail_records_system_DB.db"))
             {
-                // DataTableを生成します。
+                // DataTableを生成
                 var dataTable = new DataTable();
 
                 // SQLの実行
                 var adapter = new SQLiteDataAdapter("SELECT 乗車記録ID,記録タイトル,列車名,乗車駅,乗車日時,降車駅,降車日時 FROM 乗車記録", con);
-                // select id, name from user;
+
                 adapter.Fill(dataTable);
                 dataGridView1.DataSource = dataTable;
             }

@@ -37,30 +37,5 @@ namespace Rail_Record_System
             uc_w01.Visible = true;
             uc_w02.Visible = false;
         }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void w011_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void w021_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void bindingNavigator1_RefreshItems(object sender, EventArgs e)
-        {
-
-        }
     }
 }

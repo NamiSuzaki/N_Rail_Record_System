@@ -48,7 +48,6 @@ namespace Rail_Record_System
             this.W02_Title.Size = new System.Drawing.Size(308, 48);
             this.W02_Title.TabIndex = 0;
             this.W02_Title.Text = "乗車記録一覧";
-            this.W02_Title.Click += new System.EventHandler(this.W02_Title_Click);
             // 
             // goW03
             // 
@@ -84,7 +83,6 @@ namespace Rail_Record_System
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(856, 372);
             this.dataGridView1.TabIndex = 3;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // button1
             // 

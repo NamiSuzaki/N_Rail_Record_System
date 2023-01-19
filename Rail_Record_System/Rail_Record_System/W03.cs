@@ -40,16 +40,6 @@ namespace Rail_Record_System
             InitializeComponent();
         }
 
-        private void W03_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void W03_id_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         // 閉じるボタン押下
         private void gobacktoW01_Click(object sender, EventArgs e)
         {
@@ -75,7 +65,7 @@ namespace Rail_Record_System
 
                 // 検索
                 // 検索欄に入ってないやつは拾わない　入ってるやつは拾う
-                // 検索仕様は完全一致型
+                // 検索仕様は完全一致型　タイトルとかはあいまい方式にしたいけどなんか上手く行かぬ……　要模索
                 SQL_Edit();
 
                 // チェック用
@@ -153,7 +143,7 @@ namespace Rail_Record_System
                     // SELECTの実行及びフェッチ
                     sda.Fill(search_result);
 
-                    // dataGridViewに表示
+                    // dataGridViewに検索結果表示
                     dataGridView1.DataSource = search_result;
                 }
             }
@@ -166,7 +156,6 @@ namespace Rail_Record_System
             {
                 SQL_search = SQL_search + SQL_search_where + SQL_search_id;
                 whereC = true;
-                // DialogResult result = MessageBox.Show(SQL_search, "かくにん", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
             // タイトルが入ってたとき
@@ -374,37 +363,14 @@ namespace Rail_Record_System
             }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        // クリアボタン押下
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void W03_unit_number_TB_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void W03_name_TB_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void W03_name_LB_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void W03_lines_LB_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void W03_lines_TB_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void W03_train_number_LB_Click(object sender, EventArgs e)
+        // 更新ボタン押下
+        private void button2_Click(object sender, EventArgs e)
         {
 
         }

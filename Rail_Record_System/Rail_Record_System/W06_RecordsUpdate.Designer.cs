@@ -1,7 +1,7 @@
 ﻿
 namespace Rail_Record_System
 {
-    partial class W06
+    partial class W06_RecordsUpdate
     {
         /// <summary>
         /// Required designer variable.
@@ -378,7 +378,7 @@ namespace Rail_Record_System
             this.MaximumSize = new System.Drawing.Size(1114, 735);
             this.MinimumSize = new System.Drawing.Size(1114, 735);
             this.Name = "W06";
-            this.Text = "W06";
+            this.Text = "鉄道乗車記録システム｜乗車記録登録内容修正";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.W06_FormClosing);
             this.Load += new System.EventHandler(this.W06_Load);
             this.ResumeLayout(false);

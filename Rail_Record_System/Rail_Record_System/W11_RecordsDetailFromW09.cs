@@ -11,7 +11,7 @@ using System.Data.SQLite;
 
 namespace Rail_Record_System
 {
-    public partial class W11 : Form
+    public partial class W11_RecordsDetailFromW09 : Form
     {
         // IDをW09から受け取るためのハコ
         private string RegistID;
@@ -22,12 +22,12 @@ namespace Rail_Record_System
         // IDをW06に受渡すためのハコ
         public static string IDW06_W11;
 
-        public W11()
+        public W11_RecordsDetailFromW09()
         {
             InitializeComponent();
         }
 
-        public W06 w06 = null;
+        public W06_RecordsUpdate w06 = null;
 
         // W11からW06を開いたことを伝えるためのやつ
         public static bool FW11;
@@ -36,7 +36,7 @@ namespace Rail_Record_System
         private void W11_Load_1(object sender, EventArgs e)
         {
             // ここで検索するためのIDをW09から受け取る
-            RegistID = W09.lastID;
+            RegistID = W09_RecordsInsert.lastID;
 
             // 検索
             Register_OnlyOne();
@@ -122,7 +122,7 @@ namespace Rail_Record_System
         // 修正ボタン押下
         private void goW06_Click_1(object sender, EventArgs e)
         {
-            CanOpenW06_11 = W06.CanW06;
+            CanOpenW06_11 = W06_RecordsUpdate.CanW06;
 
             // ちょっと分かりづらいんだけ、ど変数がfalse,nullの時はW06を開く
             // trueの時は開かない
@@ -135,7 +135,7 @@ namespace Rail_Record_System
                 // フォームを開く
                 if (this.w06 == null || this.w06.IsDisposed)
                 {
-                    this.w06 = new W06();
+                    this.w06 = new W06_RecordsUpdate();
                     w06.Show();
                 }
             }

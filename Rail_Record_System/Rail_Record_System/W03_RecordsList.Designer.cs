@@ -409,7 +409,7 @@ namespace Rail_Record_System
             this.MaximumSize = new System.Drawing.Size(1557, 889);
             this.MinimumSize = new System.Drawing.Size(1557, 889);
             this.Name = "W03_N";
-            this.Text = "W03_N";
+            this.Text = "鉄道乗車記録システム｜乗車記録検索";
             this.Load += new System.EventHandler(this.W03_N_Load);
             ((System.ComponentModel.ISupportInitialize)(this.W03_DateGridView)).EndInit();
             this.ResumeLayout(false);

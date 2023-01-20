@@ -11,14 +11,14 @@ using System.Data.SQLite;
 
 namespace Rail_Record_System
 {
-    public partial class W05 : Form
+    public partial class W05_RecordsDetailFromW03 : Form
     {
-        public W05()
+        public W05_RecordsDetailFromW03()
         {
             InitializeComponent();
         }
 
-        public W06 w06 = null;
+        public W06_RecordsUpdate w06 = null;
 
         // IDをW03_Nから受け取るためのハコ
         private string ToGetID;
@@ -122,7 +122,7 @@ namespace Rail_Record_System
         // 修正ボタン押下
         private void goW06_Click(object sender, EventArgs e)
         {
-            CanOpenW06_05 = W06.CanW06;
+            CanOpenW06_05 = W06_RecordsUpdate.CanW06;
 
             // ちょっと分かりづらいんだけど、変数がfalse,nullの時はW06を開く
             // trueの時は開かない
@@ -135,7 +135,7 @@ namespace Rail_Record_System
                 // フォームを開く
                 if (this.w06 == null || this.w06.IsDisposed)
                 {
-                    this.w06 = new W06();
+                    this.w06 = new W06_RecordsUpdate();
                     w06.Show();
                 }
             }

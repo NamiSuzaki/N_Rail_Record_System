@@ -89,73 +89,61 @@
     <Compile Include="Formmain.Designer.cs">
       <DependentUpon>Formmain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="PracticeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="PracticeForm.Designer.cs">
+      <DependentUpon>PracticeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserControl1.cs">
+    <Compile Include="W01_mainmenu.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <Compile Include="W01_mainmenu.Designer.cs">
+      <DependentUpon>W01_mainmenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="W01.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="W01.Designer.cs">
-      <DependentUpon>W01.cs</DependentUpon>
-    </Compile>
-    <Compile Include="W02.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="W02.Designer.cs">
-      <DependentUpon>W02.cs</DependentUpon>
-    </Compile>
-    <Compile Include="W03.cs">
+    <Compile Include="W03_RecordsList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="W03.Designer.cs">
-      <DependentUpon>W03.cs</DependentUpon>
+    <Compile Include="W03_RecordsList.Designer.cs">
+      <DependentUpon>W03_RecordsList.cs</DependentUpon>
     </Compile>
-    <Compile Include="W03_N.cs">
+    <Compile Include="W05_RecordsDetailFromW03.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="W03_N.Designer.cs">
-      <DependentUpon>W03_N.cs</DependentUpon>
+    <Compile Include="W05_RecordsDetailFromW03.Designer.cs">
+      <DependentUpon>W05_RecordsDetailFromW03.cs</DependentUpon>
     </Compile>
-    <Compile Include="W05.cs">
+    <Compile Include="W06_RecordsUpdate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="W05.Designer.cs">
-      <DependentUpon>W05.cs</DependentUpon>
+    <Compile Include="W06_RecordsUpdate.Designer.cs">
+      <DependentUpon>W06_RecordsUpdate.cs</DependentUpon>
     </Compile>
-    <Compile Include="W06.cs">
+    <Compile Include="W09_RecordsInsert.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="W06.Designer.cs">
-      <DependentUpon>W06.cs</DependentUpon>
+    <Compile Include="W09_RecordsInsert.Designer.cs">
+      <DependentUpon>W09_RecordsInsert.cs</DependentUpon>
     </Compile>
-    <Compile Include="W09.cs">
+    <Compile Include="W11_RecordsDetailFromW09.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="W09.Designer.cs">
-      <DependentUpon>W09.cs</DependentUpon>
+    <Compile Include="W11_RecordsDetailFromW09.Designer.cs">
+      <DependentUpon>W11_RecordsDetailFromW09.cs</DependentUpon>
     </Compile>
-    <Compile Include="W11.cs">
+    <Compile Include="W13.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="W11.Designer.cs">
-      <DependentUpon>W11.cs</DependentUpon>
+    <Compile Include="W13.Designer.cs">
+      <DependentUpon>W13.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Formmain.resx">
       <DependentUpon>Formmain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="PracticeForm.resx">
+      <DependentUpon>PracticeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -166,32 +154,26 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <EmbeddedResource Include="W01_mainmenu.resx">
+      <DependentUpon>W01_mainmenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="W01.resx">
-      <DependentUpon>W01.cs</DependentUpon>
+    <EmbeddedResource Include="W03_RecordsList.resx">
+      <DependentUpon>W03_RecordsList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="W02.resx">
-      <DependentUpon>W02.cs</DependentUpon>
+    <EmbeddedResource Include="W05_RecordsDetailFromW03.resx">
+      <DependentUpon>W05_RecordsDetailFromW03.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="W03.resx">
-      <DependentUpon>W03.cs</DependentUpon>
+    <EmbeddedResource Include="W06_RecordsUpdate.resx">
+      <DependentUpon>W06_RecordsUpdate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="W03_N.resx">
-      <DependentUpon>W03_N.cs</DependentUpon>
+    <EmbeddedResource Include="W09_RecordsInsert.resx">
+      <DependentUpon>W09_RecordsInsert.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="W05.resx">
-      <DependentUpon>W05.cs</DependentUpon>
+    <EmbeddedResource Include="W11_RecordsDetailFromW09.resx">
+      <DependentUpon>W11_RecordsDetailFromW09.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="W06.resx">
-      <DependentUpon>W06.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="W09.resx">
-      <DependentUpon>W09.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="W11.resx">
-      <DependentUpon>W11.cs</DependentUpon>
+    <EmbeddedResource Include="W13.resx">
+      <DependentUpon>W13.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

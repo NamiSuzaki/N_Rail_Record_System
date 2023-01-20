@@ -13,7 +13,7 @@ namespace Rail_Record_System
     public partial class W01 : UserControl
     {
         public W03_N w03_n = null;
-        public W09 w09 = null;
+        public W09_RecordsInsert w09 = null;
 
         public W01()
         {
@@ -41,7 +41,7 @@ namespace Rail_Record_System
             // null、または画面が破棄されていたら開く
             if (this.w09 == null || this.w09.IsDisposed)
             {
-                W09 w09 = new W09();
+                W09_RecordsInsert w09 = new W09_RecordsInsert();
                 w09.Show();
             }
         }

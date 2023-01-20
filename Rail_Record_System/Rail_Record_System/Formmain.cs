@@ -16,26 +16,26 @@ namespace Rail_Record_System
         // staticで宣言することでインスタンスを固定
         // 各画面のユーザーコントロールのハコを置いておく
         public static W01 uc_w01;
-        public static W02 uc_w02;
 
         public Formmain()
         {
             InitializeComponent();
 
             uc_w01 = new W01();
-            uc_w02 = new W02();
 
             // パネルに各画面を追加
             panel1.Controls.Add(uc_w01);
-            panel1.Controls.Add(uc_w02);
 
             // ユーコンの全画面表示
             uc_w01.Dock = DockStyle.Fill;
-            uc_w02.Dock = DockStyle.Fill;
 
             // 最初はコントロール1（メインメニュー画面）のみを見えるようにする
             uc_w01.Visible = true;
-            uc_w02.Visible = false;
+        }
+
+        private void Formmain_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

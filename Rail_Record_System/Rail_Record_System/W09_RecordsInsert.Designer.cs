@@ -1,7 +1,7 @@
 ﻿
 namespace Rail_Record_System
 {
-    partial class W09
+    partial class W09_RecordsInsert
     {
         /// <summary>
         /// Required designer variable.
@@ -367,7 +367,7 @@ namespace Rail_Record_System
             this.MaximumSize = new System.Drawing.Size(1114, 735);
             this.MinimumSize = new System.Drawing.Size(1114, 735);
             this.Name = "W09";
-            this.Text = "W09";
+            this.Text = "鉄道乗車記録システム｜新規乗車記録登録";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -1,7 +1,7 @@
 ﻿
 namespace Rail_Record_System
 {
-    partial class Form2
+    partial class PracticeForm
     {
         /// <summary>
         /// Required designer variable.

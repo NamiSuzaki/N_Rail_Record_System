@@ -11,9 +11,9 @@ using System.Data.SQLite;
 
 namespace Rail_Record_System
 {
-    public partial class Form2 : Form
+    public partial class PracticeForm : Form
     {
-        public Form2()
+        public PracticeForm()
         {
             InitializeComponent();
         }

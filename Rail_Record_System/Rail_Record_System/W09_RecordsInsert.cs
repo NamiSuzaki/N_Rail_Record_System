@@ -11,14 +11,14 @@ using System.Data.SQLite;
 
 namespace Rail_Record_System
 {
-    public partial class W09 : Form
+    public partial class W09_RecordsInsert : Form
     {
-        public W11 w11 = null;
+        public W11_RecordsDetailFromW09 w11 = null;
 
         // W05フォームを使って登録直後の詳細画面を出すためのID用ハコ
         public static string lastID;
 
-        public W09()
+        public W09_RecordsInsert()
         {
             InitializeComponent();
         }
@@ -169,7 +169,7 @@ namespace Rail_Record_System
                         // フォームを開く
                         if (this.w11 == null || this.w11.IsDisposed)
                         {
-                            this.w11 = new W11();
+                            this.w11 = new W11_RecordsDetailFromW09();
                             w11.Show();
                         }
                     }

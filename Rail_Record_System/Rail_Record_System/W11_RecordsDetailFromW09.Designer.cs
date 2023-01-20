@@ -1,7 +1,7 @@
 ﻿
 namespace Rail_Record_System
 {
-    partial class W11
+    partial class W11_RecordsDetailFromW09
     {
         /// <summary>
         /// Required designer variable.
@@ -428,7 +428,7 @@ namespace Rail_Record_System
             this.MaximumSize = new System.Drawing.Size(661, 854);
             this.MinimumSize = new System.Drawing.Size(661, 854);
             this.Name = "W11";
-            this.Text = "W11";
+            this.Text = "鉄道乗車記録システム｜新規乗車記録詳細";
             this.Load += new System.EventHandler(this.W11_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();

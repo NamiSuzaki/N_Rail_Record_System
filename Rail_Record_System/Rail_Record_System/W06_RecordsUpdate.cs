@@ -11,9 +11,9 @@ using System.Data.SQLite;
 
 namespace Rail_Record_System
 {
-    public partial class W06 : Form
+    public partial class W06_RecordsUpdate : Form
     {
-        public W06()
+        public W06_RecordsUpdate()
         {
             InitializeComponent();
         }
@@ -35,32 +35,30 @@ namespace Rail_Record_System
 
             // それぞれのフラグを読む
             // フラグのON/OFFに応じて処理を変える
-            FromW05 = W05.FW05;
-            FromW11 = W11.FW11;
+            FromW05 = W05_RecordsDetailFromW03.FW05;
+            FromW11 = W11_RecordsDetailFromW09.FW11;
 
             // W05から開いた時
             if(FromW05 == true && FromW11 != true)
             {
                 // IDを読む
-                ReadW06ID = W05.IDW06_W05;
+                ReadW06ID = W05_RecordsDetailFromW03.IDW06_W05;
             }
 
             // W11から開いた時
             if(FromW11 == true && FromW05 != true)
             {
                 // IDを読む
-                ReadW06ID = W11.IDW06_W11;
+                ReadW06ID = W11_RecordsDetailFromW09.IDW06_W11;
             }
-
-            MessageBox.Show(ReadW06ID);
 
             // 検索
             Search_ToUpd();
 
             FromW05 = false;
             FromW11 = false;
-            W05.FW05 = FromW05;
-            W11.FW11 = FromW11;
+            W05_RecordsDetailFromW03.FW05 = FromW05;
+            W11_RecordsDetailFromW09.FW11 = FromW11;
 
             /*
                 ・フラグで同時に修正画面を開かないように管理する

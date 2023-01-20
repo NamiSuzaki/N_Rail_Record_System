@@ -159,6 +159,7 @@ namespace Rail_Record_System
             if (result == System.Windows.Forms.DialogResult.Yes)
             {
                 DeleteR();
+                MessageBox.Show("記録ID：" + ToGetID + "は削除されました", "削除", MessageBoxButtons.OK);
             }
         }
 
@@ -208,7 +209,7 @@ namespace Rail_Record_System
                     this.w06.Close();
                 }
 
-                MessageBox.Show("記録ID：" + ToGetID + "は削除されました", "削除", MessageBoxButtons.OK);
+                
             }
         }
     }

@@ -18,8 +18,11 @@ namespace Rail_Record_System
         public string SQL_search = "select 乗車記録ID,記録タイトル,列車名,乗車駅,乗車日時,降車駅,降車日時 from 乗車記録";
         private string SQL_search_where = " where";
         private string SQL_search_and = " and";
+
+        // whereが既にSQL文の中に入っているかを調べるための変数
         private bool whereC = false;
 
+        // 各検索要素をSQL文にはめ込むためのやつ
         private string SQL_search_id = " 乗車記録ID Like @検索ID";
         private string SQL_search_title = " 記録タイトル Like @検索タイトル";
         private string SQL_search_Bsta = " 乗車駅 Like @検索乗車駅";
@@ -33,7 +36,6 @@ namespace Rail_Record_System
         private string SQL_search_dist = " 乗車距離 Like @検索乗車距離";
         private string SQL_search_comp = " 鉄道会社 Like @検索鉄道会社";
         private string SQL_search_cate = " 鉄道種別 Like @検索鉄道種別";
-        // public string SQL_search_text = "select * from 乗車記録 where 乗車記録ID Like @検索ID";
 
         public W03_delete_this()
         {
@@ -51,7 +53,6 @@ namespace Rail_Record_System
         // 入ってるやつと＝のやつをさがす
         private void goW04_Click(object sender, EventArgs e)
         {
-            // 検索CDの数字を読み込んで変数に格納
             // パラメータを使用してSQLで検索
 
             // データテーブルを作る
@@ -364,15 +365,29 @@ namespace Rail_Record_System
         }
 
         // クリアボタン押下
-        private void button1_Click(object sender, EventArgs e)
-        {
 
+        private void W03_clear_Click(object sender, EventArgs e)
+        {
+            // 全検索条件の入力内容をクリア
+            W03_id_TB.Text = "";
+            W03_title_TB.Text = "";
+            W03_boarding_sta_TB.Text = "";
+            W03_boarding_time_TB.Text = "";
+            W03_exit_sta_TB.Text = "";
+            W03_exit_time_TB.Text = "";
+            W03_name_TB.Text = "";
+            W03_unit_number_TB.Text = "";
+            W03_train_number_TB.Text = "";
+            W03_lines_TB.Text = "";
+            W03_train_number_TB.Text = "";
+            W03_distance_TB.Text = "";
+            W03_company_TB.Text = "";
+            W03_category_TB.Text = "";
         }
+
+
 
         // 更新ボタン押下
-        private void button2_Click(object sender, EventArgs e)
-        {
 
-        }
     }
 }

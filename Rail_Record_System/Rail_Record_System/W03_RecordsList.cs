@@ -33,6 +33,7 @@ namespace Rail_Record_System
 
         private const string SQL_ID = " 乗車記録ID LIKE @検索ID";
         private const string SQL_TITLE = " 記録タイトル LIKE @検索タイトル";
+        //private const string SQL_TITLE = " 記録タイトル LIKE '%題'";
         private const string SQL_BSTA = " 乗車駅 LIKE @検索乗車駅";
         private const string SQL_BTIME = " 乗車日時 LIKE @検索乗車日時";
         private const string SQL_ESTA = " 降車駅 LIKE @検索降車駅";

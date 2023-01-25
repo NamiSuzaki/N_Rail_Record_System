@@ -1,7 +1,7 @@
 ﻿
 namespace Rail_Record_System
 {
-    partial class W03_N
+    partial class W03_RecordsList
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace Rail_Record_System
         /// </summary>
         private void InitializeComponent()
         {
-            this.W03_DateGridView = new System.Windows.Forms.DataGridView();
+            this.W03_SearchResult_DateGridView = new System.Windows.Forms.DataGridView();
             this.gobacktoW01 = new System.Windows.Forms.Button();
             this.W03_category_TB = new System.Windows.Forms.TextBox();
             this.W03_company_TB = new System.Windows.Forms.TextBox();
@@ -61,22 +61,22 @@ namespace Rail_Record_System
             this.W03_Title = new System.Windows.Forms.Label();
             this.W03_clear = new System.Windows.Forms.Button();
             this.W03_upd = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.W03_DateGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.W03_SearchResult_DateGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // W03_DateGridView
+            // W03_SearchResult_DateGridView
             // 
-            this.W03_DateGridView.AllowUserToAddRows = false;
-            this.W03_DateGridView.AllowUserToDeleteRows = false;
-            this.W03_DateGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.W03_DateGridView.Location = new System.Drawing.Point(510, 98);
-            this.W03_DateGridView.Name = "W03_DateGridView";
-            this.W03_DateGridView.ReadOnly = true;
-            this.W03_DateGridView.RowHeadersWidth = 51;
-            this.W03_DateGridView.RowTemplate.Height = 24;
-            this.W03_DateGridView.Size = new System.Drawing.Size(1004, 723);
-            this.W03_DateGridView.TabIndex = 61;
-            this.W03_DateGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.W03_DateGridView_CellContentClick);
+            this.W03_SearchResult_DateGridView.AllowUserToAddRows = false;
+            this.W03_SearchResult_DateGridView.AllowUserToDeleteRows = false;
+            this.W03_SearchResult_DateGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.W03_SearchResult_DateGridView.Location = new System.Drawing.Point(510, 98);
+            this.W03_SearchResult_DateGridView.Name = "W03_SearchResult_DateGridView";
+            this.W03_SearchResult_DateGridView.ReadOnly = true;
+            this.W03_SearchResult_DateGridView.RowHeadersWidth = 51;
+            this.W03_SearchResult_DateGridView.RowTemplate.Height = 24;
+            this.W03_SearchResult_DateGridView.Size = new System.Drawing.Size(1004, 723);
+            this.W03_SearchResult_DateGridView.TabIndex = 61;
+            this.W03_SearchResult_DateGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.W03_SearchResult_DateGridView_CellContentClick);
             // 
             // gobacktoW01
             // 
@@ -205,7 +205,7 @@ namespace Rail_Record_System
             this.goW04.TabIndex = 46;
             this.goW04.Text = "検索";
             this.goW04.UseVisualStyleBackColor = true;
-            this.goW04.Click += new System.EventHandler(this.goW04_Click);
+            this.goW04.Click += new System.EventHandler(this.GoW04_Click);
             // 
             // W03_category_LB
             // 
@@ -369,14 +369,14 @@ namespace Rail_Record_System
             this.W03_upd.UseVisualStyleBackColor = true;
             this.W03_upd.Click += new System.EventHandler(this.W03_upd_Click);
             // 
-            // W03_N
+            // W03_RecordsList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1539, 842);
             this.Controls.Add(this.W03_clear);
             this.Controls.Add(this.W03_upd);
-            this.Controls.Add(this.W03_DateGridView);
+            this.Controls.Add(this.W03_SearchResult_DateGridView);
             this.Controls.Add(this.gobacktoW01);
             this.Controls.Add(this.W03_category_TB);
             this.Controls.Add(this.W03_company_TB);
@@ -408,10 +408,10 @@ namespace Rail_Record_System
             this.Controls.Add(this.W03_Title);
             this.MaximumSize = new System.Drawing.Size(1557, 889);
             this.MinimumSize = new System.Drawing.Size(1557, 889);
-            this.Name = "W03_N";
+            this.Name = "W03_RecordsList";
             this.Text = "鉄道乗車記録システム｜乗車記録検索";
-            this.Load += new System.EventHandler(this.W03_N_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.W03_DateGridView)).EndInit();
+            this.Load += new System.EventHandler(this.W03_RecordsList_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.W03_SearchResult_DateGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -419,7 +419,7 @@ namespace Rail_Record_System
 
         #endregion
 
-        private System.Windows.Forms.DataGridView W03_DateGridView;
+        private System.Windows.Forms.DataGridView W03_SearchResult_DateGridView;
         private System.Windows.Forms.Button gobacktoW01;
         private System.Windows.Forms.TextBox W03_category_TB;
         private System.Windows.Forms.TextBox W03_company_TB;

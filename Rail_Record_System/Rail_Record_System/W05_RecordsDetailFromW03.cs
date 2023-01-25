@@ -36,7 +36,7 @@ namespace Rail_Record_System
         private void FormW05_Load_1(object sender, EventArgs e)
         {
             // ここで検索するためのIDをW03_Nから受け取る
-            ToGetID = W03_N.search_ID;
+            ToGetID = W03_RecordsList.search_ID;
 
             // 検索
             Search_OnlyOne();

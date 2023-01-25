@@ -13,10 +13,10 @@ namespace Rail_Record_System
 {
     // W03 鉄道乗車記録システム｜乗車記録検索
     // 記録一覧の表示と検索の画面
-    public partial class W03_N : Form
+    public partial class W03_RecordsList : Form
     {
         // W05を開く時の重複表示を防ぐ用変数
-        private W05_RecordsDetailFromW03 _w05 = null;
+        private W05_RecordsDetailFromW03 _w05_RecordsDetail = null;
 
         /*
          検索仕様（理想）（いったん後回し）
@@ -63,7 +63,7 @@ namespace Rail_Record_System
         // W05でのID検索用変数
         public static string search_ID;
 
-        public W03_N()
+        public W03_RecordsList()
         {
             InitializeComponent();
         }
@@ -75,10 +75,13 @@ namespace Rail_Record_System
             this.Close();
         }
 
-        // さまりー
-
-        // 検索ボタン押下
-        private void goW04_Click(object sender, EventArgs e)
+        /// <summary>
+        /// 検索処理　検索ボタン押下
+        /// 接続→SQL文編集→SQL文保存(画面更新時用)→検索→GridViewに表示
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void GoW04_Click(object sender, EventArgs e)
         {
             // 検索
             // 検索欄の情報を読み込んで、パラメータを使用してSQLで検索
@@ -86,9 +89,9 @@ namespace Rail_Record_System
             DataTable searchResult = new DataTable();
 
             // 接続情報を使ってコネクションを生成
-            using (SQLiteConnection con = new SQLiteConnection("Data Source = Rail_records_system_DB.db"))
+            using (SQLiteConnection con = new SQLiteConnection("Data Source = Rail_Records_System_DB.db"))
             {
-                _sqlSearch = "select 乗車記録ID,記録タイトル,列車名,乗車駅,乗車日時,降車駅,降車日時 from 乗車記録";
+                _sqlSearch = "SELECT 乗車記録ID,記録タイトル,列車名,乗車駅,乗車日時,降車駅,降車日時 FROM 乗車記録";
                 _containsWhere = false;
 
                 // 検索するSQL文を作成
@@ -173,21 +176,25 @@ namespace Rail_Record_System
                     cmd.Parameters.Add(searchCate);
 
                     // SQLiteへの橋渡しのアダプターを設定
-                    SQLiteDataAdapter sda = new SQLiteDataAdapter();
+                    SQLiteDataAdapter sqlDataAdapter = new SQLiteDataAdapter();
 
                     // SELECTコマンドを設定
-                    sda.SelectCommand = cmd;
+                    sqlDataAdapter.SelectCommand = cmd;
 
                     // SELECTの実行及びフェッチ
-                    sda.Fill(searchResult);
+                    sqlDataAdapter.Fill(searchResult);
 
                     // dataGridViewに表示
-                    W03_DateGridView.DataSource = searchResult;
+                    W03_SearchResult_DateGridView.DataSource = searchResult;
                 }
             }
         }
 
-        // 検索欄に入ってないやつは拾わない　入ってるやつは拾う
+        /// <summary>
+        /// 検索用のSQL文編集メソッド
+        /// WHEREが入ってる/入ってないを判定しつつ、検索項目に入ってる要素によって検索条件文を編集する
+        /// 検索欄に入ってないやつは拾わない　入ってるやつは拾う
+        /// </summary>
         private void SQL_Edit()
         {
             // IDが入ってたとき
@@ -404,67 +411,67 @@ namespace Rail_Record_System
 
         // DateGridViewの中（セル）をクリックした時、そのデータの詳細ウィンドウを表示する
         // CellContentなので、セルそのものじゃなく『セル内の値』をクリックすると反応する
-        private void W03_DateGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void W03_SearchResult_DateGridView_CellContentClick(object sender, DataGridViewCellEventArgs w03ListGridView)
         {
             // 行・列のヘッダーをクリックした場合は流す
-            if (e.ColumnIndex == -1 || e.RowIndex == -1)
+            if (w03ListGridView.ColumnIndex == -1 || w03ListGridView.RowIndex == -1)
             {
                 return;
             }
 
             // クリックしたセルが駅だった時（3：乗車駅、5：降車駅）
-            if (e.ColumnIndex == 3 || e.ColumnIndex == 5)
+            if (w03ListGridView.ColumnIndex == 3 || w03ListGridView.ColumnIndex == 5)
             {
                 MessageBox.Show("駅クリックした！");
             }
 
             // 駅以外のセルの値をクリックした時
-            if (e.ColumnIndex != 3 && e.ColumnIndex != 5)
+            if (w03ListGridView.ColumnIndex != 3 && w03ListGridView.ColumnIndex != 5)
             {
                 // クリックしたデータのIDの値を取得
-                search_ID = $"{W03_DateGridView[0, e.RowIndex].Value}";
+                search_ID = $"{W03_SearchResult_DateGridView[0, w03ListGridView.RowIndex].Value}";
 
                 // 二重起動防止　既に開かれていた場合は一度閉じて開き直す
-                if (this._w05 != null)
+                if (this._w05_RecordsDetail != null)
                 {
                     // フォームを閉じる
-                    this._w05.Close();
+                    this._w05_RecordsDetail.Close();
                 }
                 // フォームを開く
-                if (this._w05 == null || this._w05.IsDisposed)
+                if (this._w05_RecordsDetail == null || this._w05_RecordsDetail.IsDisposed)
                 {
-                    this._w05 = new W05_RecordsDetailFromW03();
-                    _w05.Show();
+                    this._w05_RecordsDetail = new W05_RecordsDetailFromW03();
+                    _w05_RecordsDetail.Show();
                 }
             }
         }
 
         // 最初開いた時の全記録一覧表示
-        private void W03_N_Load(object sender, EventArgs e)
+        private void W03_RecordsList_Load(object sender, EventArgs e)
         {
             // データテーブルを作る
-            DataTable search_result = new DataTable();
+            DataTable searchResult = new DataTable();
 
             // 接続情報を使ってコネクションを生成
-            using (SQLiteConnection con = new SQLiteConnection("Data Source = Rail_records_system_DB.db"))
+            using (SQLiteConnection con = new SQLiteConnection("Data Source = Rail_Records_System_DB.db"))
             {
-                _sqlSearch = "select 乗車記録ID,記録タイトル,列車名,乗車駅,乗車日時,降車駅,降車日時 from 乗車記録";
+                _sqlSearch = "SELECT 乗車記録ID,記録タイトル,列車名,乗車駅,乗車日時,降車駅,降車日時 FROM 乗車記録";
                 _containsWhere = false;
 
                 // SQL文とコネクション、パラメータを設定
                 using (SQLiteCommand cmd = new SQLiteCommand(_sqlSearch, con))
                 {
                     // SQLiteへの橋渡しのアダプターを設定
-                    SQLiteDataAdapter sda = new SQLiteDataAdapter();
+                    SQLiteDataAdapter sqlDataAdapter = new SQLiteDataAdapter();
 
                     // SELECTコマンドを設定
-                    sda.SelectCommand = cmd;
+                    sqlDataAdapter.SelectCommand = cmd;
 
                     // SELECTの実行及びフェッチ
-                    sda.Fill(search_result);
+                    sqlDataAdapter.Fill(searchResult);
 
                     // dataGridViewに表示
-                    W03_DateGridView.DataSource = search_result;
+                    W03_SearchResult_DateGridView.DataSource = searchResult;
                 }
             }
         }
@@ -585,7 +592,7 @@ namespace Rail_Record_System
                     sda.Fill(search_result);
 
                     // dataGridViewに表示
-                    W03_DateGridView.DataSource = search_result;
+                    W03_SearchResult_DateGridView.DataSource = search_result;
                 }
             }
         }

@@ -19,7 +19,7 @@ namespace Rail_Record_System
         private W05_RecordsDetailFromW03 _w05_RecordsDetail = null;
 
         /*
-         検索仕様（理想）（いったん後回し）
+         検索仕様
          あいまい：タイトル、列車名、ナンバー、列番、会社
          完全一致：ID、駅、日時、路線、距離、種別
         */
@@ -33,7 +33,6 @@ namespace Rail_Record_System
 
         private const string SQL_ID = " 乗車記録ID LIKE @検索ID";
         private const string SQL_TITLE = " 記録タイトル LIKE @検索タイトル";
-        //private const string SQL_TITLE = " 記録タイトル LIKE '%題'";
         private const string SQL_BSTA = " 乗車駅 LIKE @検索乗車駅";
         private const string SQL_BTIME = " 乗車日時 LIKE @検索乗車日時";
         private const string SQL_ESTA = " 降車駅 LIKE @検索降車駅";
@@ -132,18 +131,23 @@ namespace Rail_Record_System
                     searchCate.ParameterName = "検索鉄道種別";
 
                     // テキストボックスから検索条件を読み込み保存
+                    /*
+                     検索仕様
+                     あいまい：タイトル、列車名、ナンバー、列番、会社
+                     完全一致：ID、駅、日時、路線、距離、種別
+                    */
                     _sop_id = W03_id_TB.Text;
-                    _sop_title = W03_title_TB.Text;
+                    _sop_title = "%" + W03_title_TB.Text + "%";
                     _sop_Bsta = W03_boarding_sta_TB.Text;
                     _sop_Btime = W03_boarding_time_TB.Text;
                     _sop_Esta = W03_exit_sta_TB.Text;
                     _sop_Etime = W03_exit_time_TB.Text;
-                    _sop_name = W03_name_TB.Text;
-                    _sop_Unum = W03_unit_number_TB.Text;
-                    _sop_Tnum = W03_train_number_TB.Text;
+                    _sop_name = "%" + W03_name_TB.Text + "%";
+                    _sop_Unum = "%" + W03_unit_number_TB.Text + "%";
+                    _sop_Tnum = "%" + W03_train_number_TB.Text + "%";
                     _sop_lines = W03_lines_TB.Text;
                     _sop_dist = W03_distance_TB.Text;
-                    _sop_comp = W03_company_TB.Text;
+                    _sop_comp = "%" + W03_company_TB.Text + "%";
                     _sop_cate = W03_category_TB.Text;
 
                     // パラメータの値を設定　テキストボックスから読み込む

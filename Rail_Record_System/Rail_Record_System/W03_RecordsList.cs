@@ -191,6 +191,10 @@ namespace Rail_Record_System
 
                     // dataGridViewに表示
                     W03_SearchResult_DateGridView.DataSource = searchResult;
+
+                    // 列の幅と行の高さを自動調整
+                    W03_SearchResult_DateGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                    W03_SearchResult_DateGridView.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
                 }
             }
         }
@@ -477,6 +481,10 @@ namespace Rail_Record_System
 
                     // dataGridViewに表示
                     W03_SearchResult_DateGridView.DataSource = searchResult;
+
+                    // 列の幅と行の高さを自動調整
+                    W03_SearchResult_DateGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                    W03_SearchResult_DateGridView.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
                 }
             }
         }
@@ -598,6 +606,10 @@ namespace Rail_Record_System
 
                     // dataGridViewに表示
                     W03_SearchResult_DateGridView.DataSource = search_result;
+
+                    // 列の幅と行の高さを自動調整
+                    W03_SearchResult_DateGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                    W03_SearchResult_DateGridView.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
                 }
             }
         }

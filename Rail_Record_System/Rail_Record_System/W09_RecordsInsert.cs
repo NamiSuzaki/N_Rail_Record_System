@@ -27,7 +27,8 @@ namespace Rail_Record_System
         private void W09_register_Click(object sender, EventArgs e)
         {
             // 登録処理
-            using (SQLiteConnection con = new SQLiteConnection("Data Source=Rail_records_system_DB.db"))
+            // 駅名登録について、外部キー制約をON　駅情報マスタにある駅名以外弾く
+            using (SQLiteConnection con = new SQLiteConnection("Data Source=Rail_records_system_DB.db;Foreign Keys=True"))
             {
                 // DBを開く
                 con.Open();
@@ -35,8 +36,6 @@ namespace Rail_Record_System
                 using (SQLiteTransaction trans = con.BeginTransaction())
                 {
                     SQLiteCommand cmd = con.CreateCommand();
-                    //cmd.CommandText = "pragma foreign_keys = true";
-                    //cmd.ExecuteNonQuery();
 
                     // インサート
                     // @をつけることで後述のParametersでセットした値をプログラム実行時に付加してSQLを実行できる
@@ -212,6 +211,38 @@ namespace Rail_Record_System
         {
             //画面を閉じる
             this.Close();
+        }
+
+        // 新規登録フォームを開いた時
+        private void W09_RecordsInsert_Load(object sender, EventArgs e)
+        {
+            // W09_regist_stations_DataGridViewに駅情報マスタの駅名を表示する
+            // 無理だったら考えるけど、『乗車駅』『降車駅』欄を選択してる状態で↑の表の駅名クリックしたらその駅名が自動でその欄に入る、とかにしたい　絶対便利なので
+
+            //W09_regist_stations_DataGridView.ColumnHeadersVisible = false;
+
+            DataTable searchResult = new DataTable();
+
+            // 接続情報を使ってコネクションを生成
+            using (SQLiteConnection con = new SQLiteConnection("Data Source = Rail_Records_System_DB.db"))
+            {
+                string sqlStationsView = "SELECT 駅名 FROM 駅情報";
+
+                using (SQLiteCommand cmd = new SQLiteCommand(sqlStationsView, con))
+                {
+                    // SQLiteへの橋渡しのアダプターを設定
+                    SQLiteDataAdapter sqlDataAdapter = new SQLiteDataAdapter();
+
+                    // SELECTコマンドを設定
+                    sqlDataAdapter.SelectCommand = cmd;
+
+                    // SELECTの実行及びフェッチ
+                    sqlDataAdapter.Fill(searchResult);
+
+                    // dataGridViewに表示
+                    W09_regist_stations_DataGridView.DataSource = searchResult;
+                }
+            }
         }
     }
 }

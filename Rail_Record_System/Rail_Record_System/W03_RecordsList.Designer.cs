@@ -68,13 +68,15 @@ namespace Rail_Record_System
             // 
             this.W03_SearchResult_DateGridView.AllowUserToAddRows = false;
             this.W03_SearchResult_DateGridView.AllowUserToDeleteRows = false;
+            this.W03_SearchResult_DateGridView.AllowUserToResizeRows = false;
             this.W03_SearchResult_DateGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.W03_SearchResult_DateGridView.Location = new System.Drawing.Point(510, 98);
             this.W03_SearchResult_DateGridView.Name = "W03_SearchResult_DateGridView";
             this.W03_SearchResult_DateGridView.ReadOnly = true;
+            this.W03_SearchResult_DateGridView.RowHeadersVisible = false;
             this.W03_SearchResult_DateGridView.RowHeadersWidth = 51;
             this.W03_SearchResult_DateGridView.RowTemplate.Height = 24;
-            this.W03_SearchResult_DateGridView.Size = new System.Drawing.Size(1004, 723);
+            this.W03_SearchResult_DateGridView.Size = new System.Drawing.Size(938, 723);
             this.W03_SearchResult_DateGridView.TabIndex = 61;
             this.W03_SearchResult_DateGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.W03_SearchResult_DateGridView_CellContentClick);
             // 
@@ -361,7 +363,7 @@ namespace Rail_Record_System
             // W03_upd
             // 
             this.W03_upd.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.W03_upd.Location = new System.Drawing.Point(1328, 16);
+            this.W03_upd.Location = new System.Drawing.Point(1216, 16);
             this.W03_upd.Name = "W03_upd";
             this.W03_upd.Size = new System.Drawing.Size(184, 64);
             this.W03_upd.TabIndex = 62;
@@ -373,7 +375,7 @@ namespace Rail_Record_System
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1539, 842);
+            this.ClientSize = new System.Drawing.Size(1468, 842);
             this.Controls.Add(this.W03_clear);
             this.Controls.Add(this.W03_upd);
             this.Controls.Add(this.W03_SearchResult_DateGridView);
@@ -406,8 +408,8 @@ namespace Rail_Record_System
             this.Controls.Add(this.W03_title_LB);
             this.Controls.Add(this.W03_id_LB);
             this.Controls.Add(this.W03_Title);
-            this.MaximumSize = new System.Drawing.Size(1557, 889);
-            this.MinimumSize = new System.Drawing.Size(1557, 889);
+            this.MaximumSize = new System.Drawing.Size(1486, 889);
+            this.MinimumSize = new System.Drawing.Size(1486, 889);
             this.Name = "W03_RecordsList";
             this.Text = "鉄道乗車記録システム｜乗車記録検索";
             this.Load += new System.EventHandler(this.W03_RecordsList_Load);

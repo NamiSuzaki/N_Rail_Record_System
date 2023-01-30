@@ -133,11 +133,11 @@
     <Compile Include="W11_RecordsDetailFromW09.Designer.cs">
       <DependentUpon>W11_RecordsDetailFromW09.cs</DependentUpon>
     </Compile>
-    <Compile Include="W13.cs">
+    <Compile Include="W13_StationDetail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="W13.Designer.cs">
-      <DependentUpon>W13.cs</DependentUpon>
+    <Compile Include="W13_StationDetail.Designer.cs">
+      <DependentUpon>W13_StationDetail.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Formmain.resx">
       <DependentUpon>Formmain.cs</DependentUpon>
@@ -172,8 +172,8 @@
     <EmbeddedResource Include="W11_RecordsDetailFromW09.resx">
       <DependentUpon>W11_RecordsDetailFromW09.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="W13.resx">
-      <DependentUpon>W13.cs</DependentUpon>
+    <EmbeddedResource Include="W13_StationDetail.resx">
+      <DependentUpon>W13_StationDetail.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

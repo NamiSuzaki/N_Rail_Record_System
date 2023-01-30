@@ -208,8 +208,6 @@ namespace Rail_Record_System
                     // 修正フォームを閉じる
                     this.w06.Close();
                 }
-
-                
             }
         }
     }

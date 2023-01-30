@@ -344,7 +344,7 @@ namespace Rail_Record_System
             this.W09_regist_stations_DataGridView.RowHeadersVisible = false;
             this.W09_regist_stations_DataGridView.RowHeadersWidth = 51;
             this.W09_regist_stations_DataGridView.RowTemplate.Height = 24;
-            this.W09_regist_stations_DataGridView.Size = new System.Drawing.Size(176, 656);
+            this.W09_regist_stations_DataGridView.Size = new System.Drawing.Size(240, 656);
             this.W09_regist_stations_DataGridView.TabIndex = 62;
             // 
             // sqLiteCommand1
@@ -355,7 +355,7 @@ namespace Rail_Record_System
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1266, 688);
+            this.ClientSize = new System.Drawing.Size(1330, 688);
             this.Controls.Add(this.W09_regist_stations_DataGridView);
             this.Controls.Add(this.W09_note_TB);
             this.Controls.Add(this.W09_note_LB);
@@ -386,7 +386,8 @@ namespace Rail_Record_System
             this.Controls.Add(this.W09_boarding_sta_LB);
             this.Controls.Add(this.W09_title_LB);
             this.Controls.Add(this.W09_Title);
-            this.MinimumSize = new System.Drawing.Size(1284, 735);
+            this.MaximumSize = new System.Drawing.Size(1348, 735);
+            this.MinimumSize = new System.Drawing.Size(1348, 735);
             this.Name = "W09_RecordsInsert";
             this.Text = "鉄道乗車記録システム｜新規乗車記録登録";
             this.Load += new System.EventHandler(this.W09_RecordsInsert_Load);

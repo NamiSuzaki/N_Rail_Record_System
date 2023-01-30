@@ -149,27 +149,37 @@ namespace Rail_Record_System
                         }
 
                         // 実行
-                        cmd.ExecuteNonQuery();
-
-                        // コミット　trans.commit();でDBの変更を確定
-                        trans.Commit();
-
-                        // 登録完了
-                        // ここからはさっき登録した記録のIDを拾う
-                        W09_W11_open();
-
-                        // 登録したデータの詳細を表示する
-                        // 二重起動防止　既に開かれていた場合は一度閉じて開き直す
-                        if (this.w11 != null)
+                        // SQLで外部キー制約に引っかかるか否かで処理を変えるため、try/catch
+                        try
                         {
-                            // フォームを閉じる
-                            this.w11.Close();
+                            // 外部キー制約に引っかかっていない時
+                            cmd.ExecuteNonQuery();
+
+                            // コミット　trans.commit();でDBの変更を確定
+                            trans.Commit();
+
+                            // 登録完了
+                            // ここからはさっき登録した記録のIDを拾う
+                            W09_W11_open();
+
+                            // 登録したデータの詳細を表示する
+                            // 二重起動防止　既に開かれていた場合は一度閉じて開き直す
+                            if (this.w11 != null)
+                            {
+                                // フォームを閉じる
+                                this.w11.Close();
+                            }
+                            // フォームを開く
+                            if (this.w11 == null || this.w11.IsDisposed)
+                            {
+                                this.w11 = new W11_RecordsDetailFromW09();
+                                w11.Show();
+                            }
                         }
-                        // フォームを開く
-                        if (this.w11 == null || this.w11.IsDisposed)
+                        catch(System.Data.SQLite.SQLiteException)
                         {
-                            this.w11 = new W11_RecordsDetailFromW09();
-                            w11.Show();
+                            // 外部キー制約に引っかかった時
+                            DialogResult result = MessageBox.Show("乗車駅/降車駅の駅名は、右記一覧表から選択して入力してください", "登録内容エラー", MessageBoxButtons.OK,MessageBoxIcon.Error);
                         }
                     }
                 }
@@ -226,7 +236,7 @@ namespace Rail_Record_System
             // 接続情報を使ってコネクションを生成
             using (SQLiteConnection con = new SQLiteConnection("Data Source = Rail_Records_System_DB.db"))
             {
-                string sqlStationsView = "SELECT 駅名 FROM 駅情報";
+                string sqlStationsView = "SELECT 駅ID,駅名 FROM 駅情報";
 
                 using (SQLiteCommand cmd = new SQLiteCommand(sqlStationsView, con))
                 {
@@ -241,6 +251,10 @@ namespace Rail_Record_System
 
                     // dataGridViewに表示
                     W09_regist_stations_DataGridView.DataSource = searchResult;
+
+                    // 列の幅と行の高さを自動調整
+                    W09_regist_stations_DataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                    W09_regist_stations_DataGridView.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
                 }
             }
         }

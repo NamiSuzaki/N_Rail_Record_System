@@ -9,7 +9,6 @@ C:\Users\s20217061.STD\Documents\N_Rail_Record_System\Rail_Record_System\Rail_Re
 C:\Users\s20217061.STD\Documents\N_Rail_Record_System\Rail_Record_System\Rail_Record_System\bin\Debug\EntityFramework.xml
 C:\Users\s20217061.STD\Documents\N_Rail_Record_System\Rail_Record_System\Rail_Record_System\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\s20217061.STD\Documents\N_Rail_Record_System\Rail_Record_System\Rail_Record_System\bin\Debug\System.Data.SQLite.xml
-C:\Users\s20217061.STD\Documents\N_Rail_Record_System\Rail_Record_System\Rail_Record_System\obj\Debug\Rail_Record_System.csproj.AssemblyReference.cache
 C:\Users\s20217061.STD\Documents\N_Rail_Record_System\Rail_Record_System\Rail_Record_System\obj\Debug\Rail_Record_System.Properties.Resources.resources
 C:\Users\s20217061.STD\Documents\N_Rail_Record_System\Rail_Record_System\Rail_Record_System\obj\Debug\Rail_Record_System.csproj.GenerateResource.cache
 C:\Users\s20217061.STD\Documents\N_Rail_Record_System\Rail_Record_System\Rail_Record_System\obj\Debug\Rail_Record_System.csproj.CoreCompileInputs.cache
@@ -69,10 +68,10 @@ D:\docu\N_Rail_Record_System\Rail_Record_System\Rail_Record_System\obj\Debug\Rai
 D:\docu\N_Rail_Record_System\Rail_Record_System\Rail_Record_System\obj\Debug\Rail_Record_System.exe
 D:\docu\N_Rail_Record_System\Rail_Record_System\Rail_Record_System\obj\Debug\Rail_Record_System.pdb
 D:\docu\N_Rail_Record_System\Rail_Record_System\Rail_Record_System\obj\Debug\Rail_Record_System.W03_N.resources
-C:\Users\s20217061.STD\Documents\N_Rail_Record_System\Rail_Record_System\Rail_Record_System\obj\Debug\Rail_Record_System.W13.resources
 C:\Users\s20217061.STD\Documents\N_Rail_Record_System\Rail_Record_System\Rail_Record_System\obj\Debug\Rail_Record_System.W05_RecordsDetailFromW03.resources
 C:\Users\s20217061.STD\Documents\N_Rail_Record_System\Rail_Record_System\Rail_Record_System\obj\Debug\Rail_Record_System.W06_RecordsUpdate.resources
 C:\Users\s20217061.STD\Documents\N_Rail_Record_System\Rail_Record_System\Rail_Record_System\obj\Debug\Rail_Record_System.W09_RecordsInsert.resources
 C:\Users\s20217061.STD\Documents\N_Rail_Record_System\Rail_Record_System\Rail_Record_System\obj\Debug\Rail_Record_System.W11_RecordsDetailFromW09.resources
 C:\Users\s20217061.STD\Documents\N_Rail_Record_System\Rail_Record_System\Rail_Record_System\obj\Debug\Rail_Record_System.PracticeForm.resources
 C:\Users\s20217061.STD\Documents\N_Rail_Record_System\Rail_Record_System\Rail_Record_System\obj\Debug\Rail_Record_System.W03_RecordsList.resources
+C:\Users\s20217061.STD\Documents\N_Rail_Record_System\Rail_Record_System\Rail_Record_System\obj\Debug\Rail_Record_System.W13_StationDetail.resources

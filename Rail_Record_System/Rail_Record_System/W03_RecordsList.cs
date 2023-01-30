@@ -18,6 +18,9 @@ namespace Rail_Record_System
         // W05を開く時の重複表示を防ぐ用変数
         private W05_RecordsDetailFromW03 _w05_RecordsDetail = null;
 
+        // W13を開く時の重複表示を防ぐ用変数
+        private W13_StationDetail _w13_StationDetail = null;
+
         /*
          検索仕様
          あいまい：タイトル、列車名、ナンバー、列番、会社
@@ -62,6 +65,9 @@ namespace Rail_Record_System
 
         // W05でのID検索用変数
         public static string search_ID;
+
+        // W13での駅詳細表示用変数
+        public static string detail_STA;
 
         public W03_RecordsList()
         {
@@ -431,7 +437,32 @@ namespace Rail_Record_System
             // クリックしたセルが駅だった時（3：乗車駅、5：降車駅）
             if (w03ListGridView.ColumnIndex == 3 || w03ListGridView.ColumnIndex == 5)
             {
-                MessageBox.Show("駅クリックした！");
+                switch(w03ListGridView.ColumnIndex)
+                {
+                    case 3:
+                        // クリックしたデータの駅の値を取得（乗車駅）
+                        detail_STA = $"{W03_SearchResult_DateGridView[3, w03ListGridView.RowIndex].Value}";
+                        break;
+
+                    case 5:
+                        // クリックしたデータの駅の値を取得（降車駅）
+                        detail_STA = $"{W03_SearchResult_DateGridView[5, w03ListGridView.RowIndex].Value}";
+                        break;
+                }
+
+                // 駅詳細画面の表示
+                // 二重起動防止　既に開かれていた場合は一度閉じて開き直す
+                if (this._w13_StationDetail != null)
+                {
+                    // フォームを閉じる
+                    this._w13_StationDetail.Close();
+                }
+                // フォームを開く
+                if (this._w13_StationDetail == null || this._w13_StationDetail.IsDisposed)
+                {
+                    this._w13_StationDetail = new W13_StationDetail();
+                    _w13_StationDetail.Show();
+                }
             }
 
             // 駅以外のセルの値をクリックした時

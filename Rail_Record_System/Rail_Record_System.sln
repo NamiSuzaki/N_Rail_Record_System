@@ -8,11 +8,14 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		G2A214佐々木菜海_GP演習|Any CPU = G2A214佐々木菜海_GP演習|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{A03A6D77-9BAE-410C-9C1F-0B4428EA48E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A03A6D77-9BAE-410C-9C1F-0B4428EA48E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A03A6D77-9BAE-410C-9C1F-0B4428EA48E1}.G2A214佐々木菜海_GP演習|Any CPU.ActiveCfg = Debug|Any CPU
+		{A03A6D77-9BAE-410C-9C1F-0B4428EA48E1}.G2A214佐々木菜海_GP演習|Any CPU.Build.0 = Debug|Any CPU
 		{A03A6D77-9BAE-410C-9C1F-0B4428EA48E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A03A6D77-9BAE-410C-9C1F-0B4428EA48E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection

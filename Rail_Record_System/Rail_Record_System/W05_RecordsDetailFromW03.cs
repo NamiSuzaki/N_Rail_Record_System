@@ -39,7 +39,20 @@ namespace Rail_Record_System
             ToGetID = W03_RecordsList.search_ID;
 
             // 検索
-            Search_OnlyOne();
+            // ここで削除済みのデータにアクセスしようとした時のtry/catchをする
+            try
+            {
+                Search_OnlyOne();
+            }
+            catch(System.IndexOutOfRangeException)
+            {
+                // W03で削除済みデータをクリックした時
+                // フォームを閉じる
+                this.Close();
+
+                // エラーメッセージの表示
+                DialogResult result = MessageBox.Show("削除済みのデータです。\n右上の[更新]ボタンで一覧の更新を行ってください。", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void Search_OnlyOne()

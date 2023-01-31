@@ -437,7 +437,7 @@ namespace Rail_Record_System
             // クリックしたセルが駅だった時（3：乗車駅、5：降車駅）
             if (w03ListGridView.ColumnIndex == 3 || w03ListGridView.ColumnIndex == 5)
             {
-                switch(w03ListGridView.ColumnIndex)
+                switch (w03ListGridView.ColumnIndex)
                 {
                     case 3:
                         // クリックしたデータの駅の値を取得（乗車駅）

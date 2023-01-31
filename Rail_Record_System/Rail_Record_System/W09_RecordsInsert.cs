@@ -81,7 +81,7 @@ namespace Rail_Record_System
                     if (String.IsNullOrEmpty(W09_boarding_sta_TB.Text) || String.IsNullOrEmpty(W09_exit_sta_TB.Text))
                     {
                         // 登録時エラーポップアップの表示
-                        DialogResult result = MessageBox.Show("乗車駅・降車駅を入力してください", "登録内容エラー", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        DialogResult result = MessageBox.Show("乗車駅・降車駅を入力してください", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                     // 乗車駅・降車駅が入ってたらとりあえず登録
                     else
@@ -179,7 +179,7 @@ namespace Rail_Record_System
                         catch(System.Data.SQLite.SQLiteException)
                         {
                             // 外部キー制約に引っかかった時
-                            DialogResult result = MessageBox.Show("乗車駅/降車駅の駅名は、右記一覧表から選択して入力してください", "登録内容エラー", MessageBoxButtons.OK,MessageBoxIcon.Error);
+                            DialogResult result = MessageBox.Show("乗車駅/降車駅の駅名は、右記一覧表から選択して入力してください。", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         }
                     }
                 }
